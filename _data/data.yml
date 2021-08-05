@@ -142,27 +142,40 @@ education:
   display: true
   title: Education
   items:
-    - university: Example University
-      time: 2015 - 2018
-      major: Machine Learning
-      degree: Master
+    - university: Indian Institute of Technology, Roorkee
+      time: 2012 - 2017
+      major: Metallurgy and Material Engineering
+      degree: B.Tech. + M.Tech. (Dual Degree Course)
       details: |
-        Experience in this university:
-        + First
-        + Second
+        Credit Courses: 
+            + Economics
+            + Corporate Social Responsibility
+            + Object Oriented Programming
+            + Management Concepts and Practices
+            + Marketing
+            + Human Resource Management
+            + Operations
+            + Financial Management
+            + Behaviour Psychology
 
-        ...
+    - university: Udacity - Data Product Manager
+      time: 2021
+      major: 
+      degree: Nano Degrees
+      details: 
 
-    - university: Example University
-      time: 2011 - 2015
-      major: Computer Science
-      degree: Bachelor
-      details: |
-        Experience in this university:
-        + First
-        + Second
+    - university: Udacity - Computer Vision
+      time: 2020
+      major: 
+      degree: Nano Degrees
+      details: 
 
-        ...
+    - university: Udacity - Artificial Intelligence
+      time: 2018
+      major: 
+      degree: Nano Degrees
+      details: 
+      
 
 certificates:
   display: true
@@ -181,7 +194,7 @@ certificates:
       details: |
 
 publications:
-  display: true
+  display: false
   title: Publications
   intro: |
     This is all the books I wrote.
@@ -198,10 +211,11 @@ publications:
 
 patents:
   display: true
-  title: Patents
+  title: Patent & Research Paper
   details: |
-    This is all my patents.
-    + 2020\. A patent name is here. CN123456, filed May 15, 2020, and issued July 20, 2020.
+    + First Author. “System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques”; us US20200099713A1. 
+    + Second Author. “System and method for detecting bots using semi-supervised deep learning techniques”; us US20200099714A1. 
+    + First Author. “Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties”, in International Journal for the Science and Technology of Polymers 2016.
 
 languages:
   display: true
@@ -219,6 +233,10 @@ interests:
     - item: Reading
       link:
     - item: Cooking
+      link:
+    - item: PC Gaming
+      link:
+    - item: Bike Trips
       link:
 
 evaluation:
