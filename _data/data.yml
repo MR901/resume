@@ -13,10 +13,10 @@ contact:
   telegram:
   website:
   medium:
-  linkedin: linkedin.com/in/mr901
+  linkedin: mr901
   googlescholar:
   researchgate:
-  github: github.com/MR901
+  github: MR901
   gitlab:
   bitbucket:
   twitter:
@@ -120,15 +120,27 @@ projects:
       details: |
         Project Bar's detail, you can write markdown format text.
 
+
 skills:
   display: true
-  title: Skills
+  title: Tools & Skills
   details: |
-    Here is my skills:
-    + First
-    + Second
-
-    ...
+    + ML Languages/Framework
+        - Python, scikit-learn, Tensorflow, PyTorch
+    + **Other Language**
+        - R, SAS, JAVA, C++
+    + **Other**
+        -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
+    + **Databases**
+        - SQL, No-SQL
+    + **Software**
+        - Tableau, Excel, XLMiner, Spyder, Jupyter Notebook, RStudio, Gimp, SolidWorks
+    + **Cloud Computing Services**
+        - Google Cloud Platform, Amazon Web Services
+    + **Cloud Data lakes**
+        - S3, Cloud Storage, Drive, Pcloud
+    + **Hardware**
+        - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
 
   levels:
     - name: Skill A
