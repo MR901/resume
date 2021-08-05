@@ -203,7 +203,7 @@ certificates:
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Deep Learning: Advanced NLP and RNNs
+    - name: Deep Learning- Advanced NLP and RNNs
       authority: Coursera
       time: 2020
       link: https://www.google.com
@@ -213,7 +213,7 @@ certificates:
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Business Fundamentals: Corporate Strategy
+    - name: Business Fundamentals- Corporate Strategy
       authority: Coursera
       time: 2020
       link: https://www.google.com
@@ -223,7 +223,7 @@ certificates:
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Deep Learning A-Z: Hands-On Artificial Neural Network
+    - name: Deep Learning A-Z- Hands-On Artificial Neural Network
       authority: Coursera
       time: 2020
       link: https://www.google.com
@@ -273,17 +273,17 @@ certificates:
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Machine Learning A-Z: Hands-On Python & R in Data Science
+    - name: Machine Learning A-Z- Hands-On Python & R in Data Science
       authority: Coursera
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Deep Learning and NLP A-Z: How to Create a ChatBot
+    - name: Deep Learning and NLP A-Z- How to Create a ChatBot
       authority: Coursera
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Artificial Intelligence A-Z: Learn How To Build An AI
+    - name: Artificial Intelligence A-Z- Learn How To Build An AI
       authority: Coursera
       time: 2020
       link: https://www.google.com
@@ -338,7 +338,7 @@ certificates:
       time: 2020
       link: https://www.google.com
       details: |
-    - name: Java Programming: Solving Problems with Software, Duke Univ
+    - name: Java Programming- Solving Problems with Software, Duke Univ
       authority: Coursera
       time: 2020
       link: https://www.google.com
