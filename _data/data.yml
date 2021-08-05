@@ -38,13 +38,13 @@ areas_of_interest:
   display: true
   title: Areas of Professional Interest
   details: |
-    + •	Reinforcement, Unsupervised Learning and Recommendation System 
-    + •	Data Collection, Data Engineering and Experiment Design
-    + •	EDGE Devices based ML 
-    + •	Data based Product Research and Development
-    + •	Deep Learning based solutions (RNN, CNN, LSTM, SOM, Auto Encoder) 
-    + •	Natural Language Processing (NLP) and ChatBots
-    + •	Time Series analysis & Computer Vision 
+    + Reinforcement, Unsupervised Learning and Recommendation System 
+    + Data Collection, Data Engineering and Experiment Design
+    + EDGE Devices based ML 
+    + Data based Product Research and Development
+    + Deep Learning based solutions (RNN, CNN, LSTM, SOM, Auto Encoder) 
+    + Natural Language Processing (NLP) and ChatBots
+    + Time Series analysis & Computer Vision 
 
 
 experiences:
@@ -175,23 +175,179 @@ education:
       major: 
       degree: Nano Degrees
       details: 
-      
+
 
 certificates:
   display: true
   title: Certificates
   items:
-    - name: Course Foo
-      authority: Coursera
-      time: 2020
-      link:
-      details: |
-        It's my Course Foo certificate by coursera.
-    - name: Course Bar
+    - name: Deep Learning and Computer Vision A-Z
       authority: Coursera
       time: 2020
       link: https://www.google.com
       details: |
+    - name: Neural Networks and Deep Learning, DeepLearning.AI
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Deep Learning: Advanced NLP and RNNs
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Deep Learning with TensorFlow 2.0
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Business Fundamentals: Corporate Strategy
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Real-time OCR and Text Detection
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Deep Learning A-Z: Hands-On Artificial Neural Network
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Statistics for Business Analytics A-Z 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Introduction to Big Data, UC San Diego
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Big Data Integration and Processing, UC San Diego
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Customer Analytics, University of Pennsylvania 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Linear Regression and Modelling, Duke University 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: A crash course in Data Science, Johns Hopkins 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Managing Data Analysis, Johns Hopkins University 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Introduction to R Programming, Microsoft Corporation 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Mastering Data Analysis in Excel, Duke University 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Machine Learning A-Z: Hands-On Python & R in Data Science
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Deep Learning and NLP A-Z: How to Create a ChatBot
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Artificial Intelligence A-Z: Learn How To Build An AI
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Introduction to Data Analytics for Business, University of Colorado
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Big Data Modeling and Management System, UC San Diego
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Data Management and Visualization, Wesleyan University 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Practical Machine Learning, Johns Hopkins University
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Building a Data Science Team, Johns Hopkins University 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Data Science in Real Life, Johns Hopkins University 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: R Programming, Johns Hopkins University
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Programming Foundations with JavaScript, HTML & CSS, Duke
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Setting expectations & Assessing Performance Issues, UC Davis
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Coaching Conversations, University of California, Davis
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Java Programming: Solving Problems with Software, Duke Univ
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Managing as a Coach, University of California, Davis 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+    - name: Coaching Practices, University of California, Davis 
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+
+#     - name: Course Foo
+#       authority: Coursera
+#       time: 2020
+#       link:
+#       details: |
+#         It's my Course Foo certificate by coursera.
 
 publications:
   display: false
