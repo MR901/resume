@@ -1,0 +1,238 @@
+basic:
+  name: Mohit Rajput
+  title: Machine Learning Software Engineer
+  avatar:
+    display: true
+    path: profile_pic.png
+
+contact:
+  email: mohitrajput901@gmail.com
+  phone: +91-89795-72630
+  wechat:
+  whatsapp:
+  telegram:
+  website:
+  medium:
+  linkedin: linkedin.com/in/mr901
+  googlescholar:
+  researchgate:
+  github: github.com/MR901
+  gitlab:
+  bitbucket:
+  twitter:
+  stackoverflow:
+  quora:
+  goodreads:
+
+profile:
+  display: false
+  title: Profile
+  details: |
+    It's your career profile, you can wirte markdown format text.
+    + First
+    + Second
+
+    ...
+
+areas_of_interest:
+  display: true
+  title: Areas of Professional Interest
+  details: |
+    + •	Reinforcement, Unsupervised Learning and Recommendation System 
+    + •	Data Collection, Data Engineering and Experiment Design
+    + •	EDGE Devices based ML 
+    + •	Data based Product Research and Development
+    + •	Deep Learning based solutions (RNN, CNN, LSTM, SOM, Auto Encoder) 
+    + •	Natural Language Processing (NLP) and ChatBots
+    + •	Time Series analysis & Computer Vision 
+
+
+experiences:
+  display: true
+  title: Experiences
+  items:
+    - company: Cargill Digital Labs, Cargill
+      tag: full-time
+      location: Bangalore
+      role1: Machine Learning Software Engineer 
+      time1: Jun'19 - Present
+      details: |
+        Experience in this company:
+        + First
+        + Second
+
+        ...
+
+    - company: ShieldSquare (Radware)
+      tag: full-time
+      location: Bangalore
+      role1: Data Scientist – R&D
+      time1: Apr'18-May'19
+      role2: Associate Research Engineer – R&D
+      time2: Jun'17-Mar'18
+      details: |
+        Experience in this company:
+        + ICLSSTA
+            - Solely developed a framework, which develop and evaluate unsupervised learning solution in much depth and this from a single config file.
+            - *Tags: Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
+
+        + Adaptive Action Taking (AAT)
+            - Developed a generalized module named which makes use of reinforcement learning to automatically take action on incoming traffic on the web property.
+            - *Tags: Reinforcement Learning, Multi-Armed Bandit, Smart handling of Business Limits, Self-Adjusting* 
+        + Deep Behaviour Analysis (IDBA)
+            - Partially developed a module named Intent based, which utilizes LSTM to yield encoded features and scores that are used with supervised, anomaly and clustering.
+            - Tags: RNN, Auto-Encoder, Semi-Supervised Learning, Sequence Based Detection, Deep Learning 
+        + Threshold Online Reinforcement (ThOR)
+            - Helped developed a module named, which makes utilizes online learning to develop a probability score distribution over of isotonic regression for action taking.
+            - Tags: Isotonic Regression, Online Learning, Self-Adjusting, Smart handling of Business Limits 
+        +  - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
+            - Tags: Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis. 
+        + Titan Batch Analyser 
+            - Developed and Implemented, which utilizes multiple browser signatures, behaviour based rules, regular expressions and databases to generate a suspiciousness score to take action on traffic.
+            - Tags: SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets 
+        + Rule Scripts
+            - Developed and Implemented multiple rules which were based on network, device and browser fingerprint, and behaviour of the visitors. These were adequately balanced between causal and correlated, yielding negligible FP. 
+            - Tags: Domain knowledge, Behaviour Analysis, Rules development 
+        + Rule Mining
+            - Created a Recommendation System for the highlighting possible bad signature coming in the traffic. 
+            - Tags: Associate Rule Mining, Text Data Pre-processing 
+        + Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
+          Tags: SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing 
+        + Developing Dynamic Moving Collective Intelligence which can evolve while working across multiple sid. 
+
+
+
+
+projects:
+  display: true
+  title: Projects
+  intro: |
+    This is all the projects I'm involved in.
+
+  items:
+    - name: Foo
+      link: https://www.google.com
+      details: |
+        Project Foo's detail, you can write markdown format text.
+
+    - name: Bar
+      link:
+      details: |
+        Project Bar's detail, you can write markdown format text.
+
+skills:
+  display: true
+  title: Skills
+  details: |
+    Here is my skills:
+    + First
+    + Second
+
+    ...
+
+  levels:
+    - name: Skill A
+      level: 90
+    - name: Skill B
+      level: 80
+    - name: Skill C
+      level: 70
+
+education:
+  display: true
+  title: Education
+  items:
+    - university: Example University
+      time: 2015 - 2018
+      major: Machine Learning
+      degree: Master
+      details: |
+        Experience in this university:
+        + First
+        + Second
+
+        ...
+
+    - university: Example University
+      time: 2011 - 2015
+      major: Computer Science
+      degree: Bachelor
+      details: |
+        Experience in this university:
+        + First
+        + Second
+
+        ...
+
+certificates:
+  display: true
+  title: Certificates
+  items:
+    - name: Course Foo
+      authority: Coursera
+      time: 2020
+      link:
+      details: |
+        It's my Course Foo certificate by coursera.
+    - name: Course Bar
+      authority: Coursera
+      time: 2020
+      link: https://www.google.com
+      details: |
+
+publications:
+  display: true
+  title: Publications
+  intro: |
+    This is all the books I wrote.
+
+  items:
+    - title: Foo in Action
+      authors: Foo Bar
+      conference: Foobar, 2019
+      link: https://www.google.com
+    - title: The Art of Bar
+      authors: Foo Bar
+      conference: Foobar, 2019
+      link:
+
+patents:
+  display: true
+  title: Patents
+  details: |
+    This is all my patents.
+    + 2020\. A patent name is here. CN123456, filed May 15, 2020, and issued July 20, 2020.
+
+languages:
+  display: true
+  title: Languages
+  items:
+    - idiom: Hindi
+      level: Native
+    - idiom: English
+      level: Professional
+
+interests:
+  display: true
+  title: Interests
+  items:
+    - item: Reading
+      link:
+    - item: Cooking
+      link:
+
+evaluation:
+  display: true
+  title: Self-evaluation
+  details: |
+    Here is my self evaluation.
+    + First
+    + Second
+
+    ...
+
+footer:
+  display: true
+
+close: >
+  Sorry, my resume has been hidden.
