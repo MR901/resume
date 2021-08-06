@@ -100,6 +100,7 @@ experiences:
           Tags: SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing 
         + Developing Dynamic Moving Collective Intelligence which can evolve while working across multiple sid. 
 
+ 
 
 
 
@@ -110,16 +111,50 @@ projects:
     This is all the projects I'm involved in.
 
   items:
-    - name: Foo
-      link: https://www.google.com
+    - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
+      link: 
       details: |
-        Project Foo's detail, you can write markdown format text.
-
-    - name: Bar
+    - name: Edge Device based CV application for counting of sheets processed in a workshop
       link:
       details: |
-        Project Bar's detail, you can write markdown format text.
+    - name: Text Detection and OCR
+      link:
+      details: |
+    - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
+      link:
+      details: |
+    - name: WhatsApp based Chatbot (Hack around way)
+      link:
+      details: |
+    - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
+      link:
+      details: |
+    - name: Streamlit based threshold adjustment for object detector and annotation visualizer
+      link:
+      details: |
+    - name: Unsupervised Learning Framework 
+      link:
+      details: |
+          Easy selection of basic data pre-processing, transformation, dimension reduction/clustering/anomaly algorithm selection or pipeline creation, hyperparameters setting, ensemble, and  EDA.
+    - name: Other projects
+      link: 
+      details: |
+        + Identifying customer segment, Udacity
+        + Tagging part of speech, Udacity 
+        + Isolation game playing agent, Udacity 
+        + Cargo route planning, Udacity 
+        + Sudoku solver, Udacity 
+        + Twitter Sentiment Analysis 
+        + Black Friday: Understanding the customer purchase behaviour, Analytics Vidhya 
+        + Estimation of the audience score of movies, Coursera 
+        + Predicting the way in which exercise were done, Coursera 
+        + Forecasting bike rental demand in the Capital Bike Sharing Program, Kaggle 
+        + Predicting Survival on the Titanic, Kaggle
 
+#     - name: Foo
+#       link: https://www.google.com
+#       details: |
+#         Project Foo's detail, you can write markdown format text.
 
 skills:
   display: true
@@ -174,185 +209,196 @@ education:
       time: 2021
       major: 
       degree: Nano Degrees
-      details: 
+      details: https://confirm.udacity.com/QGUGJTSK
 
     - university: Udacity - Computer Vision
       time: 2020
       major: 
       degree: Nano Degrees
-      details: 
+      details: https://confirm.udacity.com/4DMWY73G
 
     - university: Udacity - Artificial Intelligence
       time: 2018
       major: 
       degree: Nano Degrees
-      details: 
+      details: https://confirm.udacity.com/KGCWC7NW
 
 
 certificates:
   display: true
   title: Certificates
   items:
-    - name: "Deep Learning and Computer Vision A-Z"
-      authority: Coursera
+    - name: "Deep Learning and NLP A-Z: How to Create a ChatBot"
+      authority: Udemy
       time: 2020
       link: https://www.google.com
       details: |
-    - name: "Neural Networks and Deep Learning, DeepLearning.AI"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Deep Learning: Advanced NLP and RNNs"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Deep Learning with TensorFlow 2.0"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Business Fundamentals: Corporate Strategy"
-      authority: Coursera
+    - name: "Artificial Intelligence A-Z: Learn How To Build An AI"
+      authority: Udemy
       time: 2020
       link: https://www.google.com
       details: |
     - name: "Real-time OCR and Text Detection"
       authority: Coursera
+      time: 2021
+      link: https://coursera.org/share/b8c104fdf7afa84fa1cc279d747d38c4
+      details: |
+    - name: "Neural Networks and Deep Learning, DeepLearning.AI"
+      authority: Coursera
+      time: 2021
+      link: https://coursera.org/share/92aafe4a3474d94117ab73a9420afe82
+      details: |
+    - name: "Business Fundamentals: Corporate Strategy"
+      authority: Udemy
       time: 2020
-      link: https://www.google.com
+      link: https://www.udemy.com/certificate/UC-AP3ABEGX/
+      details: |
+    - name: "Deep Learning with TensorFlow 2.0"
+      authority: Udemy
+      time: 2020
+      link: https://www.udemy.com/certificate/UC-6M01FJV2/
+      details: |
+    - name: "Deep Learning: Advanced NLP and RNNs"
+      authority: Udemy
+      time: 2020
+      link: https://www.udemy.com/certificate/UC-FK7VUTER/
+      details: |
+    - name: "Deep Learning and Computer Vision A-Z: OpenCV, SSD & GANs"
+      authority: Udemy
+      time: 2018
+      link: https://www.udemy.com/certificate/UC-ZQF4NUHP/
       details: |
     - name: "Deep Learning A-Z: Hands-On Artificial Neural Network"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2018
+      link: https://www.udemy.com/certificate/UC-PUMKBSE1/
+      details: |
+    - name: "Machine Learning A-Z: Hands-On Python & R in Data Science"
+      authority: Udemy
+      time: 2017
+      link: https://www.udemy.com/certificate/UC-76HXNV9U/
       details: |
     - name: "Statistics for Business Analytics A-Z"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Introduction to Big Data, UC San Diego"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      authority: Udemy
+      time: 2017
+      link: https://www.udemy.com/certificate/UC-OOVF3D0D/
       details: |
     - name: "Big Data Integration and Processing, UC San Diego"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Customer Analytics, University of Pennsylvania"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Linear Regression and Modelling, Duke University"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "A crash course in Data Science, Johns Hopkins"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Managing Data Analysis, Johns Hopkins University"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Introduction to R Programming, Microsoft Corporation"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Mastering Data Analysis in Excel, Duke University"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Machine Learning A-Z: Hands-On Python & R in Data Science"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Deep Learning and NLP A-Z: How to Create a ChatBot"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Artificial Intelligence A-Z: Learn How To Build An AI"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Introduction to Data Analytics for Business, University of Colorado"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2017
+      link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
       details: |
     - name: "Big Data Modeling and Management System, UC San Diego"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2017
+      link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
       details: |
-    - name: "Data Management and Visualization, Wesleyan University"
+#       https://www.coursera.org/account/accomplishments/certificate/VZ3PX9CV2Y8Z
+    - name: "Introduction to Data Analytics for Business, University of Colorado"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2017
+      link: https://coursera.org/share/431a53339ca34da0776464e0742a15ed
+#       https://www.coursera.org/account/accomplishments/certificate/K9MNKJXVKCZJ
+      details: |
+    - name: "Introduction to Big Data, UC San Diego"
+      authority: Coursera
+      time: 2017
+      link: https://coursera.org/share/a5966ae7f1093d28cabdc2d0d56c96f0
+#       https://www.coursera.org/account/accomplishments/certificate/QLJD4FLJJLVV
+      details: |
+    - name: "Customer Analytics, University of Pennsylvania"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/c3761defcff1a28328abb5d12e23f0ae
+#       https://www.coursera.org/account/accomplishments/certificate/6APN86VXXFKJ
       details: |
     - name: "Practical Machine Learning, Johns Hopkins University"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2016
+      link: https://coursera.org/share/7295b164f5bf12044ebea79a7809cf24
+#       https://www.coursera.org/account/accomplishments/verify/MZP92JQR2CMT
+      details: |
+    - name: "Linear Regression and Modelling, Duke University"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
+#       https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
       details: |
     - name: "Building a Data Science Team, Johns Hopkins University"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2016
+      link: https://coursera.org/share/2b8f08e4f99182d5ff882c2de2ff208e
+#       https://www.coursera.org/account/accomplishments/verify/B8PMWCU3PGP3
       details: |
     - name: "Data Science in Real Life, Johns Hopkins University"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2016
+      link: https://coursera.org/share/ee48db7b7cbe7d12ad3cee24281d45b7
+#       https://www.coursera.org/account/accomplishments/verify/6P9E75GJZHD4
+      details: |
+    - name: "Managing Data Analysis, Johns Hopkins University"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/0b95afa85e3ba653c34aa2206f84c5ae
+#       https://www.coursera.org/account/accomplishments/verify/LLFGAPSKTZ3A
       details: |
     - name: "R Programming, Johns Hopkins University"
       authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Programming Foundations with JavaScript, HTML & CSS, Duke"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Setting expectations & Assessing Performance Issues, UC Davis"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      time: 2016
+      link: https://coursera.org/share/ec6f87082b34ce5bd3c935c2b785d5b7
       details: |
     - name: "Coaching Conversations, University of California, Davis"
       authority: Coursera
       time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Java Programming: Solving Problems with Software, Duke Univ"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
-      details: |
-    - name: "Managing as a Coach, University of California, Davis"
-      authority: Coursera
-      time: 2020
-      link: https://www.google.com
+      link: https://www.coursera.org/account/accomplishments/verify/854AWKUAYRDH
       details: |
     - name: "Coaching Practices, University of California, Davis"
       authority: Coursera
-      time: 2020
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/UWGHHXEKKNCL
+      details: |
+    - name: "Data Management and Visualization, Wesleyan University"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/SNWR3DDAMQDA
+      details: |
+    - name: "Java Programming: Solving Problems with Software, Duke Univ"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/5GGYWAN9UZ5V
+      details: |
+    - name: "A crash course in Data Science, Johns Hopkins"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/A9PBXDCTMP6H
+      details: |
+    - name: "Managing as a Coach, University of California, Davis"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/B9D4CP8UYK38
+      details: |
+    - name: "Mastering Data Analysis in Excel, Duke University"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/2JHAKUAHJRPP
+      details: |
+    - name: "Programming Foundations with JavaScript, HTML & CSS, Duke"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/61cfbf4357f5769d2d1ea3dad2786a29
+#       https://www.coursera.org/account/accomplishments/verify/QC5UYULEU2L2
+      details: |
+    - name: "Setting expectations & Assessing Performance Issues, UC Davis"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/BF4WVJCW73GV
+      details: |
+    - name: "Introduction to R Programming, Microsoft Corporation"
+      authority: Coursera
+      time: 2016
       link: https://www.google.com
       details: |
+
 
 #     - name: Course Foo
 #       authority: Coursera
