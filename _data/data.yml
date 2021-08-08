@@ -140,10 +140,20 @@ projects:
       link: 
       details: |
         + Identifying customer segment, Udacity
-        + Tagging part of speech, Udacity 
-        + Isolation game playing agent, Udacity 
-        + Cargo route planning, Udacity 
+        
+        + Flying Taxi Business Case, Udacity
+        + Build a Scalable Data Strategy, Udacity
+        + Create an Iterative Design Path, Udacity
+        
+        + Facial Keypoint Detection, Udacity
+        + Image Captioning, Udacity
+        + Landmark Detection & Tracking (SLAM), Udacity
+        
+        + Part of Speech Tagging, Udacity 
+        + Build an Adversarial Game Playing Agent - Isolation game playing agent, Udacity 
+        + Build a Forward-Planning Agent - Cargo route planning, Udacity 
         + Sudoku solver, Udacity 
+
         + Twitter Sentiment Analysis 
         + Black Friday: Understanding the customer purchase behaviour, Analytics Vidhya 
         + Estimation of the audience score of movies, Coursera 
