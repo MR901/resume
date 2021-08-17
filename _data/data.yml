@@ -58,10 +58,31 @@ experiences:
       time1: Jun'19 - Present
       details: |
         Experience in this company:
-        + First
-        + Second
+        + ML labs v2 setup
+          - Defining ways to Work with ML projects and other applications having ML related features
+          - Brining sustainable practices for accelerated development while maintaining the agility  
+          - Planning phase of data governance, 3rd Party Data Annotators, Portal development for data tagging, selection and versioning, data collection experiment designs and pipelines.
+        + Estimating Growth Indicator of Chicken (POC)
+          - Estimating the weight and age of the chicken based on video recording done using the mobile camera.
+          - *Tags: Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
+        + Defective Nugget Detection and Accounting (POC then MVP)
+          - Defective Nugget Detection and Tracking on conveyor belt with output projected on display for manual removal.
+          - *Tags: Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
+        + HR Chatbot (Myco) (MVP)
+          - Initial product version was launched for Singapore and Australia with capability for form filling, ticket creation, ticket checking, easy data integration from excel sheet
+          - *Tags: Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
+        + Financial Commentary Generation (POC)
+          - A utility for table-to-text based on template method was developed for the initial stage, b/c of the lack and too much fragmentation of data source this approach was deemed fit.
+        + YOLO v5-v4 training and deployment integration on AWS suitable to multiple tailored needs.
+          - *Tags: Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
+        + Computer Vision Utility 
+          - Streamlit based web application for parsing, labelling, visualizing annotation, with support for Yolo prediction.
+          - Ability to connect work with local, S3 and pcloud storage.
+        + MiApp feature involving weather data visualization using the GIS data.
+        + Information Extraction from Ship Invoices (POC) 
+          - Extracting multiple information through the information that was shared in old and current emails.
+          - *Tags: Text-to-Table, Analytics; Regex, Python Email to DB*
 
-        ...
 
     - company: ShieldSquare (Radware)
       tag: full-time
@@ -74,33 +95,32 @@ experiences:
         Experience in this company:
         + ICLSSTA
             - Solely developed a framework, which develop and evaluate unsupervised learning solution in much depth and this from a single config file.
-            - *Tags: Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
-
+            - **Tags**: *Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
         + Adaptive Action Taking (AAT)
             - Developed a generalized module named which makes use of reinforcement learning to automatically take action on incoming traffic on the web property.
-            - *Tags: Reinforcement Learning, Multi-Armed Bandit, Smart handling of Business Limits, Self-Adjusting* 
+            - **Tags**: *Reinforcement Learning, Multi-Armed Bandit, Smart handling of Business Limits, Self-Adjusting* 
         + Deep Behaviour Analysis (IDBA)
             - Partially developed a module named Intent based, which utilizes LSTM to yield encoded features and scores that are used with supervised, anomaly and clustering.
-            - Tags: RNN, Auto-Encoder, Semi-Supervised Learning, Sequence Based Detection, Deep Learning 
+            - **Tags**: *RNN, Auto-Encoder, Semi-Supervised Learning, Sequence Based Detection, Deep Learning* 
         + Threshold Online Reinforcement (ThOR)
             - Helped developed a module named, which makes utilizes online learning to develop a probability score distribution over of isotonic regression for action taking.
-            - Tags: Isotonic Regression, Online Learning, Self-Adjusting, Smart handling of Business Limits 
-        +  - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
-            - Tags: Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis. 
+            - **Tags**: *Isotonic Regression, Online Learning, Self-Adjusting, Smart handling of Business Limits* 
+        + Second Level Module Integration
+            - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
+            - **Tags**: *Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis.* 
         + Titan Batch Analyser 
             - Developed and Implemented, which utilizes multiple browser signatures, behaviour based rules, regular expressions and databases to generate a suspiciousness score to take action on traffic.
-            - Tags: SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets 
+            - **Tags**: *SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets* 
         + Rule Scripts
             - Developed and Implemented multiple rules which were based on network, device and browser fingerprint, and behaviour of the visitors. These were adequately balanced between causal and correlated, yielding negligible FP. 
-            - Tags: Domain knowledge, Behaviour Analysis, Rules development 
+            - **Tags**: *Domain knowledge, Behaviour Analysis, Rules development* 
         + Rule Mining
             - Created a Recommendation System for the highlighting possible bad signature coming in the traffic. 
-            - Tags: Associate Rule Mining, Text Data Pre-processing 
-        + Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
-          Tags: SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing 
-        + Developing Dynamic Moving Collective Intelligence which can evolve while working across multiple sid. 
-
- 
+            - **Tags**: *Associate Rule Mining, Text Data Pre-processing* 
+        + Developing Dynamic Moving Collective Intelligence which can evolve while working across multiple sid.
+        + Other Works
+            - Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
+            - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
 
 
 
@@ -115,31 +135,36 @@ projects:
       link: 
       details: |
     - name: Edge Device based CV application for counting of sheets processed in a workshop
-      link:
+      link: https://youtu.be/ZMsrct_866k
       details: |
     - name: Text Detection and OCR
-      link:
+      link: 
       details: |
     - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
-      link:
+      link: https://youtu.be/HxUXtiWylH4
+      details: |
+    - name: Human Pose Estimation and Activity Recognition
+      link: https://youtu.be/Y7LCiZbOmNQ
+      details: |
+    - name: GIS Temperature and Precipitation Time based changes visualization
+      link: https://youtu.be/FeCqUZUwEZA
       details: |
     - name: WhatsApp based Chatbot (Hack around way)
-      link:
+      link: 
       details: |
     - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
-      link:
+      link: 
       details: |
     - name: Streamlit based threshold adjustment for object detector and annotation visualizer
-      link:
+      link: 
       details: |
-    - name: Unsupervised Learning Framework 
-      link:
+    - name: Supervised and Unsupervised Learning Framework 
+      link: 
       details: |
           Easy selection of basic data pre-processing, transformation, dimension reduction/clustering/anomaly algorithm selection or pipeline creation, hyperparameters setting, ensemble, and  EDA.
     - name: Other projects
       link: 
       details: |
-        + Identifying customer segment, Udacity
         
         + Flying Taxi Business Case, Udacity
         + Build a Scalable Data Strategy, Udacity
@@ -154,7 +179,8 @@ projects:
         + Build a Forward-Planning Agent - Cargo route planning, Udacity 
         + Sudoku solver, Udacity 
 
-        + Twitter Sentiment Analysis 
+        + Twitter Sentiment Analysis
+        + Identifying customer segment
         + Black Friday: Understanding the customer purchase behaviour, Analytics Vidhya 
         + Estimation of the audience score of movies, Coursera 
         + Predicting the way in which exercise were done, Coursera 
@@ -187,13 +213,13 @@ skills:
     + **Hardware**
         - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
 
-  levels:
-    - name: Skill A
-      level: 90
-    - name: Skill B
-      level: 80
-    - name: Skill C
-      level: 70
+#   levels:
+#     - name: Skill A
+#       level: 90
+#     - name: Skill B
+#       level: 80
+#     - name: Skill C
+#       level: 70
 
 education:
   display: true
