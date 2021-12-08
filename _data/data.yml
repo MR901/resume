@@ -82,7 +82,8 @@ experiences:
         + **Information Extraction from Ship Invoices (POC)**  
           - Extracting multiple information through the information that was shared in old and current emails.
           - **Tags**: Text-to-Table, Analytics; Regex, Python Email to DB*
-
+        &nbsp;
+        &nbsp;
 
     - company: ShieldSquare (Radware)
       tag: full-time
@@ -108,7 +109,7 @@ experiences:
         + **Second Level Module Integration**
             - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
             - **Tags**: *Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis.* 
-        + **Titan Batch Analyser **
+        + **Titan Batch Analyser**
             - Developed and Implemented, which utilizes multiple browser signatures, behaviour based rules, regular expressions and databases to generate a suspiciousness score to take action on traffic.
             - **Tags**: *SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets* 
         + **Rule Scripts**
@@ -121,7 +122,7 @@ experiences:
         + **Other Works**
             - Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
             - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
-
+        &nbsp;
 
 
 projects:
@@ -146,11 +147,11 @@ projects:
     - name: Image to Image Search - Flicker8k
       link: https://youtu.be/zV9rrC-mLGI
       details: |
-        &nbsp;&nbsp;&nbsp;&nbsp;Following Searchers were created
-        &nbsp;&nbsp;&nbsp;&nbsp;  1. RCH - Regional Color Histogram
-        &nbsp;&nbsp;&nbsp;&nbsp;  2. PTG - Pre Trained Grouping
-        &nbsp;&nbsp;&nbsp;&nbsp;  3. TAE - Trained Auto Encoder
-        &nbsp;&nbsp;&nbsp;&nbsp;  4. ICG - Image Caption Based Grouping (incomplete)
+        &nbsp;&nbsp;&nbsp;&nbsp;Following Searchers were created  
+        &nbsp;&nbsp;&nbsp;&nbsp;  1. RCH - Regional Color Histogram  
+        &nbsp;&nbsp;&nbsp;&nbsp;  2. PTG - Pre Trained Grouping  
+        &nbsp;&nbsp;&nbsp;&nbsp;  3. TAE - Trained Auto Encoder  
+        &nbsp;&nbsp;&nbsp;&nbsp;  4. ICG - Image Caption Based Grouping (incomplete)  
       
     - name: Image to Image Search - Jewellery
       link: https://youtu.be/DmrSy9Ivobc
@@ -490,9 +491,9 @@ patents:
   display: true
   title: Patent & Research Paper
   details: |
-    + First Author. “System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques”; us US20200099713A1. 
-    + Second Author. “System and method for detecting bots using semi-supervised deep learning techniques”; us US20200099714A1. 
-    + First Author. “Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties”, in International Journal for the Science and Technology of Polymers 2016.
+    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
+    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
+    + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
 
 languages:
   display: true
