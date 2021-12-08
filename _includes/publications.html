@@ -19,14 +19,14 @@
         <div class="item">
             {% if publication.title %}
             <p class="title" style="font-size:100%">
-                &nbsp;&nbsp;{{ publication.title }}
+                &nbsp;{{ publication.title }}
                 {% if publication.link %}
                 <small>[<a href="{{ publication.link }}" style="color:rgba(0,0,235,0.8);font-size:90%">demo link</a>]</small>
                 {% endif %}
             </p>
 
             {% if publication.authors %}
-            <div class="authors" style="font-size:90%">&nbsp;&nbsp;{{ publication.authors }}</div>
+            <div class="authors" style="font-size:90%">&nbsp;{{ publication.authors }}</div>
             {% endif %}
 
             {% if publication.conference %}
