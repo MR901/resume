@@ -19,15 +19,15 @@
         <div class="item">
             {% if project.name %}
             <p class="project">
-                {{ project.name }}
+                &nbsp;&nbsp;{{ project.name }}
                 {% if project.link %}
-                [<a href="{{ project.link }}" style="color:rgba(0,0,255,0.8);">demo link</a>]
+                <small>[<a href="{{ project.link }}" style="color:rgba(0,0,235,0.8);font-size:90%">demo link</a>]</small>
                 {% endif %}
             </p>
 
             {% if project.details %}
             <div class="details">
-                <div class="markdown" align="left" style="font-size:80%">
+                <div class="markdown" align="left" style="font-size:90%">
                     {{ project.details | markdownify }}
                 </div>
             </div>

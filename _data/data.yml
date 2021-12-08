@@ -58,30 +58,30 @@ experiences:
       time1: Jun'19 - Present
       details: |
         Experience in this company:
-        + ML labs v2 setup
+        + **ML labs v2 setup**
           - Defining ways to Work with ML projects and other applications having ML related features
           - Brining sustainable practices for accelerated development while maintaining the agility  
           - Planning phase of data governance, 3rd Party Data Annotators, Portal development for data tagging, selection and versioning, data collection experiment designs and pipelines.
-        + Estimating Growth Indicator of Chicken (POC)
+        + **Estimating Growth Indicator of Chicken (POC)**
           - Estimating the weight and age of the chicken based on video recording done using the mobile camera.
-          - *Tags: Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
-        + Defective Nugget Detection and Accounting (POC then MVP)
+          - **Tags**: Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
+        + **Defective Nugget Detection and Accounting (POC then MVP)**
           - Defective Nugget Detection and Tracking on conveyor belt with output projected on display for manual removal.
-          - *Tags: Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
-        + HR Chatbot (Myco) (MVP)
+          - **Tags**: Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
+        + **HR Chatbot (Myco) (MVP)**
           - Initial product version was launched for Singapore and Australia with capability for form filling, ticket creation, ticket checking, easy data integration from excel sheet
-          - *Tags: Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
-        + Financial Commentary Generation (POC)
+          - **Tags**: Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
+        + **Financial Commentary Generation (POC)**
           - A utility for table-to-text based on template method was developed for the initial stage, b/c of the lack and too much fragmentation of data source this approach was deemed fit.
-        + YOLO v5-v4 training and deployment integration on AWS suitable to multiple tailored needs.
-          - *Tags: Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
-        + Computer Vision Utility 
+        + **YOLOv5-v4** training and deployment integration on AWS suitable to multiple tailored needs.
+          - **Tags**: Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
+        + **Computer Vision Utility**
           - Streamlit based web application for parsing, labelling, visualizing annotation, with support for Yolo prediction.
           - Ability to connect work with local, S3 and pcloud storage.
         + MiApp feature involving weather data visualization using the GIS data.
-        + Information Extraction from Ship Invoices (POC) 
+        + **Information Extraction from Ship Invoices (POC)**  
           - Extracting multiple information through the information that was shared in old and current emails.
-          - *Tags: Text-to-Table, Analytics; Regex, Python Email to DB*
+          - **Tags**: Text-to-Table, Analytics; Regex, Python Email to DB*
 
 
     - company: ShieldSquare (Radware)
@@ -93,32 +93,32 @@ experiences:
       time2: Jun'17-Mar'18
       details: |
         Experience in this company:
-        + ICLSSTA
+        + **ICLSSTA**
             - Solely developed a framework, which develop and evaluate unsupervised learning solution in much depth and this from a single config file.
             - **Tags**: *Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
-        + Adaptive Action Taking (AAT)
+        + **Adaptive Action Taking (AAT)**
             - Developed a generalized module named which makes use of reinforcement learning to automatically take action on incoming traffic on the web property.
             - **Tags**: *Reinforcement Learning, Multi-Armed Bandit, Smart handling of Business Limits, Self-Adjusting* 
-        + Deep Behaviour Analysis (IDBA)
+        + **Deep Behaviour Analysis (IDBA)**
             - Partially developed a module named Intent based, which utilizes LSTM to yield encoded features and scores that are used with supervised, anomaly and clustering.
             - **Tags**: *RNN, Auto-Encoder, Semi-Supervised Learning, Sequence Based Detection, Deep Learning* 
-        + Threshold Online Reinforcement (ThOR)
+        + **Threshold Online Reinforcement (ThOR)**
             - Helped developed a module named, which makes utilizes online learning to develop a probability score distribution over of isotonic regression for action taking.
             - **Tags**: *Isotonic Regression, Online Learning, Self-Adjusting, Smart handling of Business Limits* 
-        + Second Level Module Integration
+        + **Second Level Module Integration**
             - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
             - **Tags**: *Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis.* 
-        + Titan Batch Analyser 
+        + **Titan Batch Analyser **
             - Developed and Implemented, which utilizes multiple browser signatures, behaviour based rules, regular expressions and databases to generate a suspiciousness score to take action on traffic.
             - **Tags**: *SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets* 
-        + Rule Scripts
+        + **Rule Scripts**
             - Developed and Implemented multiple rules which were based on network, device and browser fingerprint, and behaviour of the visitors. These were adequately balanced between causal and correlated, yielding negligible FP. 
             - **Tags**: *Domain knowledge, Behaviour Analysis, Rules development* 
-        + Rule Mining
+        + **Rule Mining**
             - Created a Recommendation System for the highlighting possible bad signature coming in the traffic. 
             - **Tags**: *Associate Rule Mining, Text Data Pre-processing* 
         + Developing Dynamic Moving Collective Intelligence which can evolve while working across multiple sid.
-        + Other Works
+        + **Other Works**
             - Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
             - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
 
@@ -146,11 +146,11 @@ projects:
     - name: Image to Image Search - Flicker8k
       link: https://youtu.be/zV9rrC-mLGI
       details: |
-        Following Searchers were created
-          1. RCH - Regional Color Histogram
-          2. PTG - Pre Trained Grouping
-          3. TAE - Trained Auto Encoder
-          4. ICG - Image Caption Based Grouping (incomplete)
+        &nbsp;&nbsp;&nbsp;&nbsp;Following Searchers were created
+        &nbsp;&nbsp;&nbsp;&nbsp;  1. RCH - Regional Color Histogram
+        &nbsp;&nbsp;&nbsp;&nbsp;  2. PTG - Pre Trained Grouping
+        &nbsp;&nbsp;&nbsp;&nbsp;  3. TAE - Trained Auto Encoder
+        &nbsp;&nbsp;&nbsp;&nbsp;  4. ICG - Image Caption Based Grouping (incomplete)
       
     - name: Image to Image Search - Jewellery
       link: https://youtu.be/DmrSy9Ivobc
@@ -187,32 +187,32 @@ projects:
     - name: Supervised and Unsupervised Learning Framework 
       link: 
       details: |
-          Easy selection of basic data pre-processing, transformation, dimension reduction/clustering/anomaly algorithm selection or pipeline creation, hyperparameters setting, ensemble, and  EDA.
+          &nbsp;&nbsp;&nbsp;&nbsp;Easy selection of basic data pre-processing, transformation, dimension reduction/clustering/anomaly algorithm selection or pipeline creation, hyperparameters setting, ensemble, and  EDA.
       
     - name: Other projects
       link: 
       details: |
         
-        + &nbsp;&nbsp;Flying Taxi Business Case, Udacity
-        + &nbsp;&nbsp;Build a Scalable Data Strategy, Udacity
-        + &nbsp;&nbsp;Create an Iterative Design Path, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Flying Taxi Business Case, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Build a Scalable Data Strategy, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Create an Iterative Design Path, Udacity
         
-        + &nbsp;&nbsp;Facial Keypoint Detection, Udacity
-        + &nbsp;&nbsp;Image Captioning, Udacity
-        + &nbsp;&nbsp;Landmark Detection & Tracking (SLAM), Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Facial Keypoint Detection, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Image Captioning, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Landmark Detection & Tracking (SLAM), Udacity
         
-        + &nbsp;&nbsp;Part of Speech Tagging, Udacity 
-        + &nbsp;&nbsp;Build an Adversarial Game Playing Agent - Isolation game playing agent, Udacity 
-        + &nbsp;&nbsp;Build a Forward-Planning Agent - Cargo route planning, Udacity 
-        + &nbsp;&nbsp;Sudoku solver, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Part of Speech Tagging, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Build an Adversarial Game Playing Agent - Isolation game playing agent, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Build a Forward-Planning Agent - Cargo route planning, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Sudoku solver, Udacity 
 
-        + Twitter Sentiment Analysis
-        + Identifying customer segment
-        + Black Friday: Understanding the customer purchase behaviour, Analytics Vidhya 
-        + Estimation of the audience score of movies, Coursera 
-        + Predicting the way in which exercise were done, Coursera 
-        + Forecasting bike rental demand in the Capital Bike Sharing Program, Kaggle 
-        + Predicting Survival on the Titanic, Kaggle
+        + &nbsp;&nbsp;&nbsp;&nbsp;Twitter Sentiment Analysis
+        + &nbsp;&nbsp;&nbsp;&nbsp;Identifying customer segment
+        + &nbsp;&nbsp;&nbsp;&nbsp;Black Friday: Understanding the customer purchase behaviour, Analytics Vidhya 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Estimation of the audience score of movies, Coursera 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Predicting the way in which exercise were done, Coursera 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Forecasting bike rental demand in the Capital Bike Sharing Program, Kaggle 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Predicting Survival on the Titanic, Kaggle
 
 #     - name: Foo
 #       link: https://www.google.com
@@ -519,7 +519,7 @@ interests:
       link:
 
 evaluation:
-  display: true
+  display: false
   title: Self-evaluation
   details: |
     Here is my self evaluation.
