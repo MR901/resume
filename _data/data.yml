@@ -220,6 +220,94 @@ projects:
 #       details: |
 #         Project Foo's detail, you can write markdown format text.
 
+publications:
+  display: true
+  title: Python Libraries
+  intro: |
+    This is all the libraries that I wrote.
+
+  items:
+    - title: 1. Algorithmic Machine Learning Exploration and Exploitation Tool (AMLEET)
+      authors: Mohit Rajput 
+      # conference: Foobar, 2019
+      # link: https://www.google.com
+      details: |
+        A personal library compromised of general code base for faster develoment. It supports the following.
+        + **General**: Code Visual in Terminal; operations reated to list, dict, datetime, pandas and numpy; Runtime python cmdline support; Git status info; system performance; and many more.
+        + **Logger**: Initializing, Method.
+        + **Configuration**: Generator; Accepts json, yaml, cmdline, configparser and dict; Merge multiple configs; etc
+        + **Notifications**: Support sending Emails and SMS
+        + **Storage**: Ability to work with datalakes such as Pcloud, S3.
+        + **DB Support**: Provides functionalities to work with tables and DB. Additionally support GoogleBQ.
+        + **Computer Vision**:  
+          + General
+          + Work With Streams
+          + Color Threshold
+          + Draw on Frame
+          + Manipulate Frame
+          + Image Transformation for Transfer
+          + Video to Images
+          + Images to Videos or GIF
+          + Annotation Conversions and Plotting
+          + Image Pixel Standardizations
+          + Multi Face Detection
+          + Multi Face Landmark
+          + Multi Recognition - best selection
+          + Multi Pose Estimation
+          + Training Data Creation
+        + **NLP**:
+          + Text Cleaning 
+          + EDA
+          + Embedding Creation
+        + **Tables**
+          + Feature Analysis
+          + Custom Scaling and Transformation
+          + EDA
+          + Transformation
+        + **Supervised & Unsupervised Learning**
+          + Wrapper on scikit-learn
+          + Anomaly and outlier Detection 
+          + Custom Algorithm support
+          + Framework to support config to select suitable algorithm and params
+          + Ensembling
+          + Support for multiple metadata export
+        + **Evaluation**
+          + Regression
+          + Classification
+          + Object Detection
+        + **Sections Still in Development**
+          + Redis Integration
+          + GIS Data Support
+          + Time Series
+          + Network information extraction
+        &nbsp;‎ &nbsp;  
+        &nbsp;‎ &nbsp;  
+
+
+    - title: 2. COCO Transformation Utility (CTU)
+      authors: Mohit Rajput 
+      # conference: Foobar, 2019
+      # link:
+      details: |
+        Developed as a part of ML-Labs@Cargill. Awaiting for approval to be released as open source.
+        + Enable modifying your COCO annotations similair to the transformation applied to the images.
+        + Provides the capabilty to have augmented images and annoations.
+        + Ability to plot multiple annoations on images.
+        &nbsp;‎ &nbsp;  
+
+    # - title: The Art of Bar
+    #   authors: Foo Bar
+    #   conference: Foobar, 2019
+    #   link:
+
+patents:
+  display: true
+  title: Patent & Research Paper
+  details: |
+    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
+    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
+    + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
+
 skills:
   display: true
   title: Tools & Skills
@@ -470,91 +558,6 @@ certificates:
 #       link:
 #       details: |
 #         It's my Course Foo certificate by coursera.
-
-publications:
-  display: true
-  title: Python Libraries
-  intro: |
-    This is all the libraries that I wrote.
-
-  items:
-    - title: Algorithmic Machine Learning Exploration and Exploitation Tool (AMLEET)
-      authors: Mohit Rajput 
-      # conference: Foobar, 2019
-      # link: https://www.google.com
-      details: |
-        A personal library compromised of general code base for faster develoment. It supports the following.
-        + **General**: Code Visual in Terminal; operations reated to list, dict, datetime, pandas and numpy; Runtime python cmdline support; Git status info; system performance; and many more.
-        + **Logger**: Initializing, Method.
-        + **Configuration**: Generator; Accepts json, yaml, cmdline, configparser and dict; Merge multiple configs; etc
-        + **Notifications**: Support sending Emails and SMS
-        + **Storage**: Ability to work with datalakes such as Pcloud, S3.
-        + **DB Support**: Provides functionalities to work with tables and DB. Additionally support GoogleBQ.
-        + **Computer Vision**:  
-          + General
-          + Work With Streams
-          + Color Threshold
-          + Draw on Frame
-          + Manipulate Frame
-          + Image Transformation for Transfer
-          + Video to Images
-          + Images to Videos or GIF
-          + Annotation Conversions and Plotting
-          + Image Pixel Standardizations
-          + Multi Face Detection
-          + Multi Face Landmark
-          + Multi Recognition - best selection
-          + Multi Pose Estimation
-          + Training Data Creation
-        + **NLP**:
-          + Text Cleaning 
-          + EDA
-          + Embedding Creation
-        + **Tables**
-          + Feature Analysis
-          + Custom Scaling and Transformation
-          + EDA
-          + Transformation
-        + **Supervised & Unsupervised Learning**
-          + Wrapper on scikit-learn
-          + Anomaly and outlier Detection 
-          + Custom Algorithm support
-          + Framework to support config to select suitable algorithm and params
-          + Ensembling
-          + Support for multiple metadata export
-        + **Evaluation**
-          + Regression
-          + Classification
-          + Object Detection
-        + **Sections Still in Development**
-          + Redis Integration
-          + GIS Data Support
-          + Time Series
-          + Network information extraction
-
-
-    - title: COCO Transformation Utility
-      authors: Mohit Rajput 
-      # conference: Foobar, 2019
-      # link:
-      details: |
-        Developed as a part of ML-Labs@Cargill. Awaiting for approval to be released as open source.
-        + Enable modifying your COCO annotations similair to the transformation applied to the images.
-        + Provides the capabilty to have augmented images and annoations.
-        + Ability to plot multiple annoations on images.
-
-    # - title: The Art of Bar
-    #   authors: Foo Bar
-    #   conference: Foobar, 2019
-    #   link:
-
-patents:
-  display: true
-  title: Patent & Research Paper
-  details: |
-    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
-    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
-    + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
 
 languages:
   display: true
