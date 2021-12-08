@@ -21,17 +21,18 @@
             <p class="project">
                 {{ project.name }}
                 {% if project.link %}
-                [<a href="{{ project.link }}">demo link</a>]
+                [<a href="{{ project.link }}" style="color:rgba(0,0,255,0.8);">demo link</a>]
                 {% endif %}
             </p>
 
             {% if project.details %}
             <div class="details">
-                <div class="markdown">
+                <div class="markdown" align="left" style="font-size:80%">
                     {{ project.details | markdownify }}
                 </div>
             </div>
             {% endif %}
+            
             {% endif %}
         </div>
         {% endfor %}

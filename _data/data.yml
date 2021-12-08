@@ -134,12 +134,15 @@ projects:
     - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
       link: 
       details: |
+      
     - name: Edge Device based CV application for counting of sheets processed in a workshop
       link: https://youtu.be/ZMsrct_866k
       details: |
+      
     - name: Sticker Detection and OCR
       link: https://youtu.be/de7EYj7bFEI
       details: |
+      
     - name: Image to Image Search - Flicker8k
       link: https://youtu.be/zV9rrC-mLGI
       details: |
@@ -148,50 +151,60 @@ projects:
           2. PTG - Pre Trained Grouping
           3. TAE - Trained Auto Encoder
           4. ICG - Image Caption Based Grouping (incomplete)
+      
     - name: Image to Image Search - Jewellery
       link: https://youtu.be/DmrSy9Ivobc
       details: |
+      
     - name: Accounting for Pipe Bundles being Exported
       link: https://youtu.be/hJdGpM8_ADo
       details: |
+      
     - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
       link: https://youtu.be/HxUXtiWylH4
       details: |
+      
     - name: Human Pose Estimation and Activity Recognition
       link: https://youtu.be/Y7LCiZbOmNQ
       details: |
+      
     - name: GIS Temperature and Precipitation Time based changes visualization
       link: https://youtu.be/FeCqUZUwEZA
       details: |
+      
     - name: WhatsApp based Chatbot (Hack around way)
       link: 
       details: |
+      
     - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
       link: 
       details: |
+      
     - name: Streamlit based threshold adjustment for object detector and annotation visualizer
       link: 
       details: |
+      
     - name: Supervised and Unsupervised Learning Framework 
       link: 
       details: |
           Easy selection of basic data pre-processing, transformation, dimension reduction/clustering/anomaly algorithm selection or pipeline creation, hyperparameters setting, ensemble, and  EDA.
+      
     - name: Other projects
       link: 
       details: |
         
-        + Flying Taxi Business Case, Udacity
-        + Build a Scalable Data Strategy, Udacity
-        + Create an Iterative Design Path, Udacity
+        + &nbsp;&nbsp;Flying Taxi Business Case, Udacity
+        + &nbsp;&nbsp;Build a Scalable Data Strategy, Udacity
+        + &nbsp;&nbsp;Create an Iterative Design Path, Udacity
         
-        + Facial Keypoint Detection, Udacity
-        + Image Captioning, Udacity
-        + Landmark Detection & Tracking (SLAM), Udacity
+        + &nbsp;&nbsp;Facial Keypoint Detection, Udacity
+        + &nbsp;&nbsp;Image Captioning, Udacity
+        + &nbsp;&nbsp;Landmark Detection & Tracking (SLAM), Udacity
         
-        + Part of Speech Tagging, Udacity 
-        + Build an Adversarial Game Playing Agent - Isolation game playing agent, Udacity 
-        + Build a Forward-Planning Agent - Cargo route planning, Udacity 
-        + Sudoku solver, Udacity 
+        + &nbsp;&nbsp;Part of Speech Tagging, Udacity 
+        + &nbsp;&nbsp;Build an Adversarial Game Playing Agent - Isolation game playing agent, Udacity 
+        + &nbsp;&nbsp;Build a Forward-Planning Agent - Cargo route planning, Udacity 
+        + &nbsp;&nbsp;Sudoku solver, Udacity 
 
         + Twitter Sentiment Analysis
         + Identifying customer segment
