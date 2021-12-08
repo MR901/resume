@@ -1,6 +1,6 @@
 basic:
   name: Mohit Rajput
-  title: Machine Learning Software Engineer
+  title: Machine Learning Software Engineer | AI/ML/DL | IIT Roorkee
   avatar:
     display: true
     path: profile_pic.png
@@ -472,20 +472,32 @@ certificates:
 #         It's my Course Foo certificate by coursera.
 
 publications:
-  display: false
-  title: Publications
+  display: true
+  title: Python Libraries
   intro: |
-    This is all the books I wrote.
+    This is all the libraries that I wrote.
 
   items:
-    - title: Foo in Action
-      authors: Foo Bar
-      conference: Foobar, 2019
-      link: https://www.google.com
-    - title: The Art of Bar
-      authors: Foo Bar
-      conference: Foobar, 2019
-      link:
+    - title: Algorithmic Machine Learning Exploration and Exploitation Tool (AMLEET)
+      authors: Mohit Rajput 
+      # conference: Foobar, 2019
+      # link: https://www.google.com
+      details: |
+        + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
+        + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
+        + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
+
+    - title: COCO Transformation Utility
+      authors: Mohit Rajput 
+      # conference: Foobar, 2019
+      # link:
+      details: |
+        + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
+
+    # - title: The Art of Bar
+    #   authors: Foo Bar
+    #   conference: Foobar, 2019
+    #   link:
 
 patents:
   display: true

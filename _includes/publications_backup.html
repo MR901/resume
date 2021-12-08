@@ -18,10 +18,11 @@
         {% for publication in publications.items %}
         <div class="item">
             {% if publication.title %}
-            <p class="title" style="font-size:90%">
-                &nbsp;&nbsp;{{ publication.title }}
+            <p class="title">
                 {% if publication.link %}
-                <small>[<a href="{{ publication.link }}" style="color:rgba(0,0,235,0.8);font-size:90%">demo link</a>]</small>
+                <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
+                {% else %}
+                {{ publication.title }}
                 {% endif %}
             </p>
 
@@ -32,16 +33,6 @@
             {% if publication.conference %}
             <div class="conference">{{ publication.conference }}</div>
             {% endif %}
-            
-            {% if publication.details %}
-            <div class="details">
-                <div class="markdown" align="left" style="font-size:90%">
-                    {{ publication.details | markdownify }}
-                </div>
-            </div>
-            {% endif %}
-
-
             {% endif %}
         </div>
         {% endfor %}
