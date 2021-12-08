@@ -137,8 +137,22 @@ projects:
     - name: Edge Device based CV application for counting of sheets processed in a workshop
       link: https://youtu.be/ZMsrct_866k
       details: |
-    - name: Text Detection and OCR
-      link: 
+    - name: Sticker Detection and OCR
+      link: https://youtu.be/de7EYj7bFEI
+      details: |
+    - name: Image to Image Search - Flicker8k
+      link: https://youtu.be/zV9rrC-mLGI
+      details: |
+        Following Searchers were created
+          1. RCH - Regional Color Histogram
+          2. PTG - Pre Trained Grouping
+          3. TAE - Trained Auto Encoder
+          4. ICG - Image Caption Based Grouping (incomplete)
+    - name: Image to Image Search - Jewellery
+      link: https://youtu.be/DmrSy9Ivobc
+      details: |
+    - name: Accounting for Pipe Bundles being Exported
+      link: https://youtu.be/hJdGpM8_ADo
       details: |
     - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
       link: https://youtu.be/HxUXtiWylH4
@@ -487,6 +501,8 @@ interests:
     - item: PC Gaming
       link:
     - item: Bike Trips
+      link:
+    - item: Travelling
       link:
 
 evaluation:
