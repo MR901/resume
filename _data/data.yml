@@ -1,6 +1,6 @@
 basic:
   name: Mohit Rajput
-  title: Machine Learning Software Engineer | AI/ML/DL | IIT Roorkee
+  title: Machine Learning Software Engineer | Data Scientist | AI/ML/DL | IIT Roorkee
   avatar:
     display: true
     path: profile_pic.png
@@ -51,6 +51,35 @@ experiences:
   display: true
   title: Experiences
   items:
+    - company: Analytics Technology and Engineering (ATE), Amazon Seller Services Private Limited
+      tag: full-time
+      location: Bangalore
+      role1: Data Scientist II 
+      time1: Apr'22 - Present
+      details: |
+        Experience in this company:
+        + **Day Ahead Capcity Planning**
+          - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
+          - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
+          - **Tags**: Time Series, Curve Matching, ML, Sagemaker, EC2, Lambda, Event Bridge, S3, Dashboard*
+        + **Common Utilities Python Lib (v1)**
+          - A simple library that contains the common utilities to be used as part of multiple projects.geography
+          - Credential Keeping and Retrieving: This is based on AWS Secret Manager 
+          - SQL Query Executor: Run SQL jobs while capturing and providing the job stats and logging them too.
+          - Logger: A file and table based logger wrapper
+          - S3 Interaction: A wrapper containing functions for S3 based utility.
+          - Operations: A set of certain class & functions for Path, Time, & Math related Operations
+          - Data Evaluation & Clustering: Functions to evaluate & show performance of Regression & class based data in much greator details.
+          - Data Analysis: Function to identify Missing data wrt to groups, plotting the data etc were present.
+          - Document Interaction: ability to connect & retrieve data from Quip
+          - **Tags**: AWS Services, DB, SQL, Evaluation, Logging, Analyis, data pipeline*
+        + **Capacity Planning Performance Evaluation, Analysis & Dashboard**
+          - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
+          - Helps better evaluate multiple component of delivery at multiple country, station, ship methods and cycles
+          - **Tags**: Time Series, EC2, QuickSight, S3, Excel*
+        &nbsp;‎ &nbsp;    
+        &nbsp;‎ &nbsp;  
+
     - company: Cargill Digital Labs, Cargill
       tag: full-time
       location: Bangalore
