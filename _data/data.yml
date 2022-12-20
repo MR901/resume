@@ -137,7 +137,7 @@ experiences:
             - **Tags**: *Isotonic Regression, Online Learning, Self-Adjusting, Smart handling of Business Limits* 
         + **Second Level Module Integration**
             - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
-            - **Tags**: *Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis.* 
+            - **Tags**: *Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis* 
         + **Titan Batch Analyser**
             - Developed and Implemented, which utilizes multiple browser signatures, behaviour based rules, regular expressions and databases to generate a suspiciousness score to take action on traffic.
             - **Tags**: *SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets* 
@@ -346,7 +346,6 @@ skills:
         - R, SAS, JAVA, C++
     + **Other**
       -  APIs, Google Big Query, Docker, Selenium, Redis, Grafana, Kibana, HTML, CSS
-# -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
     + **Databases**
         - SQL, No-SQL
     + **Software**
@@ -358,6 +357,7 @@ skills:
     + **Hardware**
         - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
 
+# -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
 #   levels:
 #     - name: Skill A
 #       level: 90
