@@ -61,7 +61,7 @@ experiences:
         + **Day Ahead Capcity Planning**
           - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
           - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
-          - **Tags**: Time Series, Curve Matching, ML, Sagemaker, EC2, Lambda, Event Bridge, S3, Dashboard*
+          - **Tags**: *Time Series, Curve Matching, ML, Sagemaker, EC2, Lambda, Event Bridge, S3, Dashboard*
         + **Common Utilities Python Lib (v1)**
           - A simple library that contains the common utilities to be used as part of multiple projects.geography
           - Credential Keeping and Retrieving: This is based on AWS Secret Manager 
@@ -72,11 +72,11 @@ experiences:
           - Data Evaluation & Clustering: Functions to evaluate & show performance of Regression & class based data in much greator details.
           - Data Analysis: Function to identify Missing data wrt to groups, plotting the data etc were present.
           - Document Interaction: ability to connect & retrieve data from Quip
-          - **Tags**: AWS Services, DB, SQL, Evaluation, Logging, Analyis, data pipeline*
+          - **Tags**: *AWS Services, DB, SQL, Evaluation, Logging, Analyis, data pipeline*
         + **Capacity Planning Performance Evaluation, Analysis & Dashboard**
           - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
           - Helps better evaluate multiple component of delivery at multiple country, station, ship methods and cycles
-          - **Tags**: Time Series, EC2, QuickSight, S3, Excel*
+          - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
@@ -93,24 +93,24 @@ experiences:
           - Planning phase of data governance, 3rd Party Data Annotators, Portal development for data tagging, selection and versioning, data collection experiment designs and pipelines.
         + **Estimating Growth Indicator of Chicken (POC)**
           - Estimating the weight and age of the chicken based on video recording done using the mobile camera.
-          - **Tags**: Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
+          - **Tags**: *Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
         + **Defective Nugget Detection and Accounting (POC then MVP)**
           - Defective Nugget Detection and Tracking on conveyor belt with output projected on display for manual removal.
-          - **Tags**: Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
+          - **Tags**: *Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
         + **HR Chatbot (Myco) (MVP)**
           - Initial product version was launched for Singapore and Australia with capability for form filling, ticket creation, ticket checking, easy data integration from excel sheet
-          - **Tags**: Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
+          - **Tags**: *Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
         + **Financial Commentary Generation (POC)**
           - A utility for table-to-text based on template method was developed for the initial stage, b/c of the lack and too much fragmentation of data source this approach was deemed fit.
         + **YOLOv5-v4** training and deployment integration on AWS suitable to multiple tailored needs.
-          - **Tags**: Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
+          - **Tags**: *Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
         + **Computer Vision Utility**
           - Streamlit based web application for parsing, labelling, visualizing annotation, with support for Yolo prediction.
           - Ability to connect work with local, S3 and pcloud storage.
         + MiApp feature involving weather data visualization using the GIS data.
         + **Information Extraction from Ship Invoices (POC)**  
           - Extracting multiple information through the information that was shared in old and current emails.
-          - **Tags**: Text-to-Table, Analytics; Regex, Python Email to DB*
+          - **Tags**: *Text-to-Table, Analytics; Regex, Python Email to DB*
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
@@ -345,13 +345,14 @@ skills:
     + **Other Language**
         - R, SAS, JAVA, C++
     + **Other**
-        -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
+      -  APIs, Google Big Query, Docker, Selenium, Redis, Grafana, Kibana, HTML, CSS
+# -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
     + **Databases**
         - SQL, No-SQL
     + **Software**
         - Tableau, Excel, XLMiner, Spyder, Jupyter Notebook, RStudio, Gimp, SolidWorks
     + **Cloud Computing Services**
-        - Google Cloud Platform, Amazon Web Services
+        - Google Cloud Platform, Amazon Web Services, Microservices Architecture
     + **Cloud Data lakes**
         - S3, Cloud Storage, Drive, Pcloud
     + **Hardware**
