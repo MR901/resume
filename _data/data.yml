@@ -9,7 +9,7 @@ contact:
   email: mohitrajput901@gmail.com
   phone: +91-89795-72630
   wechat:
-  whatsapp:
+  whatsapp: +91-89795-72630
   telegram:
   website:
   medium:
@@ -51,11 +51,26 @@ experiences:
   display: true
   title: Experiences
   items:
-    - company: Analytics Technology and Engineering (ATE), Amazon Seller Services Private Limited
+    - company: CandorHealth
+      tag: full-time
+      location: Bangalore
+      role1: Senior Machine Learning Software Engineer 
+      time1: Mar'23 - Present
+      details: |
+        Experience in this company:
+        + **National Provider Identifier (NPI) Filler services for the missing NPI**
+          - Filled in the missing information for multiple cases of Healthcare provider by utilizing the data available from data source.
+          - **Tags**: *Identity Resolution, Similarity Mapping, Search, Parallel Processing, Big Data, APIs, Redis, Spark*
+        &nbsp;‎ &nbsp;    
+        &nbsp;‎ &nbsp;  
+
+    - company: Amazon Seller Services Private Limited - Analytics Technology and Engineering (ATE)
       tag: full-time
       location: Bangalore
       role1: Data Scientist II 
-      time1: Apr'22 - Present
+      time1: Apr'22 - Jan'23
+      role2: Engineer
+      time2: Feb'23 - Mar'23
       details: |
         Experience in this company:
         + **Day Ahead Capcity Planning**
@@ -77,10 +92,15 @@ experiences:
           - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
           - Helps better evaluate multiple component of delivery at multiple country, station, ship methods and cycles
           - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
+
+        + **Engg >> to add**
+          - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights.
+          - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
+          
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
-    - company: Cargill Digital Labs, Cargill
+    - company: Cargill - Cargill Digital Labs
       tag: full-time
       location: Bangalore
       role1: Machine Learning Software Engineer 
@@ -114,12 +134,12 @@ experiences:
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
-    - company: ShieldSquare (Radware)
+    - company: ShieldSquare (Radware) - Reseach and Development Team
       tag: full-time
       location: Bangalore
       role1: Data Scientist – R&D
       time1: Apr'18-May'19
-      role2: Associate Research Engineer – R&D
+      role2: Associate Data Scientist – R&D
       time2: Jun'17-Mar'18
       details: |
         Experience in this company:
@@ -161,6 +181,7 @@ projects:
     This is all the projects I'm involved in.
 
   items:
+
     - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
       link: 
       details: |
@@ -208,6 +229,10 @@ projects:
       
     - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
       link: 
+      details: |
+      
+    - name: Streamlit deployed app for basic Computer Vision applications.
+      link: https://computer-vision-util.streamlit.app/
       details: |
       
     - name: Streamlit based threshold adjustment for object detector and annotation visualizer
@@ -311,12 +336,11 @@ publications:
           + Network information extraction
         &nbsp;‎ &nbsp;  
         &nbsp;‎ &nbsp;  
-
-
+      
     - title: 2. COCO Transformation Utility (CTU)
-      # authors: Mohit Rajput 
+      authors: Mohit Rajput 
       # conference: Foobar, 2019
-      # link:
+      link: https://pypi.org/project/ctu/
       details: |
         &nbsp;‎&nbsp;‎Developed as a part of ML-Labs@Cargill. Awaiting for approval to be released as open source.
         + Enable modifying your COCO annotations similair to the transformation applied to the images.
@@ -327,7 +351,7 @@ publications:
     #   authors: Foo Bar
     #   conference: Foobar, 2019
     #   link:
-
+      
 patents:
   display: true
   title: Patent & Research Paper
@@ -335,7 +359,7 @@ patents:
     + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
     + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
     + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
-
+      
 skills:
   display: true
   title: Tools & Skills
@@ -356,7 +380,7 @@ skills:
         - S3, Cloud Storage, Drive, Pcloud
     + **Hardware**
         - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
-
+      
 # -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
 #   levels:
 #     - name: Skill A
@@ -385,195 +409,233 @@ education:
             + Operations
             + Financial Management
             + Behaviour Psychology
-
+      
     - university: Udacity - Data Product Manager
       time: 2021
       major: 
       degree: Nano Degrees
       details: https://confirm.udacity.com/QGUGJTSK
-
+      
     - university: Udacity - Computer Vision
       time: 2020
       major: 
       degree: Nano Degrees
       details: https://confirm.udacity.com/4DMWY73G
-
+      
     - university: Udacity - Artificial Intelligence
       time: 2018
       major: 
       degree: Nano Degrees
       details: https://confirm.udacity.com/KGCWC7NW
-
-
+      
 certificates:
   display: true
   title: Certificates
   items:
+
+    - name: "Introduction to Machine Learning in Production"
+      authority: Coursera
+      time: 2022
+      link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
+      details: |
+
+    - name: "Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract"
+      authority: Coursera
+      time: 2021
+      link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
+      details: |
+#     https://coursera.org/share/b8c104fdf7afa84fa1cc279d747d38c4
+
+    - name: "Neural Networks and Deep Learning, DeepLearning.AI"
+      authority: Coursera
+      time: 2020
+      link: https://coursera.org/share/92aafe4a3474d94117ab73a9420afe82
+      details: |
+
     - name: "Deep Learning and NLP A-Z: How to Create a ChatBot"
       authority: Udemy
       time: 2020
-      link: https://www.google.com
+      link: https://www.udemy.com/certificate/UC-PUMKBSE1/
       details: |
+
     - name: "Artificial Intelligence A-Z: Learn How To Build An AI"
       authority: Udemy
       time: 2020
       link: https://www.google.com
       details: |
-    - name: "Real-time OCR and Text Detection"
-      authority: Coursera
-      time: 2021
-      link: https://coursera.org/share/b8c104fdf7afa84fa1cc279d747d38c4
-      details: |
-    - name: "Neural Networks and Deep Learning, DeepLearning.AI"
-      authority: Coursera
-      time: 2021
-      link: https://coursera.org/share/92aafe4a3474d94117ab73a9420afe82
-      details: |
+
     - name: "Business Fundamentals: Corporate Strategy"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-AP3ABEGX/
       details: |
+
     - name: "Deep Learning with TensorFlow 2.0"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-6M01FJV2/
       details: |
+
     - name: "Deep Learning: Advanced NLP and RNNs"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-FK7VUTER/
       details: |
+
     - name: "Deep Learning and Computer Vision A-Z: OpenCV, SSD & GANs"
       authority: Udemy
       time: 2018
       link: https://www.udemy.com/certificate/UC-ZQF4NUHP/
       details: |
+
     - name: "Deep Learning A-Z: Hands-On Artificial Neural Network"
       authority: Coursera
       time: 2018
       link: https://www.udemy.com/certificate/UC-PUMKBSE1/
       details: |
+
     - name: "Machine Learning A-Z: Hands-On Python & R in Data Science"
       authority: Udemy
       time: 2017
       link: https://www.udemy.com/certificate/UC-76HXNV9U/
       details: |
+
     - name: "Statistics for Business Analytics A-Z"
       authority: Udemy
       time: 2017
       link: https://www.udemy.com/certificate/UC-OOVF3D0D/
       details: |
+
     - name: "Big Data Integration and Processing, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
       details: |
+
     - name: "Big Data Modeling and Management System, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
       details: |
 #       https://www.coursera.org/account/accomplishments/certificate/VZ3PX9CV2Y8Z
+
     - name: "Introduction to Data Analytics for Business, University of Colorado"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/431a53339ca34da0776464e0742a15ed
-#       https://www.coursera.org/account/accomplishments/certificate/K9MNKJXVKCZJ
       details: |
+#       https://www.coursera.org/account/accomplishments/certificate/K9MNKJXVKCZJ
+
     - name: "Introduction to Big Data, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/a5966ae7f1093d28cabdc2d0d56c96f0
-#       https://www.coursera.org/account/accomplishments/certificate/QLJD4FLJJLVV
       details: |
+#       https://www.coursera.org/account/accomplishments/certificate/QLJD4FLJJLVV
+
     - name: "Customer Analytics, University of Pennsylvania"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/c3761defcff1a28328abb5d12e23f0ae
-#       https://www.coursera.org/account/accomplishments/certificate/6APN86VXXFKJ
       details: |
+#       https://www.coursera.org/account/accomplishments/certificate/6APN86VXXFKJ
+
     - name: "Practical Machine Learning, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/7295b164f5bf12044ebea79a7809cf24
-#       https://www.coursera.org/account/accomplishments/verify/MZP92JQR2CMT
       details: |
+#       https://www.coursera.org/account/accomplishments/verify/MZP92JQR2CMT
+
     - name: "Linear Regression and Modelling, Duke University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
-#       https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
       details: |
+#       https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
+
     - name: "Building a Data Science Team, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/2b8f08e4f99182d5ff882c2de2ff208e
-#       https://www.coursera.org/account/accomplishments/verify/B8PMWCU3PGP3
       details: |
+#       https://www.coursera.org/account/accomplishments/verify/B8PMWCU3PGP3
+
     - name: "Data Science in Real Life, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/ee48db7b7cbe7d12ad3cee24281d45b7
-#       https://www.coursera.org/account/accomplishments/verify/6P9E75GJZHD4
       details: |
+#       https://www.coursera.org/account/accomplishments/verify/6P9E75GJZHD4
+
     - name: "Managing Data Analysis, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/0b95afa85e3ba653c34aa2206f84c5ae
-#       https://www.coursera.org/account/accomplishments/verify/LLFGAPSKTZ3A
       details: |
+#       https://www.coursera.org/account/accomplishments/verify/LLFGAPSKTZ3A
+
     - name: "R Programming, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/ec6f87082b34ce5bd3c935c2b785d5b7
       details: |
+
     - name: "Coaching Conversations, University of California, Davis"
       authority: Coursera
       time: 2020
       link: https://www.coursera.org/account/accomplishments/verify/854AWKUAYRDH
       details: |
+
     - name: "Coaching Practices, University of California, Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/UWGHHXEKKNCL
       details: |
+
     - name: "Data Management and Visualization, Wesleyan University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/SNWR3DDAMQDA
       details: |
+
     - name: "Java Programming: Solving Problems with Software, Duke Univ"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/5GGYWAN9UZ5V
       details: |
+
     - name: "A crash course in Data Science, Johns Hopkins"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/A9PBXDCTMP6H
       details: |
+
     - name: "Managing as a Coach, University of California, Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/B9D4CP8UYK38
       details: |
+
     - name: "Mastering Data Analysis in Excel, Duke University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/2JHAKUAHJRPP
       details: |
+
     - name: "Programming Foundations with JavaScript, HTML & CSS, Duke"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/61cfbf4357f5769d2d1ea3dad2786a29
-#       https://www.coursera.org/account/accomplishments/verify/QC5UYULEU2L2
       details: |
+#       https://www.coursera.org/account/accomplishments/verify/QC5UYULEU2L2
+
     - name: "Setting expectations & Assessing Performance Issues, UC Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/BF4WVJCW73GV
       details: |
+
     - name: "Introduction to R Programming, Microsoft Corporation"
       authority: Coursera
       time: 2016
