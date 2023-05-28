@@ -52,7 +52,7 @@ experiences:
   title: Experiences
   items:
     - company: CandorHealth
-      tag: full-time
+      tag: Full-time
       location: Bangalore
       role1: Senior Machine Learning Software Engineer 
       time1: Mar'23 - Present
@@ -65,7 +65,7 @@ experiences:
         &nbsp;‎ &nbsp;  
 
     - company: Amazon Seller Services Private Limited - Analytics Technology and Engineering (ATE)
-      tag: full-time
+      tag: Full-time
       location: Bangalore
       role1: Data Scientist II 
       time1: Apr'22 - Jan'23
@@ -73,7 +73,7 @@ experiences:
       time2: Feb'23 - Mar'23
       details: |
         Experience in this company:
-        + **Day Ahead Capcity Planning**
+        + **Day Ahead Capacity Planning**
           - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
           - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
           - **Tags**: *Time Series, Curve Matching, ML, Sagemaker, EC2, Lambda, Event Bridge, S3, Dashboard*
@@ -92,19 +92,16 @@ experiences:
           - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
           - Helps better evaluate multiple component of delivery at multiple country, station, ship methods and cycles
           - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
-
-        + **Engg >> to add**
-          - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights.
-          - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
-          
+        + **Multiple Reports Creation and Data Pipelines Testing**
+          - Created Reports for Middle Mile Performance Evaluation and tested/adjusted few data pipelines for reporting.
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
     - company: Cargill - Cargill Digital Labs
-      tag: full-time
+      tag: Full-time
       location: Bangalore
       role1: Machine Learning Software Engineer 
-      time1: Jun'19 - Present
+      time1: Jun'19 - Apr'22
       details: |
         Experience in this company:
         + **ML labs v2 setup**
@@ -135,7 +132,7 @@ experiences:
         &nbsp;‎ &nbsp;  
 
     - company: ShieldSquare (Radware) - Reseach and Development Team
-      tag: full-time
+      tag: Full-time
       location: Bangalore
       role1: Data Scientist – R&D
       time1: Apr'18-May'19
@@ -173,12 +170,11 @@ experiences:
             - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
         &nbsp;‎ &nbsp;  
 
-
 projects:
   display: true
   title: Projects
   intro: |
-    This is all the projects I'm involved in.
+    Here're some projects I've developed
 
   items:
 
@@ -278,7 +274,7 @@ publications:
   display: true
   title: Python Libraries
   intro: |
-    This is all the libraries that I wrote.
+    Here're the libraries that I've created
 
   items:
     - title: 1. Algorithmic Machine Learning Exploration and Exploitation Tool (AMLEET)
@@ -338,7 +334,7 @@ publications:
         &nbsp;‎ &nbsp;  
       
     - title: 2. COCO Transformation Utility (CTU)
-      authors: Mohit Rajput 
+      # authors: Mohit Rajput 
       # conference: Foobar, 2019
       link: https://pypi.org/project/ctu/
       details: |
@@ -365,7 +361,7 @@ skills:
   title: Tools & Skills
   details: |
     + ML Languages/Framework
-        - Python, scikit-learn, Tensorflow, PyTorch
+        - Python, Scikit-Learn, Tensorflow, PyTorch
     + **Other Language**
         - R, SAS, JAVA, C++
     + **Other**
@@ -380,7 +376,8 @@ skills:
         - S3, Cloud Storage, Drive, Pcloud
     + **Hardware**
         - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
-      
+
+# Apache Spark, Apacke Kafka, Streamlit      
 # -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
 #   levels:
 #     - name: Skill A
@@ -399,16 +396,16 @@ education:
       major: Metallurgy and Material Engineering
       degree: B.Tech. + M.Tech. (Dual Degree Course)
       details: |
-        Credit Courses: 
-            + Economics
-            + Corporate Social Responsibility
-            + Object Oriented Programming
-            + Management Concepts and Practices
-            + Marketing
-            + Human Resource Management
-            + Operations
-            + Financial Management
-            + Behaviour Psychology
+        + Credit Courses: 
+          - Economics
+          - Corporate Social Responsibility
+          - Object Oriented Programming
+          - Management Concepts and Practices
+          - Marketing
+          - Human Resource Management
+          - Operations
+          - Financial Management
+          - Behaviour Psychology
       
     - university: Udacity - Data Product Manager
       time: 2021
