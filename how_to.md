@@ -50,6 +50,8 @@ If you want to print your resume, just press the shortcut of print. Also, it can
 
 If you want to use it locally, you should clone this repository then just like deploying a regular Jekyll website.
 
+For Dev Container and native Jekyll steps, see `README.md` (Local Preview section).
+
 ### Customization
 
 + `_data/data.yml`: All the resume content.
