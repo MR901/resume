@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 title: Online &hearts; Resume
-url:
-baseurl:
+url: https://mr901.github.io
+baseurl: /resume
 
 # Sass setting
 sass:
@@ -18,3 +18,9 @@ allow_search_engines: true  # allow search engines indexing your resume
 analytics:
   google:                   # your google analytics
   cloudflare:               # your cloudflare analytics
+
+# Serve additional assets from _data so downloads and markdown can be accessed
+include:
+  - _data/overview.md
+  - _data/cover_letter.md
+  - _data/downloadables

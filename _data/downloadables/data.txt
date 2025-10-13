@@ -24,15 +24,64 @@ contact:
   quora:
   goodreads:
 
-profile:
-  display: false
-  title: Profile
-  details: |
-    It's your career profile, you can write markdown format text.
-    + First
-    + Second
+# profile:
+#   display: false
+#   title: Profile
+#   details: |
+#     It's your career profile, you can write markdown format text.
+#     + First
+#     + Second
 
-    ...
+#     ...
+
+
+profile:
+  display: true
+  title: Career Overview
+  details: |
+    Mohit Rajput has built a career defined by deep technical ownership, productized machine learning at scale, and hands-on edge AI innovation. His journey spans foundational engineering, applied ML research, deployment in production systems, and MLOps infrastructure across cloud and edge environments.
+
+    **Strategic Evolution**  
+    + Started as a strong backend and data engineer, gradually moving to ML-focused architecture, Edge AI, and agentic workflows.
+    + Demonstrated capability to build both core ML models and the surrounding data + system pipelines needed to make them work in production.
+    + Developed a rare blend of signal processing expertise, edge deployment, and modern MLOps practices.
+
+    **Differentiators**  
+    + Hands-on expertise in deploying AI solutions not just on the cloud but on **FogLAMP Edge** environments integrated with PLCs and HMIs.
+    + Merges ML research and systems engineering—building forecasting, anomaly detection, and signal processing solutions from first principles.
+    + Strong engineering discipline with deep involvement in data architecture, observability, and system-level monitoring.
+    + Maintains open-source contributions and builds reusable components like Excel Datalinks, testing plugins, and MCP interfaces for agentic workflows.
+    + Operates across multiple platforms (Azure, GCP, Edge) with end-to-end ownership.
+
+    **Career Arc**
+    + **Early Phase**: Solid backend and system-level foundation. Built strong engineering fundamentals, with exposure to large-scale distributed systems.
+    + **Growth Phase**: Transition to applied ML and MLOps. Architected pipelines, introduced automation, and began owning larger pieces of ML delivery.
+    + **Specialization**: Focused on Edge AI and predictive maintenance. Built multiple predictive models for centrifuge operations, solids buildup detection, and anomaly detection, all running on EDGE with real-time feedback loops.
+    + **Ecosystem Building**: Developed reusable infrastructure—MLOps frameworks, Grafana + Postgres monitoring layers, FogLAMP plugins, and MCP orchestration layers—enabling faster iteration and scalable deployments.
+    + **Thought Leadership**: Pushed innovations like multi-reference anomaly detectors, contrastive learning in vibration analysis, and signal-domain ML models at the edge.
+
+    **Key Highlights**
+    + **Edge AI Solutions**: Designed and deployed ML models directly on plant floor systems (FogLAMP), optimizing industrial operations.
+    + **MLOps Framework**: Architected a cloud-agnostic pipeline for ML monitoring, retraining, and deployment.
+    + **Signal Processing & ML**: Combined domain signal features with neural architectures (e.g., stacked LSTMs, autoencoders, Siamese networks).
+    + **Open Source Impact**: Developed multiple tooling utilities ([coco-transformation-util](https://github.com/MR901/coco-transformation-util), [articledoc](https://github.com/MR901/articledoc), [mcp-plots](https://github.com/MR901/mcp-plots)).
+
+    **Technological Strengths**
+    + ML & AI: LSTM, Autoencoder, Siamese Networks, Contrastive Learning
+    + Edge: FogLAMP, PLC/HMI integration, signal analysis
+    + MLOps: Azure, GCP, Postgres, Grafana, BigQuery, InfluxDB, MLFlow, DVC
+    + Dev & Infra: Python, API Design, Automation, System Monitoring
+    + Agentic Systems: MCP server for FogLAMP, agent persona orchestration
+    + Tooling: Excel Add-ins, Data Generators, Custom Filters and Rules
+
+    **Professional Signature**
+    + Solves hard problems at the boundary of ML, signal processing, and system engineering.
+    + Builds production-ready infrastructure, not just prototypes.
+    + Bridges cloud and edge deployments seamlessly.
+    + Keeps innovation grounded in reliability, maintainability, and scaling.
+    + Consistent open-source and internal tooling contributions that accelerate development velocity across teams.
+
+    Mohit’s career stands out for combining **engineering precision**, **research-informed ML**, and **operational delivery** in industrial and edge computing domains—a rare and high-leverage skill set in modern AI systems work.
 
 
 areas_of_interest:

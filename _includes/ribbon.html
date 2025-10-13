@@ -1,0 +1,165 @@
+{% assign ribbon = site.data.ribbon %}
+{% assign data = site.data.data %}
+{% assign default_section_key = ribbon.default | default: ribbon.sections[0].key %}
+
+{% if ribbon and ribbon.enabled %}
+<div class="ribbon-nav" style="background: {{ site.theme_color }}; color: #fff;">
+  <div class="container" style="display:flex; gap: 16px; flex-wrap: wrap; align-items: center; padding: 10px 0;">
+    {% for section in ribbon.sections %}
+      {% if section.enabled %}
+        <button class="btn btn-sm btn-light ribbon-btn" data-target="{{ section.key }}" style="white-space: nowrap;">
+          {{ section.title }}
+        </button>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div id="ribbon-views" class="container" style="padding-top: 16px;">
+  {% for section in ribbon.sections %}
+    {% if section.enabled %}
+      <div class="ribbon-view" id="view-{{ section.key }}" style="display:none;">
+        {% case section.type %}
+          {% when 'markdown' %}
+            <div class="wrapper">
+              <section>
+                <div class="section-title">{{ section.title }}</div>
+                <div class="section-content">
+                  <div class="markdown" data-md-src="{{ section.file | relative_url }}"><div class="text-muted">Loading...</div></div>
+                </div>
+              </section>
+            </div>
+
+          {% when 'resume' %}
+            <div class="wrapper">
+              {% include basic.html %}
+              {% include profile.html %}
+              {% include areas_of_interest.html %}
+              {% include experiences.html %}
+              {% include projects.html %}
+              {% include publications.html %}
+              {% include patents.html %}
+              {% include skills.html %}
+              {% include education.html %}
+              {% include certificates.html %}
+              {% include language.html %}
+              {% include interests.html %}
+              {% include evaluation.html %}
+            </div>
+
+          {% when 'downloads' %}
+            <div class="wrapper">
+              <section>
+                <div class="section-title">{{ section.title }}</div>
+                <div class="section-content">
+                  {% assign download_dir = section.dir | default: '_data/downloadables' %}
+                  {% assign files = site.static_files
+                    | where_exp: 'f', 'f.relative_path contains download_dir or f.path contains download_dir'
+                    | where_exp: 'f', 'f.extname != ".md"' %}
+                  <div class="list-group">
+                    {% if files.size == 0 %}
+                      <div class="text-muted">No downloads available.</div>
+                    {% endif %}
+                    {% for f in files %}
+                      <a class="list-group-item list-group-item-action" href="{{ f.relative_path | relative_url }}" download>
+                        <i class="fas fa-download"></i> {{ f.name }}
+                      </a>
+                    {% endfor %}
+                  </div>
+                </div>
+              </section>
+            </div>
+        {% endcase %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+ <script>
+  (function() {
+    var defaultKey = '{{ default_section_key }}';
+    var baseurl = '{{ site.baseurl | default: "" }}';
+    function tryFetch(urls) {
+      return new Promise(function(resolve, reject) {
+        var i = 0;
+        function next() {
+          if (i >= urls.length) return reject(new Error('All fetch attempts failed'));
+          var u = urls[i++];
+          fetch(u).then(function(r){
+            if (!r.ok) return next();
+            r.text().then(resolve).catch(next);
+          }).catch(next);
+        }
+        next();
+      });
+    }
+    function loadMarkdown(container) {
+      if (!container || container.getAttribute('data-md-loaded') === 'true') return;
+      var src = container.getAttribute('data-md-src');
+      if (!src) return;
+      var candidates = [src];
+      if (baseurl && src.indexOf(baseurl + '/') === 0) {
+        candidates.push(src.substring(baseurl.length));
+      } else if (baseurl) {
+        candidates.push(baseurl + (src.charAt(0) === '/' ? '' : '/') + src);
+      }
+      tryFetch(candidates).then(function(text){
+        try {
+          var html = (window.marked && typeof window.marked.parse === 'function') ? window.marked.parse(text) : (window.marked ? window.marked(text) : text);
+          container.innerHTML = html;
+        } catch (e) {
+          container.innerHTML = text;
+        }
+        container.setAttribute('data-md-loaded', 'true');
+      }).catch(function(){
+        // Leave existing placeholder; don't overwrite with an error
+      });
+    }
+    function showView(key) {
+      var views = document.querySelectorAll('.ribbon-view');
+      views.forEach(function(v) { v.style.display = 'none'; v.classList.remove('active'); });
+      var target = document.getElementById('view-' + key);
+      if (target) { target.style.display = ''; target.classList.add('active'); }
+      if (target) {
+        target.querySelectorAll('[data-md-src]').forEach(loadMarkdown);
+      }
+      var buttons = document.querySelectorAll('.ribbon-btn');
+      buttons.forEach(function(b) {
+        if (b.getAttribute('data-target') === key) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      if (history && history.replaceState) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('section', key);
+        history.replaceState(null, '', url.toString());
+      }
+    }
+
+    document.querySelectorAll('.ribbon-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        showView(this.getAttribute('data-target'));
+      });
+    });
+
+    var urlKey = new URL(window.location.href).searchParams.get('section');
+    showView(urlKey || defaultKey);
+  })();
+</script>
+<style>
+  .ribbon-btn.active { font-weight: 700; }
+  .ribbon-nav .btn { border: none; }
+  .ribbon-nav .btn.active { background: rgba(255,255,255,0.85); color: #000; }
+  .ribbon-nav { position: sticky; top: 0; z-index: 1030; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+  @media print {
+    .ribbon-nav { display: none !important; }
+    .ribbon-view { display: none !important; }
+    .ribbon-view.active { display: block !important; }
+  }
+</style>
+{% endif %}
+
+

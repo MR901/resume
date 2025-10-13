@@ -1,0 +1,27 @@
+enabled: true
+default: experience
+sections:
+  - key: overview
+    title: "Overview"
+    type: markdown
+    file: _data/overview.md
+    enabled: true
+
+  - key: personal_value_statement
+    title: "Personal Value Statement"
+    type: markdown
+    file: _data/cover_letter.md
+    enabled: true
+
+  - key: experience
+    title: "Experience + Accomplishments"
+    type: resume
+    enabled: true
+
+  - key: downloads
+    title: "Downloads"
+    type: downloads
+    dir: _data/downloadables
+    enabled: true
+
+
