@@ -1,5 +1,7 @@
-**Career Journey Report — Mohit Rajput**
-<!-- hidden comment: (For Marketing, Positioning, and Professional Showcase) -->
+<!-- 
+**Career Journey Report — Mohit Rajput*
+(For Marketing, Positioning, and Professional Showcase)
+-->
 
 ---
 

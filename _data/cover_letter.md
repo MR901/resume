@@ -1,5 +1,7 @@
+<!-- 
 **Personal Value Statement - Mohit Rajput**
-<!-- hidden comment: (For Marketing, Positioning, and Professional Showcase) -->
+
+-->
 
 ---
 

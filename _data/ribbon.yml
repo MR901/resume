@@ -1,27 +1,78 @@
+# ============================================
+# Ribbon Navigation Configuration
+# ============================================
+
+# Enable or disable the ribbon navigation
 enabled: true
+
+# Default section to show on page load
 default: experience
+
+# Visual styling options
+style:
+  # Button style: 'pills', 'rounded', 'square', 'minimal'
+  type: rounded
+  
+  # Button size: 'xs', 'sm', 'md', 'lg'
+  size: sm
+  
+  # Alignment: 'left', 'center', 'right', 'space-between', 'space-around'
+  alignment: center
+  
+  # Shadow depth: 'sm', 'md', 'lg', 'xl'
+  shadow: md
+  
+  # Custom colors (optional - leave blank to use theme color)
+  background: "#0eb322"
+  # text: "#ffffff"
+  
+  # Spacing
+  padding_y: 10px  # Vertical padding
+  padding_x: 0     # Horizontal padding (0 uses container default)
+  gap: 16px        # Gap between buttons
+
+# Responsive behavior
+responsive:
+  # Stack buttons vertically on mobile
+  mobile_stack: false
+  
+  # Make ribbon sticky on mobile
+  mobile_sticky: true
+
+# Animation settings
+animation:
+  # Enable smooth transitions
+  enabled: true
+  
+  # Fade-in duration for content (in seconds)
+  duration: 0.3
+
+# Sections to display in ribbon
 sections:
   - key: overview
     title: "Career Journey"
     type: markdown
     file: _data/overview.md
     enabled: true
+    description: "A narrative overview of my professional journey"
 
   - key: personal_value_statement
     title: "Personal Value Statement"
     type: markdown
     file: _data/cover_letter.md
     enabled: true
+    description: "My core values and professional philosophy"
 
   - key: experience
     title: "Detailed Curriculum Vitae"
     type: resume
     enabled: true
+    description: "Complete work history, education, and skills"
 
   - key: downloads
     title: "Downloads"
     type: downloads
     dir: assets/for_downloads
     enabled: true
-
+    description: "Downloadable documents and resources"
 

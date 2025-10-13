@@ -3,11 +3,38 @@
 {% assign default_section_key = ribbon.default | default: ribbon.sections[0].key %}
 
 {% if ribbon and ribbon.enabled %}
-<div class="ribbon-nav" style="background: {{ site.theme_color }}; color: #fff;">
-  <div class="container" style="display:flex; gap: 16px; flex-wrap: wrap; align-items: center; padding: 10px 0;">
+{% comment %} Extract configuration with defaults {% endcomment %}
+{% assign style_type = ribbon.style.type | default: 'rounded' %}
+{% assign style_size = ribbon.style.size | default: 'sm' %}
+{% assign style_alignment = ribbon.style.alignment | default: 'left' %}
+{% assign style_shadow = ribbon.style.shadow | default: 'md' %}
+{% assign style_bg = ribbon.style.background | default: site.theme_color %}
+{% assign style_text = ribbon.style.text | default: '#ffffff' %}
+{% assign style_gap = ribbon.style.gap | default: '16px' %}
+{% assign style_padding_y = ribbon.style.padding_y | default: '10px' %}
+{% assign style_padding_x = ribbon.style.padding_x | default: '0' %}
+{% assign mobile_stack = ribbon.responsive.mobile_stack | default: false %}
+
+{% comment %} Build CSS classes {% endcomment %}
+{% assign ribbon_classes = 'ribbon-nav shadow-' | append: style_shadow | append: ' style-' | append: style_type %}
+{% assign container_classes = 'ribbon-container align-' | append: style_alignment %}
+{% if mobile_stack %}
+  {% assign container_classes = container_classes | append: ' mobile-stack' %}
+{% endif %}
+
+<div class="{{ ribbon_classes }}" style="background: {{ style_bg }}; color: {{ style_text }};">
+  <div class="container {{ container_classes }}" style="gap: {{ style_gap }}; padding: {{ style_padding_y }} {{ style_padding_x }};">
     {% for section in ribbon.sections %}
       {% if section.enabled %}
-        <button class="btn btn-sm btn-light ribbon-btn" data-target="{{ section.key }}" style="white-space: nowrap;">
+        <button 
+          class="btn btn-{{ style_size }} btn-light ribbon-btn" 
+          data-target="{{ section.key }}"
+          {% if section.description %}
+          title="{{ section.description }}"
+          aria-label="{{ section.title }}: {{ section.description }}"
+          {% else %}
+          aria-label="{{ section.title }}"
+          {% endif %}>
           {{ section.title }}
         </button>
       {% endif %}
@@ -15,10 +42,10 @@
   </div>
 </div>
 
-<div id="ribbon-views" class="container" style="padding-top: 16px;">
+<div id="ribbon-views" class="container" style="padding-top: 16px;" role="main" aria-live="polite">
   {% for section in ribbon.sections %}
     {% if section.enabled %}
-      <div class="ribbon-view" id="view-{{ section.key }}" style="display:none;">
+      <div class="ribbon-view" id="view-{{ section.key }}" role="tabpanel" aria-labelledby="btn-{{ section.key }}">
         {% case section.type %}
           {% when 'markdown' %}
             <div class="wrapper">
@@ -61,9 +88,13 @@
                       <div class="text-muted">No downloads available.</div>
                     {% endif %}
                     {% for f in files %}
-                      <a class="list-group-item list-group-item-action" href="{{ f.url | relative_url }}" download>
-                        <i class="fas fa-download"></i> {{ f.name }}
-                      </a>
+                      <div class="list-group-item" style="display:flex; align-items:center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                        <span>{{ f.name }}</span>
+                        <span style="display:flex; gap: 8px;">
+                          <a class="btn btn-sm btn-outline-primary" href="{{ f.path | relative_url }}" target="_blank" rel="noopener">Preview</a>
+                          <a class="btn btn-sm btn-primary" href="{{ f.path | relative_url }}" download="{{ f.name }}">Download</a>
+                        </span>
+                      </div>
                     {% endfor %}
                   </div>
                 </div>
@@ -75,11 +106,20 @@
   {% endfor %}
 </div>
 
- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
- <script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
   (function() {
-    var defaultKey = '{{ default_section_key }}';
-    var baseurl = '{{ site.baseurl | default: "" }}';
+    'use strict';
+    
+    // Configuration
+    var config = {
+      defaultKey: '{{ default_section_key }}',
+      baseurl: '{{ site.baseurl | default: "" }}',
+      animationEnabled: {{ ribbon.animation.enabled | default: true }},
+      animationDuration: {{ ribbon.animation.duration | default: 0.3 }}
+    };
+    
+    // Utility: Try multiple URLs for fetching
     function tryFetch(urls) {
       return new Promise(function(resolve, reject) {
         var i = 0;
@@ -94,70 +134,152 @@
         next();
       });
     }
+    
+    // Load markdown content
     function loadMarkdown(container) {
       if (!container || container.getAttribute('data-md-loaded') === 'true') return;
+      
       var src = container.getAttribute('data-md-src');
       if (!src) return;
+      
+      // Show loading state
+      container.classList.add('ribbon-loading');
+      
+      // Build candidate URLs
       var candidates = [src];
-      if (baseurl && src.indexOf(baseurl + '/') === 0) {
-        candidates.push(src.substring(baseurl.length));
-      } else if (baseurl) {
-        candidates.push(baseurl + (src.charAt(0) === '/' ? '' : '/') + src);
+      if (config.baseurl && src.indexOf(config.baseurl + '/') === 0) {
+        candidates.push(src.substring(config.baseurl.length));
+      } else if (config.baseurl) {
+        candidates.push(config.baseurl + (src.charAt(0) === '/' ? '' : '/') + src);
       }
+      
       tryFetch(candidates).then(function(text){
         try {
-          var html = (window.marked && typeof window.marked.parse === 'function') ? window.marked.parse(text) : (window.marked ? window.marked(text) : text);
+          var html = (window.marked && typeof window.marked.parse === 'function') 
+            ? window.marked.parse(text) 
+            : (window.marked ? window.marked(text) : text);
           container.innerHTML = html;
         } catch (e) {
-          container.innerHTML = text;
+          container.innerHTML = '<pre>' + text + '</pre>';
         }
+        container.classList.remove('ribbon-loading');
         container.setAttribute('data-md-loaded', 'true');
-      }).catch(function(){
-        // Leave existing placeholder; don't overwrite with an error
+      }).catch(function(err){
+        container.classList.remove('ribbon-loading');
+        container.innerHTML = '<div class="text-muted">Content unavailable.</div>';
+        console.warn('Failed to load markdown:', err);
       });
     }
+    
+    // Show a specific view
     function showView(key) {
       var views = document.querySelectorAll('.ribbon-view');
-      views.forEach(function(v) { v.style.display = 'none'; v.classList.remove('active'); });
-      var target = document.getElementById('view-' + key);
-      if (target) { target.style.display = ''; target.classList.add('active'); }
-      if (target) {
-        target.querySelectorAll('[data-md-src]').forEach(loadMarkdown);
-      }
       var buttons = document.querySelectorAll('.ribbon-btn');
-      buttons.forEach(function(b) {
-        if (b.getAttribute('data-target') === key) {
-          b.classList.add('active');
-        } else {
-          b.classList.remove('active');
-        }
+      
+      // Hide all views
+      views.forEach(function(v) {
+        v.style.display = 'none';
+        v.classList.remove('active');
+        v.setAttribute('aria-hidden', 'true');
       });
+      
+      // Show target view
+      var target = document.getElementById('view-' + key);
+      if (target) {
+        target.style.display = '';
+        target.classList.add('active');
+        target.setAttribute('aria-hidden', 'false');
+        
+        // Load any markdown in the view
+        target.querySelectorAll('[data-md-src]').forEach(loadMarkdown);
+        
+        // Scroll to top smoothly
+        if (window.scrollY > 100) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+      
+      // Update button states
+      buttons.forEach(function(b) {
+        var isActive = b.getAttribute('data-target') === key;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-pressed', isActive);
+      });
+      
+      // Update URL without page reload
       if (history && history.replaceState) {
-        var url = new URL(window.location.href);
-        url.searchParams.set('section', key);
-        history.replaceState(null, '', url.toString());
+        try {
+          var url = new URL(window.location.href);
+          url.searchParams.set('section', key);
+          history.replaceState(null, '', url.toString());
+        } catch (e) {
+          console.warn('Failed to update URL:', e);
+        }
+      }
+      
+      // Announce to screen readers
+      var announcement = document.getElementById('ribbon-sr-announcement');
+      if (announcement) {
+        announcement.textContent = 'Switched to ' + (target ? target.getAttribute('aria-label') || key : key) + ' section';
       }
     }
-
-    document.querySelectorAll('.ribbon-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        showView(this.getAttribute('data-target'));
+    
+    // Initialize ribbon navigation
+    function init() {
+      // Add screen reader announcement element
+      var announcement = document.createElement('div');
+      announcement.id = 'ribbon-sr-announcement';
+      announcement.className = 'sr-only';
+      announcement.setAttribute('role', 'status');
+      announcement.setAttribute('aria-live', 'polite');
+      document.body.appendChild(announcement);
+      
+      // Attach click handlers to buttons
+      document.querySelectorAll('.ribbon-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          showView(this.getAttribute('data-target'));
+        });
+        
+        // Add keyboard navigation
+        btn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
       });
-    });
-
-    var urlKey = new URL(window.location.href).searchParams.get('section');
-    showView(urlKey || defaultKey);
+      
+      // Show initial view
+      var urlKey = null;
+      try {
+        urlKey = new URL(window.location.href).searchParams.get('section');
+      } catch (e) {
+        console.warn('Failed to parse URL:', e);
+      }
+      showView(urlKey || config.defaultKey);
+    }
+    
+    // Run when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   })();
 </script>
+
+{% comment %} Screen reader only class for announcements {% endcomment %}
 <style>
-  .ribbon-btn.active { font-weight: 700; }
-  .ribbon-nav .btn { border: none; }
-  .ribbon-nav .btn.active { background: rgba(255,255,255,0.85); color: #000; }
-  .ribbon-nav { position: sticky; top: 0; z-index: 1030; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-  @media print {
-    .ribbon-nav { display: none !important; }
-    .ribbon-view { display: none !important; }
-    .ribbon-view.active { display: block !important; }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 </style>
 {% endif %}
