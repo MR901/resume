@@ -24,225 +24,40 @@ contact:
   quora:
   goodreads:
 
-# profile:
-#   display: false
-#   title: Profile
-#   details: |
-#     It's your career profile, you can write markdown format text.
-#     + First
-#     + Second
-
-#     ...
-
-
 profile:
-  display: true
-  title: Career Overview
+  display: false
+  title: Profile
   details: |
-    Mohit Rajput has built a career defined by deep technical ownership, productized machine learning at scale, and hands-on edge AI innovation. His journey spans foundational engineering, applied ML research, deployment in production systems, and MLOps infrastructure across cloud and edge environments.
+    It's your career profile, you can wirte markdown format text.
+    + First
+    + Second
 
-    **Strategic Evolution**  
-    + Started as a strong backend and data engineer, gradually moving to ML-focused architecture, Edge AI, and agentic workflows.
-    + Demonstrated capability to build both core ML models and the surrounding data + system pipelines needed to make them work in production.
-    + Developed a rare blend of signal processing expertise, edge deployment, and modern MLOps practices.
-
-    **Differentiators**  
-    + Hands-on expertise in deploying AI solutions not just on the cloud but on **FogLAMP Edge** environments integrated with PLCs and HMIs.
-    + Merges ML research and systems engineering—building forecasting, anomaly detection, and signal processing solutions from first principles.
-    + Strong engineering discipline with deep involvement in data architecture, observability, and system-level monitoring.
-    + Maintains open-source contributions and builds reusable components like Excel Datalinks, testing plugins, and MCP interfaces for agentic workflows.
-    + Operates across multiple platforms (Azure, GCP, Edge) with end-to-end ownership.
-
-    **Career Arc**
-    + **Early Phase**: Solid backend and system-level foundation. Built strong engineering fundamentals, with exposure to large-scale distributed systems.
-    + **Growth Phase**: Transition to applied ML and MLOps. Architected pipelines, introduced automation, and began owning larger pieces of ML delivery.
-    + **Specialization**: Focused on Edge AI and predictive maintenance. Built multiple predictive models for centrifuge operations, solids buildup detection, and anomaly detection, all running on EDGE with real-time feedback loops.
-    + **Ecosystem Building**: Developed reusable infrastructure—MLOps frameworks, Grafana + Postgres monitoring layers, FogLAMP plugins, and MCP orchestration layers—enabling faster iteration and scalable deployments.
-    + **Thought Leadership**: Pushed innovations like multi-reference anomaly detectors, contrastive learning in vibration analysis, and signal-domain ML models at the edge.
-
-    **Key Highlights**
-    + **Edge AI Solutions**: Designed and deployed ML models directly on plant floor systems (FogLAMP), optimizing industrial operations.
-    + **MLOps Framework**: Architected a cloud-agnostic pipeline for ML monitoring, retraining, and deployment.
-    + **Signal Processing & ML**: Combined domain signal features with neural architectures (e.g., stacked LSTMs, autoencoders, Siamese networks).
-    + **Open Source Impact**: Developed multiple tooling utilities ([coco-transformation-util](https://github.com/MR901/coco-transformation-util), [articledoc](https://github.com/MR901/articledoc), [mcp-plots](https://github.com/MR901/mcp-plots)).
-
-    **Technological Strengths**
-    + ML & AI: LSTM, Autoencoder, Siamese Networks, Contrastive Learning
-    + Edge: FogLAMP, PLC/HMI integration, signal analysis
-    + MLOps: Azure, GCP, Postgres, Grafana, BigQuery, InfluxDB, MLFlow, DVC
-    + Dev & Infra: Python, API Design, Automation, System Monitoring
-    + Agentic Systems: MCP server for FogLAMP, agent persona orchestration
-    + Tooling: Excel Add-ins, Data Generators, Custom Filters and Rules
-
-    **Professional Signature**
-    + Solves hard problems at the boundary of ML, signal processing, and system engineering.
-    + Builds production-ready infrastructure, not just prototypes.
-    + Bridges cloud and edge deployments seamlessly.
-    + Keeps innovation grounded in reliability, maintainability, and scaling.
-    + Consistent open-source and internal tooling contributions that accelerate development velocity across teams.
-
-    Mohit’s career stands out for combining **engineering precision**, **research-informed ML**, and **operational delivery** in industrial and edge computing domains—a rare and high-leverage skill set in modern AI systems work.
-
+    ...
 
 areas_of_interest:
   display: true
   title: Areas of Professional Interest
   details: |
     + Reinforcement, Unsupervised Learning and Recommendation System 
-    + Data Collection, Data Engineering, R&D, Experiment and Solution Designing 
-    + Micro service architecture as well as EDGE computing based Machine Learning 
+    + Data Collection, Data Engineering and Experiment Design
+    + EDGE Devices based ML 
+    + Data based Product Research and Development
+    + Deep Learning based solutions (RNN, CNN, LSTM, SOM, Auto Encoder) 
     + Natural Language Processing (NLP) and ChatBots
     + Time Series analysis & Computer Vision 
+
 
 experiences:
   display: true
   title: Experiences
   items:
-    - company: NerdAppLabs and Dianomic
-      tag: Full-time
-      location: Noida
-      role1: Lead Machine Learning Engineer 
-      time1: Jun'23 - Present
-      details: |
-
-        **Core Responsibilities:**
-        - Lead end-to-end ML solution design for centrifuge operational optimization.
-        - Own architecture, data pipelines, model deployment on Edge, and integration with industrial systems.
-        - Collaborate with cross-functional teams including Dianomic Systems and ADM stakeholders.
-
-        Experience in this company:
-        + **Forecasting breakover in centrifuge operations on EDGE**
-          - Solely developed .
-          - **Tags**: **
-        + **MLOps**
-          - Solely developed .
-          - **Tags**: **
-        + **Solids Buildup**
-          - Solely developed .
-          - **Tags**: **
-        + **Multi reference based Anomaly detector**
-          - Solely developed .
-          - **Tags**: **
-
-        Experience in this company:
-        + **Centrifuge Breakover Forecasting (EDGE Deployment)**
-          - Designed, trained, and deployed a predictive ML solution on EDGE devices to assist operators in optimizing centrifuge operation and reducing downtime.
-          - Integrated with PLC and HMI for real-time operational feedback.
-          - **Tags**: *Stacked-LSTM, PLC, HMI, FogLAMP, Edge Compute, Postgres, Grafana, GCP*
-
-        + **Solids Buildup Detection (EDGE Deployment)**
-          - Developed a time–frequency domain signal processing solution for predictive maintenance of centrifuges.
-          - Deployed on FogLAMP to monitor solids accumulation using high-frequency vibration signals from **4 sensors streaming at 8 kHz**.
-          - **Tags**: *Autoencoder, Fourier Analysis Networks, Signal Processing, High-Velocity Data, FogLAMP, Postgres, Grafana, Edge AI*
-
-        + **Multi-Reference Anomaly Detector**
-          - Built a multi-reference anomaly detection system leveraging contrastive learning and multi-instance learning for centrifuge operations.
-          - Supports operator-action and machine-response anomaly detection.
-          - **Tags**: *Siamese Networks, Multi-Instance Learning, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
-
-        + **MLOps Infrastructure (Cloud Agnostic)**
-          - Architected and developed an MLOps framework deployed on GCP and partially validated on Azure.
-          - Implemented feature engineering, model training, hyperparameter tuning, data collection monitoring, and raw data analysis modules.
-          - Evaluated Postgres vs BigQuery vs InfluxDB; set up Grafana dashboards for operational monitoring.
-          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB, Feature Engineering, Model Training*
-
-        + **FogLAMP Filter and Rule Development**
-          - Implemented multiple filters and rules for improved data handling and anomaly detection:
-            - `foglamp-filter-moving-measures`
-            - `foglamp-filter-data-drift`
-            - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
-          - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
-
-        + **MCP Server for FogLAMP**
-          - Designed and built MCP server supporting APIs, DB connections, agent persona handling, and dynamic tool orchestration.
-          - Enables enterprise and agentic workflows for edge and cloud AI systems.
-          - **Tags**: *MCP, API Design, FogLAMP, Edge AI, Agentic Workflows, Registry*
-
-        + **Excel FogLAMP Datalink**
-          - Developed an Excel add-in to fetch FogLAMP data, enabling data analysts and operators to work with edge data inside Excel.
-          - **Tags**: *Excel Add-in, Office.js, FogLAMP, Enterprise Integration, Data Visualization*
-
-        + **Data Infrastructure and Monitoring**
-          - Developed system resource and syslog monitoring modules.
-          - Built improved automated data transfer scripts.
-          - **Tags**: *System Monitoring, Syslogs, Automation, Edge Infrastructure*
-
-        + **Data Platform and Architecture Work**
-          - Established a Delta Lake on Azure Data Lake with a Data Medallion Architecture using Azure Data Factory for a customer solution.
-          - Evaluated DVC, MLFlow, and Databricks for experiment tracking and data versioning.
-          - **Tags**: *Azure Data Factory, Delta Lake, DVC, MLFlow, Databricks, Data Medallion Architecture*
-
-        + **Plugin Development for Testing**
-          - Created `foglamp-south-datafaker` plugin to support system testing and validation of data pipelines.
-          - **Tags**: *FogLAMP, Edge Compute, Plugin Development, Test Infrastructure*
-
-        + **[Placeholder for any upcoming MCP, FogLAMP or Edge projects here]**
-          - Add technical description and impact statement when ready.
-          - **Tags**: *...*
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp; 
-
-
-        Experience in this company:
-        + **Centrifuge Breakover Forecasting (EDGE Deployment)**
-          - Designed, trained, and deployed a predictive ML solution on EDGE devices to optimize centrifuge operation and reduce downtime.
-          - Integrated with PLC and HMI for real-time feedback.
-          - **Tags**: *Stacked-LSTM, PLC, HMI, FogLAMP, Edge Compute, Postgres, Grafana, GCP*
-        + **Solids Buildup Detection (EDGE Deployment)**
-          - Time-frequency domain signal processing solution for predictive maintenance of centrifuges.
-          - Deployed on FogLAMP for real-time monitoring of solids accumulation.
-          - **Tags**: *Autoencoder, Fourier Analysis Networks, Signal Processing, FogLAMP, Postgres, Grafana*
-        + **Multi-Reference Anomaly Detector (POC)**
-          - Proposed and researched contrastive learning based anomaly detection using multi-instance learning on vibration data.
-          - **Tags**: *Siamese Networks, MIL, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
-        + **MLOps Infrastructure (Cloud Agnostic)**
-          - Architected and developed MLOps framework (GCP, partially Azure) for data collection monitoring, model training, tuning, and evaluation.
-          - Set up Postgres + Grafana dashboards. Evaluated BigQuery and InfluxDB.
-          - Enabled multi-environment dev/stage/prod, job config control, backfill, health monitoring, logging.
-          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB*
-        + **FogLAMP Filter & Rule Development**
-          - `foglamp-filter-moving-measures`
-          - `foglamp-filter-data-drift`
-          - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
-          - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
-        + **MCP Server for FogLAMP**
-          - API, DB connection, agent persona orchestration for FogLAMP.
-          - Enables agentic workflows for edge and cloud AI systems.
-          - **Tags**: *MCP, API Design, FogLAMP, Edge AI*
-        + **Excel FogLAMP Datalink**
-          - Excel add-in for pulling FogLAMP data into templated Excel views.
-          - **Tags**: *Excel Add-in, Office.js, FogLAMP, Data Visualization*
-        + **System & Infrastructure**
-          - Syslog, CPU, memory monitoring modules
-          - Automated data transfer scripts
-          - **Tags**: *System Monitoring, Syslogs, Automation*
-        + **Azure Data Platform**
-          - Delta Lake + Medallion architecture on Azure Data Lake with ADF
-          - Evaluated DVC, MLFlow, Databricks
-          - **Tags**: *Azure Data Factory, Delta Lake, DVC, MLFlow, Databricks*
-        + **Test Plugins**
-          - `foglamp-south-datafaker` for generating configurable signal patterns
-          - Used for pipeline testing and MCP debugging
-          - **Tags**: *FogLAMP, Edge Compute, Test Infrastructure*
-
-        + **Side Projects**
-          - [coco-transformation-util](https://github.com/MR901/coco-transformation-util)
-          - [articledoc](https://github.com/MR901/articledoc)
-          - [syinfo](https://github.com/MR901/syinfo)
-          - [mcp-plots](https://github.com/MR901/mcp-plots)
-
-        
     - company: CandorHealth
       tag: Full-time
       location: Bangalore
       role1: Senior Machine Learning Software Engineer 
-      time1: Mar'23 - Jun'23
+      time1: Mar'23 - Present
       details: |
-        **Core Responsibilities:**
-        - Build data enrichment and provider matching pipeline.
-        - Optimize identity resolution at scale.
-
-        **Experience in this company:**
+        Experience in this company:
         + **National Provider Identifier (NPI) Filler services for the missing NPI**
           - Filled in the missing information for multiple cases of Healthcare provider by utilizing the data available from data source.
           - **Tags**: *Identity Resolution, Similarity Mapping, Search, Parallel Processing, Big Data, APIs, Redis, Spark*
@@ -257,12 +72,7 @@ experiences:
       role2: Engineer
       time2: Feb'23 - Mar'23
       details: |
-        Core Responsibilities:
-        - Scale Day Ahead Capacity Planning from pilot to multi-country production.
-        - Develop monitoring, automation, and utilities for faster deployment cycles.
-        - Work with operations, supply chain, and engineering teams across geographies.
-
-        **Experience in this company:**
+        Experience in this company:
         + **Day Ahead Capacity Planning**
           - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
           - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
@@ -284,12 +94,6 @@ experiences:
           - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
         + **Multiple Reports Creation and Data Pipelines Testing**
           - Created Reports for Middle Mile Performance Evaluation and tested/adjusted few data pipelines for reporting.
-
-        **Notable Contributions:**
-        - Took over and stabilized project with zero active maintainers.
-        - Led deployment expansion to multiple countries within 6 months.
-        - Optimized pipeline runtime and reporting latency for faster planning.
-
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
@@ -299,12 +103,7 @@ experiences:
       role1: Machine Learning Software Engineer 
       time1: Jun'19 - Apr'22
       details: |
-        **Core Responsibilities:**
-        - Build ML POCs and MVPs for digital transformation in agriculture and supply chain.
-        - Collaborate with product managers and global business stakeholders.
-        - Transition pilot projects to other teams after successful MVP delivery.
-
-        **Experience in this company:**
+        Experience in this company:
         + **ML labs v2 setup**
           - Defining ways to Work with ML projects and other applications having ML related features
           - Brining sustainable practices for accelerated development while maintaining the agility  
@@ -329,12 +128,6 @@ experiences:
         + **Information Extraction from Ship Invoices (POC)**  
           - Extracting multiple information through the information that was shared in old and current emails.
           - **Tags**: *Text-to-Table, Analytics; Regex, Python Email to DB*
-
-        **Notable Contributions:**
-        - Delivered MVPs that transitioned into internal products.
-        - Developed first successful internal vision pilot used for later projects.
-        - Groomed soft and business skills through direct stakeholder interaction.
-
         &nbsp;‎ &nbsp;    
         &nbsp;‎ &nbsp;  
 
@@ -346,12 +139,7 @@ experiences:
       role2: Associate Data Scientist – R&D
       time2: Jun'17-Mar'18
       details: |
-        **Core Responsibilities:**
-        - Develop ML-based bot detection frameworks.
-        - Build and optimize detection pipelines with focus on low FP and adaptive learning.
-        - Research and implement reinforcement, unsupervised, and semi-supervised solutions.
-
-        **Experience in this company:**
+        Experience in this company:
         + **ICLSSTA**
             - Solely developed a framework, which develop and evaluate unsupervised learning solution in much depth and this from a single config file.
             - **Tags**: *Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
@@ -380,12 +168,6 @@ experiences:
         + **Other Works**
             - Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
             - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
-
-        **Notable Contributions:**
-        - First author and co-inventor on patented bot detection frameworks:
-          - “System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques” — [US20200099713A1](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0)
-          - “System and method for detecting bots using semi-supervised deep learning techniques” — [US20200099714A1](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0)
-        - Key contributions used during company acquisition by Radware.
         &nbsp;‎ &nbsp;  
 
 projects:
@@ -647,18 +429,6 @@ certificates:
   display: true
   title: Certificates
   items:
-
-    - name: "GCP Databricks Platform Architect"
-      authority: Databricks Academy
-      time: 2025
-      link: https://credentials.databricks.com/133472f0-9474-4991-89cd-3e7bbe11f911
-      details: |
-
-    - name: "Databricks Fundamentals"
-      authority: Databricks Academy
-      time: 2025
-      link: https://credentials.databricks.com/9a977d0e-1f49-422c-a74a-0faba1733e6e#acc.gADRdi7P
-      details: |
 
     - name: "Introduction to Machine Learning in Production"
       authority: Coursera
