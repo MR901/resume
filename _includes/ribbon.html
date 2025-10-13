@@ -61,7 +61,7 @@
                       <div class="text-muted">No downloads available.</div>
                     {% endif %}
                     {% for f in files %}
-                      <a class="list-group-item list-group-item-action" href="{{ f.relative_path | relative_url }}" download>
+                      <a class="list-group-item list-group-item-action" href="{{ f.url | relative_url }}" download>
                         <i class="fas fa-download"></i> {{ f.name }}
                       </a>
                     {% endfor %}

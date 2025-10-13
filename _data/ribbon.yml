@@ -2,7 +2,7 @@ enabled: true
 default: experience
 sections:
   - key: overview
-    title: "Overview"
+    title: "Career Journey"
     type: markdown
     file: _data/overview.md
     enabled: true
@@ -14,14 +14,14 @@ sections:
     enabled: true
 
   - key: experience
-    title: "Experience + Accomplishments"
+    title: "Detailed Curriculum Vitae"
     type: resume
     enabled: true
 
   - key: downloads
     title: "Downloads"
     type: downloads
-    dir: _data/downloadables
+    dir: assets/for_downloads
     enabled: true
 
 
