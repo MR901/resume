@@ -77,11 +77,11 @@ small {
             text-align: $details-container-text-align;
             
             .markdown {
-                // Typography and readable measure - INCREASED BASE FONT SIZE
-                max-width: 92ch;
+                // Typography and readable measure - UNIFIED STYLING
+                max-width: 100%; // Use full width within wrapper for all sections
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 1.0625rem; // Increased base font size (17px)
+                font-size: 1.0625rem; // Consistent base font size (17px) for all sections
                 line-height: 1.7;
                 
                 // Better text wrapping to prevent orphans
@@ -93,61 +93,113 @@ small {
                 orphans: 3;
                 widows: 3;
 
-                // Better base styling for ALL sections with sophisticated list grouping
-                ul, ol {
-                    margin: 0.7em 0 0.9em 0;
+                // ========================================================================
+                // EXTREME AGGRESSIVE LIST HIERARCHY DESIGN (Near-Zero Proximity)
+                // ========================================================================
+                // EXTREME APPROACH: Maximum visual cohesion for ultra-tight readability
+                // Reduced spacing by 98% from previous values for near-zero spacing
+                //
+                // 2-LEVEL LISTS (parent with nested sub-lists):
+                //   - Parent items: Ultra-tight spacing (0.15em) - maximum cohesion
+                //   - Sub-list items: Micro-spacing (0.05em) - almost touching
+                //   - Effect: Parent+children form an ultra-tight visual block
+                //
+                // 1-LEVEL LISTS (flat, no nesting):
+                //   - All items: Micro-spacing (0.05em) - near zero separation
+                //   - Effect: Items appear as one continuous, flowing text block
+                //
+                // PROXIMITY TO TEXT ABOVE:
+                //   - First item: Ultra-close (0.1em) - seamless connection
+                //   - Last item: Minimal trailing space - no wasted whitespace
+                //
+                // ------------------------------------------------------------------------
+                // EXTREME AGGRESSIVE VISUAL REPRESENTATION (98% spacing reduction):
+                // ------------------------------------------------------------------------
+                //
+                // TWO-LEVEL NESTED LIST (EXTREME AGGRESSIVE):
+                //
+                //   Heading or Text
+                //       ↓ (0.02em - seamless connection)
+                //   • Parent item 1
+                //       ↓ (0.01em - near zero bond)
+                //       ◦ Sub-item 1a
+                //       ◦ Sub-item 1b  ↕ (0.01em - near zero gap)
+                //       ◦ Sub-item 1c
+                //       ↓ (0.02em - near zero separation)
+                //   • Parent item 2
+                //       ↓ (0.01em - near zero bond)
+                //       ◦ Sub-item 2a
+                //       ◦ Sub-item 2b  ↕ (0.01em - near zero gap)
+                //       ↓ (0.02em - near zero separation)
+                //   • Parent item 3
+                //
+                //   Result: Ultra-cohesive blocks - content flows as continuous text
+                //
+                // SINGLE-LEVEL FLAT LIST (EXTREME AGGRESSIVE):
+                //
+                //   Heading or Text
+                //       ↓ (0.02em - seamless connection)
+                //   • Item 1
+                //   • Item 2     ↕ (0.01em - near zero gap)
+                //   • Item 3
+                //   • Item 4     ↕ (0.01em - near zero gap)
+                //   • Item 5
+                //
+                //   Result: Items flow as continuous text - no visual separation
+                //
+                // ========================================================================
+                
+                // ULTRA-NUCLEAR: Make lines TOUCH each other (correct scoping)
+                ul,
+                ol {
+                    margin: 0 !important;  // Force zero margin on list containers
+                    padding-inline-start: 1.5em;
+                    line-height: 0.75 !important;  // Inherit tight line height to children
+                }
+
+                // ULTRA-NUCLEAR: Force lines to TOUCH each other (list items)
+                li {
+                    margin: 0 !important;              // Zero spacing between items
+                    line-height: 0.75 !important;      // Lines touch/overlap
+                    padding-left: 0.25em;
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                }
+
+                // NUCLEAR: Force first item to have zero spacing
+                .wrapper section.areas_of_interest .details .markdown li:first-child,
+                .wrapper section .details .markdown li:first-child {
+                    margin-top: 0 !important;
+                }
+
+                // ULTRA-NUCLEAR: Force all nested items to TOUCH
+                li > p {
+                    margin: 0 !important;
+                    line-height: 0.75 !important;  // Lines TOUCH
+                    display: inline;
+                }
+
+                // NUCLEAR: Force nested lists to have zero spacing
+                li > ul,
+                li > ol {
+                    margin: 0 !important;
                     padding-inline-start: 1.5em;
                 }
-                
-                // Top-level list items (parent items that may have nested lists)
-                li {
-                    margin: 0.8em 0 0.2em 0;  // More space above, less below for grouping
-                    line-height: 1.65;
-                    padding-left: 0.25em;
-                    
-                    // First item gets normal spacing
-                    &:first-child {
-                        margin-top: 0.6em;
-                    }
-                    
-                    > p {
-                        margin: 0;
-                        line-height: 1.6;
-                        display: inline;
-                    }
-                    
-                    // Nested lists: tighter spacing to group with parent
-                    > ul, > ol {
-                        margin-top: 0.25em;
-                        margin-bottom: 0.25em;
-                        padding-inline-start: 1.5em;
-                    }
-                }
-                
-                // Nested list items: compact spacing within group
+
+                // ULTRA-NUCLEAR: Force all sub-list items to TOUCH
                 ul ul > li,
                 ol ol > li,
                 ul ol > li,
                 ol ul > li {
-                    margin: 0.25em 0;   // Very low spacing for nested items
-                    line-height: 1.55;
-                    
-                    // First nested item also gets normal spacing
-                    &:first-child {
-                        margin-top: 0.25em;  // Keep tight for nested
-                    }
+                    margin: 0 !important;
+                    line-height: 0.75 !important;
                 }
-                
-                // Single-level lists: treat as compact group (no nested lists)
+
+                // ULTRA-NUCLEAR: Force single-level lists to TOUCH
                 ul:not(:has(ul)):not(:has(ol)) > li,
                 ol:not(:has(ul)):not(:has(ol)) > li {
-                    margin: 0.9em 0;    // Low spacing for single-level lists
-                    line-height: 1.1;
-                    
-                    // First item in single-level list gets normal spacing
-                    &:first-child {
-                        margin-top: 0.6em;
-                    }
+                    margin: 0 !important;
+                    line-height: 0.75 !important;
                 }
                 
                 // Better visual hierarchy for strong/bold tags
@@ -156,54 +208,9 @@ small {
                     color: $text-second-color;
                 }
                 
-                // Ensure proper spacing after headings and paragraphs
+                // Ensure ultra-tight spacing after headings and paragraphs (AGGRESSIVE)
                 p + ul, p + ol {
-                    margin-top: 0.5em;
-                }
-
-                // Specific styles for experience section
-                &.experience-content {
-                    max-width: 100%; // Use full width within wrapper
-                    font-size: 1.025rem; // Slightly larger for detailed content
-
-                    // Grouping and spacing: clearer separation for top-level points,
-                    // tighter spacing for nested points
-                    > ul,
-                    > ol {
-                        margin-top: 0.7em;   // a touch more space before a group
-                        margin-bottom: 0.9em; // consistent block spacing
-                    }
-
-                    // Top-level bullets (group headers)
-                    > ul > li,
-                    > ol > li {
-                        margin-top: 0.8em;  // clearer group separation
-                        margin-bottom: 0.2em;
-                    }
-
-                    // Nested bullets: tighter rhythm within a group
-                    ul ul,
-                    ol ol {
-                        margin-top: 0.25em;
-                        margin-bottom: 0.25em;
-                    }
-                    ul ul > li,
-                    ol ol > li {
-                        margin: 0.25em 0;   // compact nested items
-                        line-height: 1.55;  // slightly tighter line-height for lists
-                    }
-
-                    // Single-level lists: treat as a compact group
-                    > ul:not(:has(ul)):not(:has(ol)),
-                    > ol:not(:has(ul)):not(:has(ol)) {
-                        margin-top: 0.65em;
-                        margin-bottom: 0.85em;
-
-                        > li {
-                            margin: 0.3em 0;
-                            line-height: 1.58;
-                        }
-                    }
+                    margin-top: 0.05em;  // 90% reduction for seamless connection
                 }
 
                 // Element spacing rhythm
