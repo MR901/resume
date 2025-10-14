@@ -557,6 +557,7 @@ education:
       time: 2012 - 2017
       major: Metallurgy and Material Engineering
       degree: B.Tech. + M.Tech. (Dual Degree Course)
+      link: https://iitr.ac.in/
       details: |
         + Credit Courses: 
           - Economics
@@ -573,19 +574,22 @@ education:
       time: 2021
       major: 
       degree: Nano Degrees
-      details: "[link](https://confirm.udacity.com/QGUGJTSK)"
+      link: https://confirm.udacity.com/QGUGJTSK
+      details: 
       
     - university: Udacity - Computer Vision  
       time: 2020
       major: 
       degree: Nano Degrees
-      details: "[link](https://confirm.udacity.com/4DMWY73G)"
+      link: https://confirm.udacity.com/4DMWY73G
+      details: 
       
     - university: Udacity - Artificial Intelligence
       time: 2018
       major: 
       degree: Nano Degrees
-      details: "[link](https://confirm.udacity.com/KGCWC7NW)"
+      link: https://confirm.udacity.com/KGCWC7NW
+      details:
       
 certificates:
   display: true

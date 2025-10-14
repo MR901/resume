@@ -10,7 +10,11 @@
         <div class="item">
 
             <div class="upper-row">
+                {% if graduation.link %}
+                <div class="university"><a href="{{ graduation.link }}">{{ graduation.university }}</a></div>
+                {% else %}
                 <div class="university">{{ graduation.university }}</div>
+                {% endif %}
                 <div class="time">{{ graduation.time }}</div>
             </div>
 
