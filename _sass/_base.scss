@@ -210,7 +210,33 @@ small {
                 
                 // Ensure ultra-tight spacing after headings and paragraphs (AGGRESSIVE)
                 p + ul, p + ol {
-                    margin-top: 0.05em;  // 90% reduction for seamless connection
+                    margin-top: 0.02em;  // tighter connection to the introducing text
+                }
+
+                // Context-aware spacing around lists
+                // - Tighten space BEFORE lists (paragraph that introduces a list)
+                // - Add breathing room AFTER lists (before next paragraph or heading)
+                p:has(+ ul),
+                p:has(+ ol) {
+                    margin-bottom: 0.04em !important;  // minimal separation before list
+                }
+                ul + p,
+                ol + p {
+                    margin-top: 0.9em !important;    // more breathing room after lists
+                }
+                ul + h1,
+                ul + h2,
+                ul + h3,
+                ul + h4,
+                ul + h5,
+                ul + h6,
+                ol + h1,
+                ol + h2,
+                ol + h3,
+                ol + h4,
+                ol + h5,
+                ol + h6 {
+                    margin-top: 1.1em !important;    // clearer separation before headings
                 }
 
                 // Element spacing rhythm
