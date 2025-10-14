@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables" as *;
 
 /* Extra small devices (phones, less than 768px) */
 @media only screen and (max-width: 767px) {
