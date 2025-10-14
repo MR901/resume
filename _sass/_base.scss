@@ -70,10 +70,12 @@ small {
         // General details container styling for all sections
         .details {
             border: $details-container-border-width $details-container-border-style $details-container-border-color;
+            // border: none;
             border-radius: $details-container-border-radius;
             background: $details-container-background;
             padding: $details-container-padding-top $details-container-padding-right $details-container-padding-bottom $details-container-padding-left;
             padding-left: calc($details-container-padding-left + 1.5rem); // Add extra left indent
+            padding-top: $details-container-padding-top * 0.45; // Decrease top padding
             text-align: $details-container-text-align;
             
             .markdown {
@@ -191,15 +193,27 @@ small {
                 ol ol > li,
                 ul ol > li,
                 ol ul > li {
-                    margin: 0 !important;
-                    line-height: 0.75 !important;
+                    // Sub-list items: very low spacing to keep them tightly grouped
+                    margin-top: 0.05em !important;
+                    margin-bottom: 0.05em !important;
+                    line-height: 1.1 !important;
                 }
 
                 // ULTRA-NUCLEAR: Force single-level lists to TOUCH
                 ul:not(:has(ul)):not(:has(ol)) > li,
                 ol:not(:has(ul)):not(:has(ol)) > li {
-                    margin: 0 !important;
-                    line-height: 0.75 !important;
+                    // Single-level lists: very low spacing per item so they read as one group
+                    margin-top: 0.06em !important;
+                    margin-bottom: 0.06em !important;
+                    line-height: 1.15 !important;
+                }
+
+                // Parent items that contain a nested list: add extra space above, less below
+                li:has(> ul),
+                li:has(> ol) {
+                    margin-top: 0.18em !important;   // extra spacing above parent item
+                    margin-bottom: 0.75em !important; // reduced spacing below so sublist appears closer
+                    line-height: 1.15 !important;
                 }
                 
                 // Better visual hierarchy for strong/bold tags
@@ -483,11 +497,29 @@ small {
                 background: linear-gradient(135deg, rgba($theme-color, 0.03) 0%, rgba($theme-color, 0.015) 100%);
                 margin-bottom: 0;
                 border-left: 3px solid rgba($theme-color, 0.25);
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                // Keep role on the left, allow it to take remaining space
+                .role {
+                    flex: 1 1 auto;
+                    min-width: 0;
+                }
+
+                // Override global absolute positioning for time inside role row
+                .time {
+                    position: static;
+                    display: inline-flex;
+                    align-items: center;
+                    margin-left: 1rem;
+                    white-space: nowrap;
+                }
                 
                 // Last role row gets bottom rounded corners
                 &:last-of-type {
                     border-radius: 0 0 6px 6px;
-                    padding-bottom: 0.85rem;
+                    padding-bottom: 0;
                 }
             }
             
@@ -534,7 +566,7 @@ small {
             }
             
             .details {
-                margin-top: 1rem;
+                margin-top: 0;
             }
         }
     }
@@ -568,7 +600,7 @@ small {
         }
     }
 
-    .publications {
+        .publications {
         .item {
             margin-bottom: 1rem;
         }
@@ -593,6 +625,23 @@ small {
         
         .details {
             margin-top: 0.35rem;
+
+            // Relax list spacing only inside publications details
+            .markdown {
+                ul,
+                ol {
+                    line-height: 1.25 !important;
+                    margin: 0.25em 0 0.25em 0 !important;
+                }
+                li {
+                    line-height: 1.25 !important;
+                    margin: 0.05em 0 !important;
+                }
+                p + ul,
+                p + ol {
+                    margin-top: 0.3em !important;
+                }
+            }
         }
         
         .demo-link {

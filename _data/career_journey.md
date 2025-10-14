@@ -3,7 +3,6 @@
 (For Marketing, Positioning, and Professional Showcase)
 -->
 
----
 
 ### Executive Summary
 
@@ -126,7 +125,7 @@ Mohit Rajput’s career is defined by **technical depth**, **cross-domain adapta
 
 This unique combination of **research pedigree**, **edge execution**, and **business alignment** positions him as a **high-leverage AI leader** suited for innovation-heavy and mission-critical environments.
 
----
+<!-- --- -->
 
 <!-- 
    Mohit Rajput has built a career defined by deep technical ownership, productized machine learning at scale, and hands-on edge AI innovation. His journey spans foundational engineering, applied ML research, deployment in production systems, and MLOps infrastructure across cloud and edge environments.

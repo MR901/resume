@@ -442,7 +442,8 @@ publications:
       # conference: Foobar, 2019
       # link: https://www.google.com
       details: |
-        &nbsp;‎&nbsp;‎A personal library compromised of general code base for faster develoment. It supports the following.
+        A personal library compromised of general code base for faster develoment. It supports the following.
+
         + **General**: Code Visual in Terminal; operations reated to list, dict, datetime, pandas and numpy; Runtime python cmdline support; Git status info; system performance; and many more.
         + **Logger**: Initializing, Method.
         + **Configuration**: Generator; Accepts json, yaml, cmdline, configparser and dict; Merge multiple configs; etc

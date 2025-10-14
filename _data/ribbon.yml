@@ -20,7 +20,7 @@ style:
   alignment: center
   
   # Shadow depth: 'sm', 'md', 'lg', 'xl'
-  shadow: md
+  shadow: sm
   
   # Custom colors (optional - leave blank to use theme color)
   # background: "#1DA1F2"
@@ -29,7 +29,7 @@ style:
   # Spacing
   padding_y: 10px  # Vertical padding
   padding_x: 0     # Horizontal padding (0 uses container default)
-  gap: 16px        # Gap between buttons
+  gap: 18px        # Gap between buttons
 
 # Responsive behavior
 responsive:
@@ -49,17 +49,17 @@ animation:
 
 # Sections to display in ribbon
 sections:
-  - key: overview
+  - key: career_journey
     title: "Career Journey"
     type: markdown
-    file: _data/overview.md
+    file: _data/career_journey.md
     enabled: true
     description: "A narrative overview of my professional journey"
 
   - key: personal_value_statement
     title: "Personal Value Statement"
     type: markdown
-    file: _data/cover_letter.md
+    file: _data/personal_value_statement.md
     enabled: true
     description: "My core values and professional philosophy"
 

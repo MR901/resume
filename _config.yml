@@ -55,6 +55,6 @@ analytics:
 
 # Serve additional assets from _data so downloads and markdown can be accessed
 include:
-  - _data/overview.md
-  - _data/cover_letter.md
+  - _data/career_journey.md
+  - _data/personal_value_statement.md
   # no need to include assets/for_downloads; assets are served by default
