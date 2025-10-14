@@ -55,6 +55,7 @@ sections:
     file: _data/career_journey.md
     enabled: true
     description: "A narrative overview of my professional journey"
+    custom_spacing: false
 
   - key: personal_value_statement
     title: "Personal Value Statement"
@@ -62,12 +63,14 @@ sections:
     file: _data/personal_value_statement.md
     enabled: true
     description: "My core values and professional philosophy"
+    custom_spacing: false
 
   - key: experience
     title: "Detailed Curriculum Vitae"
     type: resume
     enabled: true
     description: "Complete work history, education, and skills"
+    custom_spacing: true
 
   - key: downloads
     title: "Downloads"
@@ -75,4 +78,5 @@ sections:
     dir: assets/for_downloads
     enabled: true
     description: "Downloadable documents and resources"
+    custom_spacing: false
 

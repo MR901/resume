@@ -46,7 +46,7 @@
   {% for section in ribbon.sections %}
     {% if section.enabled %}
       <div class="ribbon-view" id="view-{{ section.key }}" role="tabpanel" aria-labelledby="btn-{{ section.key }}">
-        <div class="wrapper">
+        <div class="wrapper{% if section.custom_spacing == false %} no-custom-spacing{% endif %}">
           {% case section.type %}
             {% when 'markdown' %}
               <section>
