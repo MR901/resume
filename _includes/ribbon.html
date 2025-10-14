@@ -365,8 +365,7 @@
     
     // Initialize ribbon navigation
     function init() {
-      // Log marked.js availability for debugging
-      console.log('Ribbon init - marked.js available?', typeof window.marked !== 'undefined');
+      // Initialize after verifying marked.js availability
       
       // Add screen reader announcement element
       var announcement = document.createElement('div');
@@ -432,13 +431,9 @@
       
       if (typeof window.marked !== 'undefined' && window.marked.parse) {
         // marked.js is loaded and functional, initialize now
-        console.log('marked.js loaded successfully from attempt', attempts);
         init();
       } else if (attempts < 200) {
         // Still waiting, retry after a short delay (max 10 seconds)
-        if (attempts % 20 === 0 && attempts > 0) {
-          console.log('Still waiting for marked.js... attempt', attempts);
-        }
         setTimeout(function() {
           waitForMarked(attempts + 1);
         }, 50);

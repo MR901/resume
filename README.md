@@ -1,116 +1,120 @@
-# resume  
-online resume  
-  
-Resume link:https://mr901.github.io/resume/  
-YAML Checking: https://www.yamllint.com/  
-  
-## Ribbon-based multi-section UI (optional)
+# MR901 Career Portfolio (Jekyll Resume)
 
-This site now supports an optional ribbon at the top that lets visitors switch between:
+- Site: `https://mr901.github.io/resume/`
+- YAML Lint: `https://www.yamllint.com/`
 
-- Overview (`_data/overview.md`)
-- Personal Value Statement (`_data/cover_letter.md`)
-- Experience + Accomplishments (from `_data/data.yml`)
-- Downloads (`_data/downloadables/`)
+## Features
+- Jekyll + Markdown + GitHub Pages
+- Ribbon-based multi-section UI (optional)
+- Responsive, print-friendly layout
+- Content driven by `_data/data.yml`
 
-### Enable the ribbon
+## Ribbon Navigation (Optional)
+The top ribbon lets visitors switch between sections like Career Journey, Personal Value Statement, Resume, and Downloads. Configure it via `_data/ribbon.yml`.
 
-1. Ensure `_data/data.yml` exists. This is always required.
-2. Add `_data/ribbon.yml` with the following structure (defaults provided in repo):
-
+Example minimal config:
 ```yaml
 enabled: true
 default: experience
 sections:
-  - key: overview
-    title: "Overview"
+  - key: career_journey
+    title: "Career Journey"
     type: markdown
-    file: _data/overview.md
+    file: _data/career_journey.md
     enabled: true
   - key: personal_value_statement
     title: "Personal Value Statement"
     type: markdown
-    file: _data/cover_letter.md
+    file: _data/personal_value_statement.md
     enabled: true
   - key: experience
-    title: "Experience + Accomplishments"
+    title: "Detailed Curriculum Vitae"
     type: resume
     enabled: true
   - key: downloads
     title: "Downloads"
     type: downloads
-    dir: _data/downloadables
+    dir: assets/for_downloads
     enabled: true
 ```
 
-If `enabled: false` or `_data/ribbon.yml` is missing, the site renders the legacy single-page resume from `_data/data.yml`.
+Notes:
+- Link directly to a section with `?section=<key>`.
+- Markdown files listed under `sections[*].file` must be included in `_config.yml` → `include:`.
 
-### Notes
+## Quick Customization (Cheat Sheet)
+- Style type: pills | rounded | square | minimal
+- Size: xs | sm | md | lg
+- Alignment: left | center | right | space-between | space-around
+- Shadow: sm | md | lg | xl
+- Mobile stack: `responsive.mobile_stack: true`
+- Colors: set `style.background`, `style.text` or rely on `site.theme_color` in `_config.yml`.
 
-- Markdown files listed in the config are served because `_config.yml` includes `'_data/overview.md'` and `'_data/cover_letter.md'` in `include:`.
-- Files placed under `_data/downloadables/` will appear in the Downloads section and can be downloaded.
-- You can link directly to a section using a query parameter, e.g. `?section=overview`.
+Popular presets:
+```yaml
+# Professional & Clean
+style: { type: rounded, size: sm, alignment: left, shadow: md }
+
+# Modern & Friendly
+style: { type: pills, size: md, alignment: center, shadow: lg }
+
+# Minimal & Modern
+style: { type: minimal, size: md, alignment: center, shadow: sm }
+```
 
 ## Local Preview
-
-### Preferred: Dev Container (no host setup)
-
-If you use VS Code, the Dev Container provides a ready-to-run Jekyll environment with LiveReload.
-
-1. Open this folder in VS Code
-2. Reopen in Container (Dev Containers extension)
-3. Run:
-
+Preferred (Dev Container):
 ```bash
 jekyll serve --livereload --host 0.0.0.0
 ```
 
-Then open: http://localhost:4000
-
-### Native Jekyll (host machine)
-
-Follow these steps to run this site locally with Jekyll on your machine.
-
-#### Prerequisites (Ubuntu/Debian)
-
+Native Jekyll (Ubuntu/Debian):
 ```bash
 sudo apt update && sudo apt install -y ruby-full build-essential zlib1g-dev
-```
-
-#### Install Jekyll and Bundler
-
-```bash
 sudo gem install jekyll bundler
-```
-
-#### Serve the site
-
-```bash
-cd /home/mohit/Documents/new_age/__resume__/resume
 jekyll serve --livereload --host 0.0.0.0
 ```
 
-Then open: http://localhost:4000
-
-#### Tips
-
-- Faster rebuilds: add `--incremental`
-- If you later add a `Gemfile`:
-
+Tips: use `--incremental` for faster rebuilds. If a Gemfile is added later:
 ```bash
 bundle install
 bundle exec jekyll serve --livereload --host 0.0.0.0
 ```
 
-#### Troubleshooting
+## Development & Validation
+YAML validation and common workflows are available:
+```bash
+# Validate YAML
+ruby validate_yaml.rb
 
-- "jekyll: command not found": re-open your terminal after installing Ruby/gems, or ensure the gem bin path is on `PATH`.
-- Port in use: change the port, e.g. `jekyll serve -P 4001`.
+# Makefile helpers
+make validate   # validate YAML
+make build      # validate + build
+make serve      # validate + serve with livereload
+make clean      # clean generated files
+```
 
-  
-## Doc Version  
-Font: Arial  
-Color Palette: Ivory and Charcoal (#ECE9E1 and #3D3D3D)  
-https://designshack.net/articles/graphics/resume-color-schemes/  
-QR code generator: https://express.adobe.com/tools/qr-code-generator  
-  
+Debugging tips:
+- YAML errors: run `ruby validate_yaml.rb` (watch for colons, indentation, unescaped characters). Avoid HTML comments in YAML.
+- Markdown runtime errors: see styled boxes in the UI and check browser console.
+- SCSS changes may require a Jekyll restart.
+
+## Error Handling Highlights
+- Frontend shows parsing/loading errors with details (and raw content view).
+- Build-time YAML validation prevents cryptic Jekyll failures.
+
+## Print & Accessibility
+- Print hides the ribbon and prints only the active section.
+- Keyboard navigation and ARIA attributes are implemented for the ribbon.
+- Respects `prefers-reduced-motion`.
+
+## Content Sources
+- Resume: `_data/data.yml`
+- Markdown sections: `_data/career_journey.md`, `_data/personal_value_statement.md`
+- Downloads: `assets/for_downloads/`
+
+## Pointers for Doc Version  
+- Font: Arial  
+- Color Palette: Ivory and Charcoal (#ECE9E1 and #3D3D3D)  
+- [Stylish Resume Color Schemes](https://designshack.net/articles/graphics/resume-color-schemes/)  
+- [QR code generator](https://express.adobe.com/tools/qr-code-generator) 

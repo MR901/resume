@@ -1,6 +1,4 @@
-// ============================================
 // Ribbon Navigation Styles
-// ============================================
 
 .ribbon-nav {
   position: sticky;
@@ -8,7 +6,6 @@
   z-index: 1030;
   transition: all 0.3s ease-in-out;
   
-  // Shadow variants
   &.shadow-sm { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); }
   &.shadow-md { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); }
   &.shadow-lg { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
@@ -21,7 +18,6 @@
     align-items: center;
     transition: all 0.2s ease;
     
-    // Alignment options
     &.align-left { justify-content: flex-start; }
     &.align-center { justify-content: center; }
     &.align-right { justify-content: flex-end; }
@@ -38,18 +34,15 @@
     font-weight: 500;
     letter-spacing: 0.01em;
     
-    // Hover effect with subtle lift
     &:hover:not(.active) {
       transform: translateY(-1px);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
     
-    // Active state
     &.active {
       font-weight: 700;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
       
-      // Active indicator underline
       &::after {
         content: '';
         position: absolute;
@@ -63,14 +56,12 @@
       }
     }
     
-    // Focus visible for accessibility
     &:focus-visible {
       outline: 2px solid rgba(0, 0, 0, 0.3);
       outline-offset: 2px;
     }
   }
   
-  // Button size variants
   .btn-xs {
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
@@ -91,7 +82,6 @@
     padding: 0.625rem 1.25rem;
   }
   
-  // Style variants
   &.style-pills {
     .ribbon-btn {
       border-radius: 50px;
@@ -138,18 +128,14 @@
   }
 }
 
-// Ribbon views container
 #ribbon-views {
   .ribbon-view {
     animation: fadeIn 0.3s ease-in-out;
     
-    // Hide all views by default
     &:not(.active) {
       display: none;
     }
     
-    // Fallback: Show first view by default (before JavaScript runs)
-    // This ensures content is visible even if JS fails
     &:first-child:not(.active) {
       display: block;
     }
@@ -167,7 +153,6 @@
   }
 }
 
-// Loading states
 .ribbon-loading {
   position: relative;
   min-height: 100px;
@@ -191,7 +176,6 @@
   to { transform: rotate(360deg); }
 }
 
-// Print styles
 @media print {
   .ribbon-nav {
     display: none !important;
@@ -206,7 +190,6 @@
   }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
   .ribbon-nav {
     .ribbon-container {
@@ -241,7 +224,6 @@
   }
 }
 
-// Accessibility: Reduced motion
 @media (prefers-reduced-motion: reduce) {
   .ribbon-nav,
   .ribbon-nav .ribbon-btn,

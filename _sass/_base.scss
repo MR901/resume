@@ -95,61 +95,7 @@ small {
                 orphans: 3;
                 widows: 3;
 
-                // ========================================================================
-                // EXTREME AGGRESSIVE LIST HIERARCHY DESIGN (Near-Zero Proximity)
-                // ========================================================================
-                // EXTREME APPROACH: Maximum visual cohesion for ultra-tight readability
-                // Reduced spacing by 98% from previous values for near-zero spacing
-                //
-                // 2-LEVEL LISTS (parent with nested sub-lists):
-                //   - Parent items: Ultra-tight spacing (0.15em) - maximum cohesion
-                //   - Sub-list items: Micro-spacing (0.05em) - almost touching
-                //   - Effect: Parent+children form an ultra-tight visual block
-                //
-                // 1-LEVEL LISTS (flat, no nesting):
-                //   - All items: Micro-spacing (0.05em) - near zero separation
-                //   - Effect: Items appear as one continuous, flowing text block
-                //
-                // PROXIMITY TO TEXT ABOVE:
-                //   - First item: Ultra-close (0.1em) - seamless connection
-                //   - Last item: Minimal trailing space - no wasted whitespace
-                //
-                // ------------------------------------------------------------------------
-                // EXTREME AGGRESSIVE VISUAL REPRESENTATION (98% spacing reduction):
-                // ------------------------------------------------------------------------
-                //
-                // TWO-LEVEL NESTED LIST (EXTREME AGGRESSIVE):
-                //
-                //   Heading or Text
-                //       ↓ (0.02em - seamless connection)
-                //   • Parent item 1
-                //       ↓ (0.01em - near zero bond)
-                //       ◦ Sub-item 1a
-                //       ◦ Sub-item 1b  ↕ (0.01em - near zero gap)
-                //       ◦ Sub-item 1c
-                //       ↓ (0.02em - near zero separation)
-                //   • Parent item 2
-                //       ↓ (0.01em - near zero bond)
-                //       ◦ Sub-item 2a
-                //       ◦ Sub-item 2b  ↕ (0.01em - near zero gap)
-                //       ↓ (0.02em - near zero separation)
-                //   • Parent item 3
-                //
-                //   Result: Ultra-cohesive blocks - content flows as continuous text
-                //
-                // SINGLE-LEVEL FLAT LIST (EXTREME AGGRESSIVE):
-                //
-                //   Heading or Text
-                //       ↓ (0.02em - seamless connection)
-                //   • Item 1
-                //   • Item 2     ↕ (0.01em - near zero gap)
-                //   • Item 3
-                //   • Item 4     ↕ (0.01em - near zero gap)
-                //   • Item 5
-                //
-                //   Result: Items flow as continuous text - no visual separation
-                //
-                // ========================================================================
+                // Tight list hierarchy: spacing adjustments controlled below
                 
                 // Better visual hierarchy for strong/bold tags
                 strong, b {
