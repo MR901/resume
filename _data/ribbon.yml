@@ -52,7 +52,7 @@ sections:
   - key: career_journey
     title: "Career Journey"
     type: markdown
-    file: _data/career_journey.md
+    file: assets/md/career_journey.md
     enabled: true
     description: "A narrative overview of my professional journey"
     custom_spacing: false
@@ -60,7 +60,7 @@ sections:
   - key: personal_value_statement
     title: "Personal Value Statement"
     type: markdown
-    file: _data/personal_value_statement.md
+    file: assets/md/personal_value_statement.md
     enabled: true
     description: "My core values and professional philosophy"
     custom_spacing: false

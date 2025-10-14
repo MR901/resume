@@ -78,7 +78,7 @@
                 <div class="section-title">{{ section.title }}</div>
                 <div class="section-content">
                   {% assign download_dir = section.dir | default: '_data/downloadables' %}
-                  {% assign files = site.static_files | where_exp: "f", "f.relative_path contains download_dir" | where_exp: "f", "f.extname != '.md'" %}
+                  {% assign files = site.static_files | where_exp: "f", "f.path contains download_dir" | where_exp: "f", "f.extname != '.md'" %}
                   <div class="list-group">
                     {% if files.size == 0 %}
                       <div class="text-muted">No downloads available.</div>

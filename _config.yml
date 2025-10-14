@@ -55,8 +55,8 @@ analytics:
 
 # Serve additional assets from _data so downloads and markdown can be accessed
 include:
-  - _data/career_journey.md
-  - _data/personal_value_statement.md
+  - assets/md/career_journey.md
+  - assets/md/personal_value_statement.md
   # no need to include assets/for_downloads; assets are served by default
 exclude:
   - RIBBON_*.md
