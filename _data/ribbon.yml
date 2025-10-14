@@ -45,7 +45,7 @@ animation:
   enabled: true
   
   # Fade-in duration for content (in seconds)
-  duration: 0.3
+  duration: 0.4
 
 # Sections to display in ribbon
 sections:

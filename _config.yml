@@ -61,14 +61,6 @@ include:
 exclude:
   - RIBBON_*.md
   - README.md
-  - README.rst
-  - DEVELOPMENT.md
-  - CODE_REVIEW_REPORT.md
-  - ERROR_HANDLING_SUMMARY.md
-  - FIXES_APPLIED.md
-  - QUICK_FIX_SUMMARY.md
-  - DETAILS_CONTAINER_GUIDE.md
-  - how_to.md
   - build.sh
   - Makefile
   - validate_yaml.rb
