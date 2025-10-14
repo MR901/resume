@@ -1,0 +1,688 @@
+basic:
+  name: Mohit Rajput
+  title: Machine Learning Software Engineer | Data Scientist | AI/ML/DL | IIT Roorkee
+  avatar:
+    display: true
+    path: profile_pic.png
+
+contact:
+  email: mohitrajput901@gmail.com
+  phone: +91-89795-72630
+  wechat:
+  whatsapp: +91-89795-72630
+  telegram:
+  website:
+  medium:
+  linkedin: mr901
+  googlescholar:
+  researchgate:
+  github: MR901
+  gitlab:
+  bitbucket:
+  twitter:
+  stackoverflow:
+  quora:
+  goodreads:
+
+profile:
+  display: false
+  title: Profile
+  details: |
+    It's your career profile, you can wirte markdown format text.
+    + First
+    + Second
+
+    ...
+
+areas_of_interest:
+  display: true
+  title: Areas of Professional Interest
+  details: |
+    + Reinforcement, Unsupervised Learning and Recommendation System 
+    + Data Collection, Data Engineering and Experiment Design
+    + EDGE Devices based ML 
+    + Data based Product Research and Development
+    + Deep Learning based solutions (RNN, CNN, LSTM, SOM, Auto Encoder) 
+    + Natural Language Processing (NLP) and ChatBots
+    + Time Series analysis & Computer Vision 
+
+
+experiences:
+  display: true
+  title: Experiences
+  items:
+    - company: CandorHealth
+      tag: Full-time
+      location: Bangalore
+      role1: Senior Machine Learning Software Engineer 
+      time1: Mar'23 - Present
+      details: |
+        Experience in this company:
+        + **National Provider Identifier (NPI) Filler services for the missing NPI**
+          - Filled in the missing information for multiple cases of Healthcare provider by utilizing the data available from data source.
+          - **Tags**: *Identity Resolution, Similarity Mapping, Search, Parallel Processing, Big Data, APIs, Redis, Spark*
+        &nbsp;‎ &nbsp;    
+        &nbsp;‎ &nbsp;  
+
+    - company: Amazon Seller Services Private Limited - Analytics Technology and Engineering (ATE)
+      tag: Full-time
+      location: Bangalore
+      role1: Data Scientist II 
+      time1: Apr'22 - Jan'23
+      role2: Engineer
+      time2: Feb'23 - Mar'23
+      details: |
+        Experience in this company:
+        + **Day Ahead Capacity Planning**
+          - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
+          - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
+          - **Tags**: *Time Series, Curve Matching, ML, Sagemaker, EC2, Lambda, Event Bridge, S3, Dashboard*
+        + **Common Utilities Python Lib (v1)**
+          - A simple library that contains the common utilities to be used as part of multiple projects.geography
+          - Credential Keeping and Retrieving: This is based on AWS Secret Manager 
+          - SQL Query Executor: Run SQL jobs while capturing and providing the job stats and logging them too.
+          - Logger: A file and table based logger wrapper
+          - S3 Interaction: A wrapper containing functions for S3 based utility.
+          - Operations: A set of certain class & functions for Path, Time, & Math related Operations
+          - Data Evaluation & Clustering: Functions to evaluate & show performance of Regression & class based data in much greator details.
+          - Data Analysis: Function to identify Missing data wrt to groups, plotting the data etc were present.
+          - Document Interaction: ability to connect & retrieve data from Quip
+          - **Tags**: *AWS Services, DB, SQL, Evaluation, Logging, Analyis, data pipeline*
+        + **Capacity Planning Performance Evaluation, Analysis & Dashboard**
+          - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
+          - Helps better evaluate multiple component of delivery at multiple country, station, ship methods and cycles
+          - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
+        + **Multiple Reports Creation and Data Pipelines Testing**
+          - Created Reports for Middle Mile Performance Evaluation and tested/adjusted few data pipelines for reporting.
+        &nbsp;‎ &nbsp;    
+        &nbsp;‎ &nbsp;  
+
+    - company: Cargill - Cargill Digital Labs
+      tag: Full-time
+      location: Bangalore
+      role1: Machine Learning Software Engineer 
+      time1: Jun'19 - Apr'22
+      details: |
+        Experience in this company:
+        + **ML labs v2 setup**
+          - Defining ways to Work with ML projects and other applications having ML related features
+          - Brining sustainable practices for accelerated development while maintaining the agility  
+          - Planning phase of data governance, 3rd Party Data Annotators, Portal development for data tagging, selection and versioning, data collection experiment designs and pipelines.
+        + **Estimating Growth Indicator of Chicken (POC)**
+          - Estimating the weight and age of the chicken based on video recording done using the mobile camera.
+          - **Tags**: *Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
+        + **Defective Nugget Detection and Accounting (POC then MVP)**
+          - Defective Nugget Detection and Tracking on conveyor belt with output projected on display for manual removal.
+          - **Tags**: *Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
+        + **HR Chatbot (Myco) (MVP)**
+          - Initial product version was launched for Singapore and Australia with capability for form filling, ticket creation, ticket checking, easy data integration from excel sheet
+          - **Tags**: *Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
+        + **Financial Commentary Generation (POC)**
+          - A utility for table-to-text based on template method was developed for the initial stage, b/c of the lack and too much fragmentation of data source this approach was deemed fit.
+        + **YOLOv5-v4** training and deployment integration on AWS suitable to multiple tailored needs.
+          - **Tags**: *Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
+        + **Computer Vision Utility**
+          - Streamlit based web application for parsing, labelling, visualizing annotation, with support for Yolo prediction.
+          - Ability to connect work with local, S3 and pcloud storage.
+        + MiApp feature involving weather data visualization using the GIS data.
+        + **Information Extraction from Ship Invoices (POC)**  
+          - Extracting multiple information through the information that was shared in old and current emails.
+          - **Tags**: *Text-to-Table, Analytics; Regex, Python Email to DB*
+        &nbsp;‎ &nbsp;    
+        &nbsp;‎ &nbsp;  
+
+    - company: ShieldSquare (Radware) - Reseach and Development Team
+      tag: Full-time
+      location: Bangalore
+      role1: Data Scientist – R&D
+      time1: Apr'18-May'19
+      role2: Associate Data Scientist – R&D
+      time2: Jun'17-Mar'18
+      details: |
+        Experience in this company:
+        + **ICLSSTA**
+            - Solely developed a framework, which develop and evaluate unsupervised learning solution in much depth and this from a single config file.
+            - **Tags**: *Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
+        + **Adaptive Action Taking (AAT)**
+            - Developed a generalized module named which makes use of reinforcement learning to automatically take action on incoming traffic on the web property.
+            - **Tags**: *Reinforcement Learning, Multi-Armed Bandit, Smart handling of Business Limits, Self-Adjusting* 
+        + **Deep Behaviour Analysis (IDBA)**
+            - Partially developed a module named Intent based, which utilizes LSTM to yield encoded features and scores that are used with supervised, anomaly and clustering.
+            - **Tags**: *RNN, Auto-Encoder, Semi-Supervised Learning, Sequence Based Detection, Deep Learning* 
+        + **Threshold Online Reinforcement (ThOR)**
+            - Helped developed a module named, which makes utilizes online learning to develop a probability score distribution over of isotonic regression for action taking.
+            - **Tags**: *Isotonic Regression, Online Learning, Self-Adjusting, Smart handling of Business Limits* 
+        + **Second Level Module Integration**
+            - Developed and implemented end to end machine and reinforce learning based solutions using ICLSSTA-AAT, IDBA-ICLSSTA-AAT, & IDBA-ThOR
+            - **Tags**: *Semi-Supervised, Supervised, unsupervised, reinforcement learning, behaviour analysis* 
+        + **Titan Batch Analyser**
+            - Developed and Implemented, which utilizes multiple browser signatures, behaviour based rules, regular expressions and databases to generate a suspiciousness score to take action on traffic.
+            - **Tags**: *SQL & Python Implementation, ETL, Advance SQL operations, Handling Multiple Datasets* 
+        + **Rule Scripts**
+            - Developed and Implemented multiple rules which were based on network, device and browser fingerprint, and behaviour of the visitors. These were adequately balanced between causal and correlated, yielding negligible FP. 
+            - **Tags**: *Domain knowledge, Behaviour Analysis, Rules development* 
+        + **Rule Mining**
+            - Created a Recommendation System for the highlighting possible bad signature coming in the traffic. 
+            - **Tags**: *Associate Rule Mining, Text Data Pre-processing* 
+        + Developing Dynamic Moving Collective Intelligence which can evolve while working across multiple sid.
+        + **Other Works**
+            - Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
+            - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
+        &nbsp;‎ &nbsp;  
+
+projects:
+  display: true
+  title: Projects
+  intro: |
+    Here're some projects I've developed
+
+  items:
+
+    - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
+      link: 
+      details: |
+      
+    - name: Edge Device based CV application for counting of sheets processed in a workshop
+      link: https://youtu.be/ZMsrct_866k
+      details: |
+      
+    - name: Sticker Detection and OCR
+      link: https://youtu.be/de7EYj7bFEI
+      details: |
+      
+    - name: Image to Image Search - Flicker8k
+      link: https://youtu.be/zV9rrC-mLGI
+      details: |
+        &nbsp;&nbsp;&nbsp;&nbsp;Following Searchers were created  
+        &nbsp;&nbsp;&nbsp;&nbsp;  1. RCH - Regional Color Histogram  
+        &nbsp;&nbsp;&nbsp;&nbsp;  2. PTG - Pre Trained Grouping  
+        &nbsp;&nbsp;&nbsp;&nbsp;  3. TAE - Trained Auto Encoder  
+        &nbsp;&nbsp;&nbsp;&nbsp;  4. ICG - Image Caption Based Grouping (incomplete)  
+      
+    - name: Image to Image Search - Jewellery
+      link: https://youtu.be/DmrSy9Ivobc
+      details: |
+      
+    - name: Accounting for Pipe Bundles being Exported
+      link: https://youtu.be/hJdGpM8_ADo
+      details: |
+      
+    - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
+      link: https://youtu.be/HxUXtiWylH4
+      details: |
+      
+    - name: Human Pose Estimation and Activity Recognition
+      link: https://youtu.be/Y7LCiZbOmNQ
+      details: |
+      
+    - name: GIS Temperature and Precipitation Time based changes visualization
+      link: https://youtu.be/FeCqUZUwEZA
+      details: |
+      
+    - name: WhatsApp based Chatbot (Hack around way)
+      link: 
+      details: |
+      
+    - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
+      link: 
+      details: |
+      
+    - name: Streamlit deployed app for basic Computer Vision applications.
+      link: https://computer-vision-util.streamlit.app/
+      details: |
+      
+    - name: Streamlit based threshold adjustment for object detector and annotation visualizer
+      link: 
+      details: |
+      
+    - name: Supervised and Unsupervised Learning Framework 
+      link: 
+      details: |
+          &nbsp;&nbsp;&nbsp;&nbsp;Easy selection of basic data pre-processing, transformation, dimension reduction/clustering/anomaly algorithm selection or pipeline creation, hyperparameters setting, ensemble, and  EDA.
+      
+    - name: Other projects
+      link: 
+      details: |
+        
+        + &nbsp;&nbsp;&nbsp;&nbsp;Flying Taxi Business Case, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Build a Scalable Data Strategy, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Create an Iterative Design Path, Udacity
+        
+        + &nbsp;&nbsp;&nbsp;&nbsp;Facial Keypoint Detection, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Image Captioning, Udacity
+        + &nbsp;&nbsp;&nbsp;&nbsp;Landmark Detection & Tracking (SLAM), Udacity
+        
+        + &nbsp;&nbsp;&nbsp;&nbsp;Part of Speech Tagging, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Build an Adversarial Game Playing Agent - Isolation game playing agent, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Build a Forward-Planning Agent - Cargo route planning, Udacity 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Sudoku solver, Udacity 
+
+        + &nbsp;&nbsp;&nbsp;&nbsp;Twitter Sentiment Analysis
+        + &nbsp;&nbsp;&nbsp;&nbsp;Identifying customer segment
+        + &nbsp;&nbsp;&nbsp;&nbsp;Black Friday: Understanding the customer purchase behaviour, Analytics Vidhya 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Estimation of the audience score of movies, Coursera 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Predicting the way in which exercise were done, Coursera 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Forecasting bike rental demand in the Capital Bike Sharing Program, Kaggle 
+        + &nbsp;&nbsp;&nbsp;&nbsp;Predicting Survival on the Titanic, Kaggle
+
+#     - name: Foo
+#       link: https://www.google.com
+#       details: |
+#         Project Foo's detail, you can write markdown format text.
+
+publications:
+  display: true
+  title: Python Libraries
+  intro: |
+    Here're the libraries that I've created
+
+  items:
+    - title: 1. Algorithmic Machine Learning Exploration and Exploitation Tool (AMLEET)
+      # authors: Mohit Rajput 
+      # conference: Foobar, 2019
+      # link: https://www.google.com
+      details: |
+        &nbsp;‎&nbsp;‎A personal library compromised of general code base for faster develoment. It supports the following.
+        + **General**: Code Visual in Terminal; operations reated to list, dict, datetime, pandas and numpy; Runtime python cmdline support; Git status info; system performance; and many more.
+        + **Logger**: Initializing, Method.
+        + **Configuration**: Generator; Accepts json, yaml, cmdline, configparser and dict; Merge multiple configs; etc
+        + **Notifications**: Support sending Emails and SMS
+        + **Storage**: Ability to work with datalakes such as Pcloud, S3.
+        + **DB Support**: Provides functionalities to work with tables and DB. Additionally support GoogleBQ.
+        + **Computer Vision**:  
+          + General
+          + Work With Streams
+          + Color Threshold
+          + Draw on Frame
+          + Manipulate Frame
+          + Image Transformation for Transfer
+          + Video to Images
+          + Images to Videos or GIF
+          + Annotation Conversions and Plotting
+          + Image Pixel Standardizations
+          + Multi Face Detection
+          + Multi Face Landmark
+          + Multi Recognition - best selection
+          + Multi Pose Estimation
+          + Training Data Creation
+        + **NLP**:
+          + Text Cleaning 
+          + EDA
+          + Embedding Creation
+        + **Tables**
+          + Feature Analysis
+          + Custom Scaling and Transformation
+          + EDA
+          + Transformation
+        + **Supervised & Unsupervised Learning**
+          + Wrapper on scikit-learn
+          + Anomaly and outlier Detection 
+          + Custom Algorithm support
+          + Framework to support config to select suitable algorithm and params
+          + Ensembling
+          + Support for multiple metadata export
+        + **Evaluation**
+          + Regression
+          + Classification
+          + Object Detection
+        + **Sections Still in Development**
+          + Redis Integration
+          + GIS Data Support
+          + Time Series
+          + Network information extraction
+        &nbsp;‎ &nbsp;  
+        &nbsp;‎ &nbsp;  
+      
+    - title: 2. COCO Transformation Utility (CTU)
+      # authors: Mohit Rajput 
+      # conference: Foobar, 2019
+      link: https://pypi.org/project/ctu/
+      details: |
+        &nbsp;‎&nbsp;‎Developed as a part of ML-Labs@Cargill. Awaiting for approval to be released as open source.
+        + Enable modifying your COCO annotations similair to the transformation applied to the images.
+        + Provides the capabilty to have augmented images and annoations.
+        + Ability to plot multiple annoations on images.
+        &nbsp;‎ &nbsp;  
+    # - title: The Art of Bar
+    #   authors: Foo Bar
+    #   conference: Foobar, 2019
+    #   link:
+      
+patents:
+  display: true
+  title: Patent & Research Paper
+  details: |
+    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
+    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
+    + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
+      
+skills:
+  display: true
+  title: Tools & Skills
+  details: |
+    + ML Languages/Framework
+        - Python, Scikit-Learn, Tensorflow, PyTorch
+    + **Other Language**
+        - R, SAS, JAVA, C++
+    + **Other**
+      -  APIs, Google Big Query, Docker, Selenium, Redis, Grafana, Kibana, HTML, CSS
+    + **Databases**
+        - SQL, No-SQL
+    + **Software**
+        - Tableau, Excel, XLMiner, Spyder, Jupyter Notebook, RStudio, Gimp, SolidWorks
+    + **Cloud Computing Services**
+        - Google Cloud Platform, Amazon Web Services, Microservices Architecture
+    + **Cloud Data lakes**
+        - S3, Cloud Storage, Drive, Pcloud
+    + **Hardware**
+        - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
+
+# Apache Spark, Apacke Kafka, Streamlit      
+# -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
+#   levels:
+#     - name: Skill A
+#       level: 90
+#     - name: Skill B
+#       level: 80
+#     - name: Skill C
+#       level: 70
+
+education:
+  display: true
+  title: Education
+  items:
+    - university: Indian Institute of Technology, Roorkee
+      time: 2012 - 2017
+      major: Metallurgy and Material Engineering
+      degree: B.Tech. + M.Tech. (Dual Degree Course)
+      details: |
+        + Credit Courses: 
+          - Economics
+          - Corporate Social Responsibility
+          - Object Oriented Programming
+          - Management Concepts and Practices
+          - Marketing
+          - Human Resource Management
+          - Operations
+          - Financial Management
+          - Behaviour Psychology
+      
+    - university: Udacity - Data Product Manager
+      time: 2021
+      major: 
+      degree: Nano Degrees
+      details: https://confirm.udacity.com/QGUGJTSK
+      
+    - university: Udacity - Computer Vision
+      time: 2020
+      major: 
+      degree: Nano Degrees
+      details: https://confirm.udacity.com/4DMWY73G
+      
+    - university: Udacity - Artificial Intelligence
+      time: 2018
+      major: 
+      degree: Nano Degrees
+      details: https://confirm.udacity.com/KGCWC7NW
+      
+certificates:
+  display: true
+  title: Certificates
+  items:
+
+    - name: "Introduction to Machine Learning in Production"
+      authority: Coursera
+      time: 2022
+      link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
+      details: |
+
+    - name: "Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract"
+      authority: Coursera
+      time: 2021
+      link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
+      details: |
+#     https://coursera.org/share/b8c104fdf7afa84fa1cc279d747d38c4
+
+    - name: "Neural Networks and Deep Learning, DeepLearning.AI"
+      authority: Coursera
+      time: 2020
+      link: https://coursera.org/share/92aafe4a3474d94117ab73a9420afe82
+      details: |
+
+    - name: "Deep Learning and NLP A-Z: How to Create a ChatBot"
+      authority: Udemy
+      time: 2020
+      link: https://www.udemy.com/certificate/UC-PUMKBSE1/
+      details: |
+
+    - name: "Artificial Intelligence A-Z: Learn How To Build An AI"
+      authority: Udemy
+      time: 2020
+      link: https://www.google.com
+      details: |
+
+    - name: "Business Fundamentals: Corporate Strategy"
+      authority: Udemy
+      time: 2020
+      link: https://www.udemy.com/certificate/UC-AP3ABEGX/
+      details: |
+
+    - name: "Deep Learning with TensorFlow 2.0"
+      authority: Udemy
+      time: 2020
+      link: https://www.udemy.com/certificate/UC-6M01FJV2/
+      details: |
+
+    - name: "Deep Learning: Advanced NLP and RNNs"
+      authority: Udemy
+      time: 2020
+      link: https://www.udemy.com/certificate/UC-FK7VUTER/
+      details: |
+
+    - name: "Deep Learning and Computer Vision A-Z: OpenCV, SSD & GANs"
+      authority: Udemy
+      time: 2018
+      link: https://www.udemy.com/certificate/UC-ZQF4NUHP/
+      details: |
+
+    - name: "Deep Learning A-Z: Hands-On Artificial Neural Network"
+      authority: Coursera
+      time: 2018
+      link: https://www.udemy.com/certificate/UC-PUMKBSE1/
+      details: |
+
+    - name: "Machine Learning A-Z: Hands-On Python & R in Data Science"
+      authority: Udemy
+      time: 2017
+      link: https://www.udemy.com/certificate/UC-76HXNV9U/
+      details: |
+
+    - name: "Statistics for Business Analytics A-Z"
+      authority: Udemy
+      time: 2017
+      link: https://www.udemy.com/certificate/UC-OOVF3D0D/
+      details: |
+
+    - name: "Big Data Integration and Processing, UC San Diego"
+      authority: Coursera
+      time: 2017
+      link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
+      details: |
+
+    - name: "Big Data Modeling and Management System, UC San Diego"
+      authority: Coursera
+      time: 2017
+      link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
+      details: |
+#       https://www.coursera.org/account/accomplishments/certificate/VZ3PX9CV2Y8Z
+
+    - name: "Introduction to Data Analytics for Business, University of Colorado"
+      authority: Coursera
+      time: 2017
+      link: https://coursera.org/share/431a53339ca34da0776464e0742a15ed
+      details: |
+#       https://www.coursera.org/account/accomplishments/certificate/K9MNKJXVKCZJ
+
+    - name: "Introduction to Big Data, UC San Diego"
+      authority: Coursera
+      time: 2017
+      link: https://coursera.org/share/a5966ae7f1093d28cabdc2d0d56c96f0
+      details: |
+#       https://www.coursera.org/account/accomplishments/certificate/QLJD4FLJJLVV
+
+    - name: "Customer Analytics, University of Pennsylvania"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/c3761defcff1a28328abb5d12e23f0ae
+      details: |
+#       https://www.coursera.org/account/accomplishments/certificate/6APN86VXXFKJ
+
+    - name: "Practical Machine Learning, Johns Hopkins University"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/7295b164f5bf12044ebea79a7809cf24
+      details: |
+#       https://www.coursera.org/account/accomplishments/verify/MZP92JQR2CMT
+
+    - name: "Linear Regression and Modelling, Duke University"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
+      details: |
+#       https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
+
+    - name: "Building a Data Science Team, Johns Hopkins University"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/2b8f08e4f99182d5ff882c2de2ff208e
+      details: |
+#       https://www.coursera.org/account/accomplishments/verify/B8PMWCU3PGP3
+
+    - name: "Data Science in Real Life, Johns Hopkins University"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/ee48db7b7cbe7d12ad3cee24281d45b7
+      details: |
+#       https://www.coursera.org/account/accomplishments/verify/6P9E75GJZHD4
+
+    - name: "Managing Data Analysis, Johns Hopkins University"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/0b95afa85e3ba653c34aa2206f84c5ae
+      details: |
+#       https://www.coursera.org/account/accomplishments/verify/LLFGAPSKTZ3A
+
+    - name: "R Programming, Johns Hopkins University"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/ec6f87082b34ce5bd3c935c2b785d5b7
+      details: |
+
+    - name: "Coaching Conversations, University of California, Davis"
+      authority: Coursera
+      time: 2020
+      link: https://www.coursera.org/account/accomplishments/verify/854AWKUAYRDH
+      details: |
+
+    - name: "Coaching Practices, University of California, Davis"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/UWGHHXEKKNCL
+      details: |
+
+    - name: "Data Management and Visualization, Wesleyan University"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/SNWR3DDAMQDA
+      details: |
+
+    - name: "Java Programming: Solving Problems with Software, Duke Univ"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/5GGYWAN9UZ5V
+      details: |
+
+    - name: "A crash course in Data Science, Johns Hopkins"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/A9PBXDCTMP6H
+      details: |
+
+    - name: "Managing as a Coach, University of California, Davis"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/B9D4CP8UYK38
+      details: |
+
+    - name: "Mastering Data Analysis in Excel, Duke University"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/2JHAKUAHJRPP
+      details: |
+
+    - name: "Programming Foundations with JavaScript, HTML & CSS, Duke"
+      authority: Coursera
+      time: 2016
+      link: https://coursera.org/share/61cfbf4357f5769d2d1ea3dad2786a29
+      details: |
+#       https://www.coursera.org/account/accomplishments/verify/QC5UYULEU2L2
+
+    - name: "Setting expectations & Assessing Performance Issues, UC Davis"
+      authority: Coursera
+      time: 2016
+      link: https://www.coursera.org/account/accomplishments/verify/BF4WVJCW73GV
+      details: |
+
+    - name: "Introduction to R Programming, Microsoft Corporation"
+      authority: Coursera
+      time: 2016
+      link: https://www.google.com
+      details: |
+
+
+#     - name: Course Foo
+#       authority: Coursera
+#       time: 2020
+#       link:
+#       details: |
+#         It's my Course Foo certificate by coursera.
+
+languages:
+  display: true
+  title: Languages
+  items:
+    - idiom: Hindi
+      level: Native
+    - idiom: English
+      level: Professional
+
+interests:
+  display: true
+  title: Interests
+  items:
+    - item: Reading
+      link:
+    - item: Cooking
+      link:
+    - item: PC Gaming
+      link:
+    - item: Bike Trips
+      link:
+    - item: Travelling
+      link:
+
+evaluation:
+  display: false
+  title: Self-evaluation
+  details: |
+    Here is my self evaluation.
+    + First
+    + Second
+
+    ...
+
+footer:
+  display: true
+
+close: >
+  Sorry, my resume has been hidden.

@@ -3,6 +3,10 @@
 
 @charset "utf-8";
 
-$theme-color: {{ site.theme_color | default: '#42A8C0' }};
+// Configure variables first so downstream modules receive the override
+@use "../_sass/variables" with (
+  $theme-color: {{ site.theme_color | default: '#42A8C0' }}
+);
 
-@import "default";
+// Load the forwarded styles
+@use "../_sass/default";

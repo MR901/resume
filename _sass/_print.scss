@@ -1,7 +1,8 @@
+@use "variables" as *;
 @media print {
     @page {
         size: A4;
-        margin: 1cm 0.5cm;
+        margin: 1.5cm 0.5cm; // Minimal side margins for maximum text width
     }
 
     @page :first {
@@ -10,6 +11,9 @@
 
     body {
         padding: 0 !important;
+        background: white !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
     }
 
     a:after {
@@ -18,13 +22,211 @@
 
     .wrapper {
         box-shadow: none;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0.2cm !important;
+        background: white !important;
 
         .avatar img {
-            max-width: 100px !important;
+            max-width: 80px !important; // Slightly smaller avatar for print
+        }
+
+        section {
+            margin-bottom: 1.2rem !important;
         }
     }
 
     footer {
         display: none;
+    }
+
+    * {
+        background: white !important;
+        color: black !important;
+    }
+
+    .section-title,
+    h1, h2, h3, h4, h5, h6 {
+        color: #333 !important;
+    }
+
+    .section-title {
+        font-size: 16px !important;
+        margin-bottom: 0.6rem !important;
+        font-weight: 600 !important;
+    }
+
+    .basic .header .name {
+        font-size: 24px !important; // Reduced from 32px (huge-font-size)
+        margin-bottom: 0.3rem !important;
+    }
+
+    .basic .header .title {
+        font-size: 16px !important; // Reduced from 18px (middle-font-size)
+        margin-bottom: 0.4rem !important;
+    }
+
+    .experiences .upper-row .company {
+        font-size: 15px !important;
+    }
+
+    .experiences .upper-row .role {
+        font-size: 13px !important;
+    }
+
+    .details {
+        border-color: #ccc !important;
+        background: white !important;
+        padding: 0.5rem !important;
+        margin-top: 0.6rem !important;
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+    }
+
+    p {
+        margin-bottom: 0.4rem !important;
+        font-size: 13px !important;
+    }
+
+    ul, ol {
+        margin: 0.3rem 0 0.5rem 0 !important;
+        font-size: 13px !important;
+    }
+
+    li { margin: 0.2rem 0 !important; line-height: 1.3 !important; }
+
+    .basic .header .contact ul li {
+        font-size: 12px !important;
+        
+        &:not(:last-child)::after {
+            margin: 0 0.15em !important;
+        }
+    }
+
+    .experiences .item {
+        margin-bottom: 1.2rem !important;
+    }
+
+    .experiences .company-row,
+    .experiences .role-row {
+        background: white !important;
+        border-color: #ddd !important;
+        padding: 0.4rem 0.6rem !important;
+    }
+
+    .certificates {
+        .item {
+            margin-bottom: 0.8rem !important;
+            padding: 0.4rem 0.6rem !important;
+            border: 1px solid #ddd !important;
+            border-radius: 4px !important;
+            background: white !important;
+            
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.25rem !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                
+                .certificate {
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    color: #333 !important;
+                    flex: 1 !important;
+                    
+                    a {
+                        color: #333 !important;
+                        text-decoration: none !important;
+                        font-weight: 600 !important;
+                    }
+                }
+                
+                .time {
+                    position: static !important;
+                    font-size: 12px !important;
+                    color: #666 !important;
+                    font-weight: 500 !important;
+                    white-space: nowrap !important;
+                    margin-left: 1rem !important;
+                }
+            }
+            
+            .authority {
+                font-size: 12px !important;
+                color: #777 !important;
+                font-style: italic !important;
+                margin-bottom: 0.3rem !important;
+            }
+            
+            .details {
+                margin-top: 0.4rem !important;
+                padding: 0.3rem !important;
+                border: none !important;
+                background: rgba(0, 0, 0, 0.02) !important;
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    .educations {
+        .item {
+            margin-bottom: 0.9rem !important;
+            padding: 0.5rem 0.7rem !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+            background: white !important;
+            
+            &:last-child {
+                margin-bottom: 0 !important;
+                border-bottom: 1px solid #ccc !important;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.3rem !important;
+                
+                .university {
+                    font-size: 15px !important;
+                    font-weight: 600 !important;
+                    color: #333 !important;
+                    display: block !important;
+                    margin-bottom: 0.2rem !important;
+                    
+                    a {
+                        color: #333 !important;
+                        text-decoration: none !important;
+                        font-weight: 600 !important;
+                    }
+                }
+                
+                .major {
+                    font-size: 13px !important;
+                    color: #555 !important;
+                    font-style: italic !important;
+                    display: block !important;
+                }
+                
+                .degree {
+                    position: static !important;
+                    font-size: 12px !important;
+                    color: #666 !important;
+                    font-weight: 500 !important;
+                    margin-top: 0.2rem !important;
+                    display: block !important;
+                    text-align: right !important;
+                }
+            }
+            
+            .details {
+                margin-top: 0.4rem !important;
+                padding: 0.3rem !important;
+                border: none !important;
+                background: rgba(0, 0, 0, 0.02) !important;
+                font-size: 12px !important;
+            }
+        }
     }
 }

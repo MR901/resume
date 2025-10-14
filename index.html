@@ -3,23 +3,29 @@ layout: default
 ---
 
 {% assign data = site.data.data %}
+{% assign ribbon = site.data.ribbon %}
 {% if site.open %}
-<div class="wrapper">
-    {% include basic.html%}
-    {% include profile.html %}
-    {% include areas_of_interest.html %}
-    {% include experiences.html %}
-    {% include projects.html %}
-    {% include publications.html %}
-    {% include patents.html %}
-    {% include skills.html %}
-    {% include education.html %}
-    {% include certificates.html %}
-    {% include language.html %}
-    {% include interests.html %}
-    {% include evaluation.html %}
-</div>
-{% include footer.html %}
+{% if ribbon and ribbon.enabled %}
+    {% include ribbon.html %}
+    {% include footer.html %}
+{% else %}
+    <div class="wrapper">
+        {% include basic.html%}
+        {% include profile.html %}
+        {% include areas_of_interest.html %}
+        {% include experiences.html %}
+        {% include projects.html %}
+        {% include publications.html %}
+        {% include patents.html %}
+        {% include skills.html %}
+        {% include education.html %}
+        {% include certificates.html %}
+        {% include language.html %}
+        {% include interests.html %}
+        {% include evaluation.html %}
+    </div>
+    {% include footer.html %}
+{% endif %}
 {% else %}
 {% include close.html %}
 {% endif %}

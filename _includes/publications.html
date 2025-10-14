@@ -1,7 +1,6 @@
 {% assign publications = data.publications %}
 {% if publications and publications.display %}
 <section class="publications">
-    <br>
     <div class="section-title">
         {{ publications.title }}
     </div>
@@ -18,24 +17,24 @@
         {% for publication in publications.items %}
         <div class="item">
             {% if publication.title %}
-            <p class="title" style="font-size:100%">
+            <p class="title">
                 &nbsp;{{ publication.title }}
                 {% if publication.link %}
-                <small>[<a href="{{ publication.link }}" style="color:rgba(0,0,235,0.8);font-size:90%">demo link</a>]</small>
+                <small>[<a href="{{ publication.link }}" class="demo-link">demo link</a>]</small>
                 {% endif %}
             </p>
 
             {% if publication.authors %}
-            <div class="authors" style="font-size:90%">&nbsp;{{ publication.authors }}</div>
+            <div class="authors">&nbsp;{{ publication.authors }}</div>
             {% endif %}
 
             {% if publication.conference %}
-            <div class="conference" style="font-size:90%">{{ publication.conference }}</div>
+            <div class="conference">{{ publication.conference }}</div>
             {% endif %}
             
             {% if publication.details %}
             <div class="details">
-                <div class="markdown" align="left" style="font-size:90%">
+                <div class="markdown" align="left">
                     {{ publication.details | markdownify }}
                 </div>
             </div>

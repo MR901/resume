@@ -1,0 +1,470 @@
+{% assign ribbon = site.data.ribbon %}
+{% assign data = site.data.data %}
+{% assign default_section_key = ribbon.default | default: ribbon.sections[0].key %}
+
+{% if ribbon and ribbon.enabled %}
+{% comment %} Extract configuration with defaults {% endcomment %}
+{% assign style_type = ribbon.style.type | default: 'rounded' %}
+{% assign style_size = ribbon.style.size | default: 'sm' %}
+{% assign style_alignment = ribbon.style.alignment | default: 'left' %}
+{% assign style_shadow = ribbon.style.shadow | default: 'md' %}
+{% assign style_bg = ribbon.style.background | default: site.theme_color %}
+{% assign style_text = ribbon.style.text | default: '#ffffff' %}
+{% assign style_gap = ribbon.style.gap | default: '16px' %}
+{% assign style_padding_y = ribbon.style.padding_y | default: '10px' %}
+{% assign style_padding_x = ribbon.style.padding_x | default: '0' %}
+{% assign mobile_stack = ribbon.responsive.mobile_stack | default: false %}
+
+{% comment %} Build CSS classes {% endcomment %}
+{% assign ribbon_classes = 'ribbon-nav shadow-' | append: style_shadow | append: ' style-' | append: style_type %}
+{% assign container_classes = 'ribbon-container align-' | append: style_alignment %}
+{% if mobile_stack %}
+  {% assign container_classes = container_classes | append: ' mobile-stack' %}
+{% endif %}
+
+<div class="{{ ribbon_classes }}" style="background: {{ style_bg }}; color: {{ style_text }};">
+  <div class="container {{ container_classes }}" style="gap: {{ style_gap }}; padding: {{ style_padding_y }} {{ style_padding_x }};">
+    {% for section in ribbon.sections %}
+      {% if section.enabled %}
+        <button 
+          class="btn btn-{{ style_size }} btn-light ribbon-btn" 
+          data-target="{{ section.key }}"
+          {% if section.description %}
+          title="{{ section.description }}"
+          aria-label="{{ section.title }}: {{ section.description }}"
+          {% else %}
+          aria-label="{{ section.title }}"
+          {% endif %}>
+          {{ section.title }}
+        </button>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div id="ribbon-views" class="container" style="padding-top: 16px;" role="main" aria-live="polite">
+  {% for section in ribbon.sections %}
+    {% if section.enabled %}
+      <div class="ribbon-view" id="view-{{ section.key }}" role="tabpanel" aria-labelledby="btn-{{ section.key }}">
+        <div class="wrapper{% if section.custom_spacing == false %} no-custom-spacing{% endif %}">
+          {% case section.type %}
+            {% when 'markdown' %}
+              <section>
+                <div class="section-title">{{ section.title }}</div>
+                <div class="section-content">
+                  <div class="details">
+                    <div class="markdown" data-md-src="{{ section.file | relative_url }}"><div class="text-muted">Loading...</div></div>
+                  </div>
+                </div>
+              </section>
+
+            {% when 'resume' %}
+              {% include basic.html %}
+              {% include profile.html %}
+              {% include areas_of_interest.html %}
+              {% include experiences.html %}
+              {% include projects.html %}
+              {% include publications.html %}
+              {% include patents.html %}
+              {% include skills.html %}
+              {% include education.html %}
+              {% include certificates.html %}
+              {% include language.html %}
+              {% include interests.html %}
+              {% include evaluation.html %}
+
+            {% when 'downloads' %}
+              <section>
+                <div class="section-title">{{ section.title }}</div>
+                <div class="section-content">
+                  {% assign download_dir = section.dir | default: '_data/downloadables' %}
+                  {% assign files = site.static_files
+                    | where_exp: 'f', 'f.relative_path contains download_dir or f.path contains download_dir'
+                    | where_exp: 'f', 'f.extname != ".md"' %}
+                  <div class="list-group">
+                    {% if files.size == 0 %}
+                      <div class="text-muted">No downloads available.</div>
+                    {% endif %}
+                    {% for f in files %}
+                      <div class="list-group-item" style="display:flex; align-items:center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                        <span>{{ f.name }}</span>
+                        <span style="display:flex; gap: 8px;">
+                          <a class="btn btn-sm" style="background: white; color: #007bff; border: 1px solid #007bff;" href="{{ f.path | relative_url }}" target="_blank" rel="noopener">Preview</a>
+                          <a class="btn btn-sm" style="background: #007bff; color: white; border: 1px solid #007bff;" href="{{ f.path | relative_url }}" download="{{ f.name }}">Download</a>
+                        </span>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </section>
+          {% endcase %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<!-- Only load marked.js when ribbon is enabled -->
+<!-- Try multiple CDNs for reliability -->
+<script>
+  window.markedLoaded = false;
+  window.markedLoadAttempt = 0;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js" crossorigin="anonymous" onload="window.markedLoaded = true;" onerror="this.remove(); if(window.markedLoadAttempt++ < 1) { var s = document.createElement('script'); s.src = 'https://unpkg.com/marked@11.0.0/marked.min.js'; s.onload = function() { window.markedLoaded = true; }; document.head.appendChild(s); }"></script>
+<script>
+  (function() {
+    'use strict';
+    
+    // Configuration
+    var config = {
+      defaultKey: '{{ default_section_key }}',
+      baseurl: '{{ site.baseurl | default: "" }}',
+      animationEnabled: {{ ribbon.animation.enabled | default: true }},
+      animationDuration: {{ ribbon.animation.duration | default: 0.3 }}
+    };
+    
+    // Track active fetch requests to prevent race conditions
+    var activeRequests = {};
+    
+    // Track navigation debounce timer
+    var navDebounceTimer = null;
+    var isNavigating = false;
+    
+    // Debounce utility function
+    function debounce(func, wait) {
+      return function() {
+        var context = this, args = arguments;
+        clearTimeout(navDebounceTimer);
+        navDebounceTimer = setTimeout(function() {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
+    
+    // Utility: Try multiple URLs for fetching with AbortController support
+    function tryFetch(urls, signal) {
+      return new Promise(function(resolve, reject) {
+        var i = 0;
+        function next() {
+          if (signal && signal.aborted) {
+            return reject(new Error('Request aborted'));
+          }
+          if (i >= urls.length) return reject(new Error('All fetch attempts failed'));
+          var u = urls[i++];
+          var fetchOptions = signal ? { signal: signal } : {};
+          fetch(u, fetchOptions).then(function(r){
+            if (!r.ok) return next();
+            r.text().then(resolve).catch(next);
+          }).catch(function(err) {
+            if (err.name === 'AbortError') {
+              reject(new Error('Request aborted'));
+            } else {
+              next();
+            }
+          });
+        }
+        next();
+      });
+    }
+    
+    // Load markdown content
+    function loadMarkdown(container) {
+      if (!container || container.getAttribute('data-md-loaded') === 'true') return;
+      
+      var src = container.getAttribute('data-md-src');
+      if (!src) return;
+      
+      // Cancel any existing request for this container
+      if (activeRequests[src]) {
+        activeRequests[src].abort();
+      }
+      
+      // Create new AbortController for this request
+      var controller = new AbortController();
+      activeRequests[src] = controller;
+      
+      // Show loading state
+      container.classList.add('ribbon-loading');
+      
+      // Build candidate URLs
+      var candidates = [src];
+      if (config.baseurl && src.indexOf(config.baseurl + '/') === 0) {
+        candidates.push(src.substring(config.baseurl.length));
+      } else if (config.baseurl) {
+        candidates.push(config.baseurl + (src.charAt(0) === '/' ? '' : '/') + src);
+      }
+      
+      tryFetch(candidates, controller.signal).then(function(text){
+        try {
+          // Ensure marked.js is available
+          if (!window.marked) {
+            throw new Error('Markdown parser not loaded. Please refresh the page.');
+          }
+          
+          // Configure marked to NOT break on single newlines
+          if (window.marked.setOptions) {
+            window.marked.setOptions({
+              breaks: false,  // Don't create <br> on single line breaks
+              gfm: true,      // Use GitHub Flavored Markdown
+              pedantic: false,
+              sanitize: false  // We trust our own markdown files
+            });
+          }
+          
+          // marked.js v9.x uses marked.parse() as the primary API
+          var html = window.marked.parse(text);
+          
+          // Safe to use innerHTML here as marked.js sanitizes the output
+          // and we only load markdown from our own trusted _data directory
+          container.innerHTML = html;
+          container.classList.remove('ribbon-loading');
+          container.setAttribute('data-md-loaded', 'true');
+          
+          // Clean up active request
+          if (activeRequests[src]) {
+            delete activeRequests[src];
+          }
+        } catch (e) {
+          container.classList.remove('ribbon-loading');
+          console.error('Markdown parsing error:', e);
+          
+          // Clean up active request
+          if (activeRequests[src]) {
+            delete activeRequests[src];
+          }
+          
+          // Provide detailed error message with better styling and retry button
+          var errorHtml = '<div style="padding: 1.5rem; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; color: #856404;">';
+          errorHtml += '<strong style="font-size: 1.1em;">⚠️ Content Display Error</strong><br><br>';
+          errorHtml += '<p style="margin: 0.5rem 0;">The markdown parser failed to load.</p>';
+          errorHtml += '<p style="margin: 0.5rem 0; font-size: 0.9em;"><strong>Error:</strong> ' + escapeHtml(e.message) + '</p>';
+          errorHtml += '<button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #ffc107; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Reload Page</button>';
+          errorHtml += '<details style="margin-top: 1rem;"><summary style="cursor: pointer; font-weight: 600;">View raw content</summary>';
+          errorHtml += '<pre style="margin-top: 0.5rem; padding: 0.75rem; background: #f8f9fa; border-radius: 4px; overflow: auto; max-height: 400px; font-size: 0.9em; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">' + escapeHtml(text) + '</pre>';
+          errorHtml += '</details></div>';
+          
+          container.innerHTML = errorHtml;
+        }
+      }).catch(function(err){
+        container.classList.remove('ribbon-loading');
+        
+        // Don't show error if request was aborted (user navigated away)
+        if (err.message !== 'Request aborted') {
+          console.error('Failed to load markdown:', err);
+          
+          // Provide detailed error message for fetch failures
+          var errorHtml = '<div style="padding: 1rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">';
+          errorHtml += '<strong>❌ Content Loading Error</strong><br>';
+          errorHtml += '<small>' + escapeHtml(err.message || 'Failed to fetch content') + '</small><br>';
+          errorHtml += '<small>Attempted URLs: ' + escapeHtml(candidates.join(', ')) + '</small>';
+          errorHtml += '</div>';
+          
+          container.innerHTML = errorHtml;
+        }
+        
+        // Clean up active request
+        if (activeRequests[src]) {
+          delete activeRequests[src];
+        }
+      });
+    }
+
+    // Escape HTML to prevent XSS in error messages
+    function escapeHtml(text) {
+      var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return String(text).replace(/[&<>"']/g, function(m) { return map[m]; });
+    }
+    
+    // Show a specific view
+    function showView(key) {
+      // Prevent concurrent navigation
+      if (isNavigating) return;
+      isNavigating = true;
+      
+      var views = document.querySelectorAll('.ribbon-view');
+      var buttons = document.querySelectorAll('.ribbon-btn');
+      
+      // Validate key exists
+      if (!key) {
+        console.warn('showView called with empty key');
+        isNavigating = false;
+        return;
+      }
+      
+      // Hide all views
+      views.forEach(function(v) {
+        if (v) {
+          v.style.display = 'none';
+          v.classList.remove('active');
+          v.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Show target view
+      var target = document.getElementById('view-' + key);
+      if (target) {
+        target.style.display = '';
+        target.classList.add('active');
+        target.setAttribute('aria-hidden', 'false');
+        
+        // Load any markdown in the view
+        var mdContainers = target.querySelectorAll('[data-md-src]');
+        if (mdContainers && mdContainers.length > 0) {
+          mdContainers.forEach(loadMarkdown);
+        }
+        
+        // Scroll to top smoothly
+        if (window.scrollY > 100) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } else {
+        console.warn('View not found for key:', key);
+      }
+      
+      // Update button states
+      buttons.forEach(function(b) {
+        if (b) {
+          var isActive = b.getAttribute('data-target') === key;
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          b.disabled = false; // Re-enable buttons after navigation
+        }
+      });
+      
+      // Update URL without page reload
+      if (history && history.replaceState) {
+        try {
+          var url = new URL(window.location.href);
+          url.searchParams.set('section', key);
+          history.replaceState(null, '', url.toString());
+        } catch (e) {
+          console.warn('Failed to update URL:', e);
+        }
+      }
+      
+      // Announce to screen readers
+      var announcement = document.getElementById('ribbon-sr-announcement');
+      if (announcement) {
+        announcement.textContent = 'Switched to ' + (target ? target.getAttribute('aria-label') || key : key) + ' section';
+      }
+      
+      // Allow navigation again after a short delay
+      setTimeout(function() {
+        isNavigating = false;
+      }, 100);
+    }
+    
+    // Debounced version of showView
+    var debouncedShowView = debounce(showView, 150);
+    
+    // Initialize ribbon navigation
+    function init() {
+      // Initialize after verifying marked.js availability
+      
+      // Add screen reader announcement element
+      var announcement = document.createElement('div');
+      announcement.id = 'ribbon-sr-announcement';
+      announcement.className = 'sr-only';
+      announcement.setAttribute('role', 'status');
+      announcement.setAttribute('aria-live', 'polite');
+      document.body.appendChild(announcement);
+      
+      // Attach click handlers to buttons
+      document.querySelectorAll('.ribbon-btn').forEach(function(btn) {
+        if (!btn) return;
+        
+        btn.addEventListener('click', function() {
+          var target = this.getAttribute('data-target');
+          if (!target) {
+            console.warn('Button missing data-target attribute');
+            return;
+          }
+          
+          // Disable button temporarily to prevent double-clicks
+          this.disabled = true;
+          
+          // Use debounced version for better UX
+          debouncedShowView(target);
+          
+          // Re-enable after debounce period
+          var self = this;
+          setTimeout(function() {
+            self.disabled = false;
+          }, 200);
+        });
+        
+        // Add keyboard navigation
+        btn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+      
+      // Show initial view
+      var urlKey = null;
+      try {
+        var url = new URL(window.location.href);
+        urlKey = url.searchParams.get('section');
+      } catch (e) {
+        console.warn('Failed to parse URL:', e);
+      }
+      
+      var initialKey = urlKey || config.defaultKey;
+      if (initialKey) {
+        showView(initialKey);
+      } else {
+        console.error('No valid initial section key found');
+      }
+    }
+    
+    // Wait for marked.js to be available before initializing
+    function waitForMarked(attempts) {
+      attempts = attempts || 0;
+      
+      if (typeof window.marked !== 'undefined' && window.marked.parse) {
+        // marked.js is loaded and functional, initialize now
+        init();
+      } else if (attempts < 200) {
+        // Still waiting, retry after a short delay (max 10 seconds)
+        setTimeout(function() {
+          waitForMarked(attempts + 1);
+        }, 50);
+      } else {
+        // Timeout - initialize anyway to show content
+        console.error('marked.js failed to load after 10 seconds - initializing anyway');
+        console.error('window.marked type:', typeof window.marked);
+        console.error('window.markedLoaded:', window.markedLoaded);
+        init();
+      }
+    }
+    
+    // Start waiting for marked.js
+    waitForMarked();
+  })();
+</script>
+
+{% comment %} Screen reader only class for announcements {% endcomment %}
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
+{% endif %}
+
+

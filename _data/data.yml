@@ -28,41 +28,175 @@ profile:
   display: false
   title: Profile
   details: |
-    It's your career profile, you can wirte markdown format text.
+    It's your career profile, you can write markdown format text.
     + First
     + Second
 
     ...
+
 
 areas_of_interest:
   display: true
   title: Areas of Professional Interest
   details: |
     + Reinforcement, Unsupervised Learning and Recommendation System 
-    + Data Collection, Data Engineering and Experiment Design
-    + EDGE Devices based ML 
-    + Data based Product Research and Development
-    + Deep Learning based solutions (RNN, CNN, LSTM, SOM, Auto Encoder) 
+    + Data Collection, Data Engineering, R&D, Experiment and Solution Designing 
+    + Micro service architecture as well as EDGE computing based Machine Learning 
     + Natural Language Processing (NLP) and ChatBots
     + Time Series analysis & Computer Vision 
-
 
 experiences:
   display: true
   title: Experiences
   items:
+    - company: NerdAppLabs and Dianomic
+      tag: Full-time
+      location: Noida
+      role1: Lead Machine Learning Engineer 
+      time1: Jun'23 - Present
+      details: |
+
+        **Core Responsibilities:**
+        - Lead end-to-end ML solution design for centrifuge operational optimization.
+        - Own architecture, data pipelines, model deployment on Edge, and integration with industrial systems.
+        - Collaborate with cross-functional teams including Dianomic Systems and ADM stakeholders.
+
+        Experience in this company:
+        + **Forecasting breakover in centrifuge operations on EDGE**
+          - Solely developed .
+          - **Tags**: **
+        + **MLOps**
+          - Solely developed .
+          - **Tags**: **
+        + **Solids Buildup**
+          - Solely developed .
+          - **Tags**: **
+        + **Multi reference based Anomaly detector**
+          - Solely developed .
+          - **Tags**: **
+
+        Experience in this company:
+        + **Centrifuge Breakover Forecasting (EDGE Deployment)**
+          - Designed, trained, and deployed a predictive ML solution on EDGE devices to assist operators in optimizing centrifuge operation and reducing downtime.
+          - Integrated with PLC and HMI for real-time operational feedback.
+          - **Tags**: *Stacked-LSTM, PLC, HMI, FogLAMP, Edge Compute, Postgres, Grafana, GCP*
+
+        + **Solids Buildup Detection (EDGE Deployment)**
+          - Developed a time–frequency domain signal processing solution for predictive maintenance of centrifuges.
+          - Deployed on FogLAMP to monitor solids accumulation using high-frequency vibration signals from **4 sensors streaming at 8 kHz**.
+          - **Tags**: *Autoencoder, Fourier Analysis Networks, Signal Processing, High-Velocity Data, FogLAMP, Postgres, Grafana, Edge AI*
+
+        + **Multi-Reference Anomaly Detector**
+          - Built a multi-reference anomaly detection system leveraging contrastive learning and multi-instance learning for centrifuge operations.
+          - Supports operator-action and machine-response anomaly detection.
+          - **Tags**: *Siamese Networks, Multi-Instance Learning, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
+
+        + **MLOps Infrastructure (Cloud Agnostic)**
+          - Architected and developed an MLOps framework deployed on GCP and partially validated on Azure.
+          - Implemented feature engineering, model training, hyperparameter tuning, data collection monitoring, and raw data analysis modules.
+          - Evaluated Postgres vs BigQuery vs InfluxDB; set up Grafana dashboards for operational monitoring.
+          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB, Feature Engineering, Model Training*
+
+        + **FogLAMP Filter and Rule Development**
+          - Implemented multiple filters and rules for improved data handling and anomaly detection:
+            - `foglamp-filter-moving-measures`
+            - `foglamp-filter-data-drift`
+            - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
+          - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
+
+        + **MCP Server for FogLAMP**
+          - Designed and built MCP server supporting APIs, DB connections, agent persona handling, and dynamic tool orchestration.
+          - Enables enterprise and agentic workflows for edge and cloud AI systems.
+          - **Tags**: *MCP, API Design, FogLAMP, Edge AI, Agentic Workflows, Registry*
+
+        + **Excel FogLAMP Datalink**
+          - Developed an Excel add-in to fetch FogLAMP data, enabling data analysts and operators to work with edge data inside Excel.
+          - **Tags**: *Excel Add-in, Office.js, FogLAMP, Enterprise Integration, Data Visualization*
+
+        + **Data Infrastructure and Monitoring**
+          - Developed system resource and syslog monitoring modules.
+          - Built improved automated data transfer scripts.
+          - **Tags**: *System Monitoring, Syslogs, Automation, Edge Infrastructure*
+
+        + **Data Platform and Architecture Work**
+          - Established a Delta Lake on Azure Data Lake with a Data Medallion Architecture using Azure Data Factory for a customer solution.
+          - Evaluated DVC, MLFlow, and Databricks for experiment tracking and data versioning.
+          - **Tags**: *Azure Data Factory, Delta Lake, DVC, MLFlow, Databricks, Data Medallion Architecture*
+
+        + **Plugin Development for Testing**
+          - Created `foglamp-south-datafaker` plugin to support system testing and validation of data pipelines.
+          - **Tags**: *FogLAMP, Edge Compute, Plugin Development, Test Infrastructure*
+
+        + **[Placeholder for any upcoming MCP, FogLAMP or Edge projects here]**
+          - Add technical description and impact statement when ready.
+          - **Tags**: *...*
+        &nbsp;‎ &nbsp;    
+        &nbsp;‎ &nbsp; 
+
+
+        Experience in this company:
+        + **Centrifuge Breakover Forecasting (EDGE Deployment)**
+          - Designed, trained, and deployed a predictive ML solution on EDGE devices to optimize centrifuge operation and reduce downtime.
+          - Integrated with PLC and HMI for real-time feedback.
+          - **Tags**: *Stacked-LSTM, PLC, HMI, FogLAMP, Edge Compute, Postgres, Grafana, GCP*
+        + **Solids Buildup Detection (EDGE Deployment)**
+          - Time-frequency domain signal processing solution for predictive maintenance of centrifuges.
+          - Deployed on FogLAMP for real-time monitoring of solids accumulation.
+          - **Tags**: *Autoencoder, Fourier Analysis Networks, Signal Processing, FogLAMP, Postgres, Grafana*
+        + **Multi-Reference Anomaly Detector (POC)**
+          - Proposed and researched contrastive learning based anomaly detection using multi-instance learning on vibration data.
+          - **Tags**: *Siamese Networks, MIL, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
+        + **MLOps Infrastructure (Cloud Agnostic)**
+          - Architected and developed MLOps framework (GCP, partially Azure) for data collection monitoring, model training, tuning, and evaluation.
+          - Set up Postgres + Grafana dashboards. Evaluated BigQuery and InfluxDB.
+          - Enabled multi-environment dev/stage/prod, job config control, backfill, health monitoring, logging.
+          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB*
+        + **FogLAMP Filter & Rule Development**
+          - `foglamp-filter-moving-measures`
+          - `foglamp-filter-data-drift`
+          - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
+          - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
+        + **MCP Server for FogLAMP**
+          - API, DB connection, agent persona orchestration for FogLAMP.
+          - Enables agentic workflows for edge and cloud AI systems.
+          - **Tags**: *MCP, API Design, FogLAMP, Edge AI*
+        + **Excel FogLAMP Datalink**
+          - Excel add-in for pulling FogLAMP data into templated Excel views.
+          - **Tags**: *Excel Add-in, Office.js, FogLAMP, Data Visualization*
+        + **System & Infrastructure**
+          - Syslog, CPU, memory monitoring modules
+          - Automated data transfer scripts
+          - **Tags**: *System Monitoring, Syslogs, Automation*
+        + **Azure Data Platform**
+          - Delta Lake + Medallion architecture on Azure Data Lake with ADF
+          - Evaluated DVC, MLFlow, Databricks
+          - **Tags**: *Azure Data Factory, Delta Lake, DVC, MLFlow, Databricks*
+        + **Test Plugins**
+          - `foglamp-south-datafaker` for generating configurable signal patterns
+          - Used for pipeline testing and MCP debugging
+          - **Tags**: *FogLAMP, Edge Compute, Test Infrastructure*
+
+        + **Side Projects**
+          - [coco-transformation-util](https://github.com/MR901/coco-transformation-util)
+          - [articledoc](https://github.com/MR901/articledoc)
+          - [syinfo](https://github.com/MR901/syinfo)
+          - [mcp-plots](https://github.com/MR901/mcp-plots)
+
+        
     - company: CandorHealth
       tag: Full-time
       location: Bangalore
       role1: Senior Machine Learning Software Engineer 
-      time1: Mar'23 - Present
+      time1: Mar'23 - Jun'23
       details: |
-        Experience in this company:
+        **Core Responsibilities:**
+        - Build data enrichment and provider matching pipeline.
+        - Optimize identity resolution at scale.
+
+        **Experience in this company:**
         + **National Provider Identifier (NPI) Filler services for the missing NPI**
           - Filled in the missing information for multiple cases of Healthcare provider by utilizing the data available from data source.
           - **Tags**: *Identity Resolution, Similarity Mapping, Search, Parallel Processing, Big Data, APIs, Redis, Spark*
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp;  
 
     - company: Amazon Seller Services Private Limited - Analytics Technology and Engineering (ATE)
       tag: Full-time
@@ -72,7 +206,12 @@ experiences:
       role2: Engineer
       time2: Feb'23 - Mar'23
       details: |
-        Experience in this company:
+        Core Responsibilities:
+        - Scale Day Ahead Capacity Planning from pilot to multi-country production.
+        - Develop monitoring, automation, and utilities for faster deployment cycles.
+        - Work with operations, supply chain, and engineering teams across geographies.
+
+        **Experience in this company:**
         + **Day Ahead Capacity Planning**
           - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
           - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
@@ -94,8 +233,11 @@ experiences:
           - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
         + **Multiple Reports Creation and Data Pipelines Testing**
           - Created Reports for Middle Mile Performance Evaluation and tested/adjusted few data pipelines for reporting.
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp;  
+
+        **Notable Contributions:**
+        - Took over and stabilized project with zero active maintainers.
+        - Led deployment expansion to multiple countries within 6 months.
+        - Optimized pipeline runtime and reporting latency for faster planning.
 
     - company: Cargill - Cargill Digital Labs
       tag: Full-time
@@ -103,7 +245,12 @@ experiences:
       role1: Machine Learning Software Engineer 
       time1: Jun'19 - Apr'22
       details: |
-        Experience in this company:
+        **Core Responsibilities:**
+        - Build ML POCs and MVPs for digital transformation in agriculture and supply chain.
+        - Collaborate with product managers and global business stakeholders.
+        - Transition pilot projects to other teams after successful MVP delivery.
+
+        **Experience in this company:**
         + **ML labs v2 setup**
           - Defining ways to Work with ML projects and other applications having ML related features
           - Brining sustainable practices for accelerated development while maintaining the agility  
@@ -128,8 +275,11 @@ experiences:
         + **Information Extraction from Ship Invoices (POC)**  
           - Extracting multiple information through the information that was shared in old and current emails.
           - **Tags**: *Text-to-Table, Analytics; Regex, Python Email to DB*
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp;  
+
+        **Notable Contributions:**
+        - Delivered MVPs that transitioned into internal products.
+        - Developed first successful internal vision pilot used for later projects.
+        - Groomed soft and business skills through direct stakeholder interaction.
 
     - company: ShieldSquare (Radware) - Reseach and Development Team
       tag: Full-time
@@ -139,7 +289,12 @@ experiences:
       role2: Associate Data Scientist – R&D
       time2: Jun'17-Mar'18
       details: |
-        Experience in this company:
+        **Core Responsibilities:**
+        - Develop ML-based bot detection frameworks.
+        - Build and optimize detection pipelines with focus on low FP and adaptive learning.
+        - Research and implement reinforcement, unsupervised, and semi-supervised solutions.
+
+        **Experience in this company:**
         + **ICLSSTA**
             - Solely developed a framework, which develop and evaluate unsupervised learning solution in much depth and this from a single config file.
             - **Tags**: *Framework, Clustering, Anomaly, Outlier, Conceptual Drift Detection, Ensembling, Support all Dimension reduction, Anomaly, and Clustering Algorithm from Sklearn, Add. Custom Algorithm*
@@ -168,7 +323,12 @@ experiences:
         + **Other Works**
             - Developed Dashboard, Visualization and Analysis, spreadsheet to understand the whole behaviour of the traffic. Partially interactive visualization sheets were also developed in python.
             - **Tags**: *SQL and Spreadsheet/Python Implementation, Visualization, Result Sharing* 
-        &nbsp;‎ &nbsp;  
+
+        **Notable Contributions:**
+        - First author and co-inventor on patented bot detection frameworks:
+          - “System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques” — [US20200099713A1](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0)
+          - “System and method for detecting bots using semi-supervised deep learning techniques” — [US20200099714A1](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0)
+        - Key contributions used during company acquisition by Radware.
 
 projects:
   display: true
@@ -180,15 +340,15 @@ projects:
 
     - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
       link: 
-      details: |
+      details: 
       
     - name: Edge Device based CV application for counting of sheets processed in a workshop
       link: https://youtu.be/ZMsrct_866k
-      details: |
+      details: 
       
     - name: Sticker Detection and OCR
       link: https://youtu.be/de7EYj7bFEI
-      details: |
+      details: 
       
     - name: Image to Image Search - Flicker8k
       link: https://youtu.be/zV9rrC-mLGI
@@ -201,39 +361,39 @@ projects:
       
     - name: Image to Image Search - Jewellery
       link: https://youtu.be/DmrSy9Ivobc
-      details: |
+      details: 
       
     - name: Accounting for Pipe Bundles being Exported
       link: https://youtu.be/hJdGpM8_ADo
-      details: |
+      details: 
       
     - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
       link: https://youtu.be/HxUXtiWylH4
-      details: |
+      details: 
       
     - name: Human Pose Estimation and Activity Recognition
       link: https://youtu.be/Y7LCiZbOmNQ
-      details: |
+      details: 
       
     - name: GIS Temperature and Precipitation Time based changes visualization
       link: https://youtu.be/FeCqUZUwEZA
-      details: |
+      details: 
       
     - name: WhatsApp based Chatbot (Hack around way)
       link: 
-      details: |
+      details: 
       
     - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
       link: 
-      details: |
+      details: 
       
     - name: Streamlit deployed app for basic Computer Vision applications.
       link: https://computer-vision-util.streamlit.app/
-      details: |
+      details: 
       
     - name: Streamlit based threshold adjustment for object detector and annotation visualizer
       link: 
-      details: |
+      details: 
       
     - name: Supervised and Unsupervised Learning Framework 
       link: 
@@ -282,56 +442,55 @@ publications:
       # conference: Foobar, 2019
       # link: https://www.google.com
       details: |
-        &nbsp;‎&nbsp;‎A personal library compromised of general code base for faster develoment. It supports the following.
+        A personal library compromised of general code base for faster develoment. It supports the following.
+
         + **General**: Code Visual in Terminal; operations reated to list, dict, datetime, pandas and numpy; Runtime python cmdline support; Git status info; system performance; and many more.
         + **Logger**: Initializing, Method.
         + **Configuration**: Generator; Accepts json, yaml, cmdline, configparser and dict; Merge multiple configs; etc
         + **Notifications**: Support sending Emails and SMS
         + **Storage**: Ability to work with datalakes such as Pcloud, S3.
         + **DB Support**: Provides functionalities to work with tables and DB. Additionally support GoogleBQ.
-        + **Computer Vision**:  
-          + General
-          + Work With Streams
-          + Color Threshold
-          + Draw on Frame
-          + Manipulate Frame
-          + Image Transformation for Transfer
-          + Video to Images
-          + Images to Videos or GIF
-          + Annotation Conversions and Plotting
-          + Image Pixel Standardizations
-          + Multi Face Detection
-          + Multi Face Landmark
-          + Multi Recognition - best selection
-          + Multi Pose Estimation
-          + Training Data Creation
+        + **Computer Vision**:
+            - General
+            - Work With Streams
+            - Color Threshold
+            - Draw on Frame
+            - Manipulate Frame
+            - Image Transformation for Transfer
+            - Video to Images
+            - Images to Videos or GIF
+            - Annotation Conversions and Plotting
+            - Image Pixel Standardizations
+            - Multi Face Detection
+            - Multi Face Landmark
+            - Multi Recognition - best selection
+            - Multi Pose Estimation
+            - Training Data Creation
         + **NLP**:
-          + Text Cleaning 
-          + EDA
-          + Embedding Creation
+            - Text Cleaning 
+            - EDA
+            - Embedding Creation
         + **Tables**
-          + Feature Analysis
-          + Custom Scaling and Transformation
-          + EDA
-          + Transformation
+            - Feature Analysis
+            - Custom Scaling and Transformation
+            - EDA
+            - Transformation
         + **Supervised & Unsupervised Learning**
-          + Wrapper on scikit-learn
-          + Anomaly and outlier Detection 
-          + Custom Algorithm support
-          + Framework to support config to select suitable algorithm and params
-          + Ensembling
-          + Support for multiple metadata export
+            - Wrapper on scikit-learn
+            - Anomaly and outlier Detection 
+            - Custom Algorithm support
+            - Framework to support config to select suitable algorithm and params
+            - Ensembling
+            - Support for multiple metadata export
         + **Evaluation**
-          + Regression
-          + Classification
-          + Object Detection
+            - Regression
+            - Classification
+            - Object Detection
         + **Sections Still in Development**
-          + Redis Integration
-          + GIS Data Support
-          + Time Series
-          + Network information extraction
-        &nbsp;‎ &nbsp;  
-        &nbsp;‎ &nbsp;  
+            - Redis Integration
+            - GIS Data Support
+            - Time Series
+            - Network information extraction 
       
     - title: 2. COCO Transformation Utility (CTU)
       # authors: Mohit Rajput 
@@ -352,8 +511,8 @@ patents:
   display: true
   title: Patent & Research Paper
   details: |
-    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
-    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
+    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://patents.google.com/patent/US11652841B2/en).  
+    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://patents.google.com/patent/US11627156B2/en).  
     + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
       
 skills:
@@ -376,6 +535,9 @@ skills:
         - S3, Cloud Storage, Drive, Pcloud
     + **Hardware**
         - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
+    + **New**
+        - Postgres, Azure Data Factory, Databrick, Delta Lake, Cursor, VS Code, Jupyter Lab, Excel-Addon, MCP, Cloud Function, 
+
 
 # Apache Spark, Apacke Kafka, Streamlit      
 # -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
@@ -395,6 +557,7 @@ education:
       time: 2012 - 2017
       major: Metallurgy and Material Engineering
       degree: B.Tech. + M.Tech. (Dual Degree Course)
+      link: https://iitr.ac.in/
       details: |
         + Credit Courses: 
           - Economics
@@ -411,234 +574,248 @@ education:
       time: 2021
       major: 
       degree: Nano Degrees
-      details: https://confirm.udacity.com/QGUGJTSK
+      link: https://confirm.udacity.com/QGUGJTSK
+      details: 
       
-    - university: Udacity - Computer Vision
+    - university: Udacity - Computer Vision  
       time: 2020
       major: 
       degree: Nano Degrees
-      details: https://confirm.udacity.com/4DMWY73G
+      link: https://confirm.udacity.com/4DMWY73G
+      details: 
       
     - university: Udacity - Artificial Intelligence
       time: 2018
       major: 
       degree: Nano Degrees
-      details: https://confirm.udacity.com/KGCWC7NW
+      link: https://confirm.udacity.com/KGCWC7NW
+      details:
       
 certificates:
   display: true
   title: Certificates
   items:
 
+    - name: "GCP Databricks Platform Architect"
+      authority: Databricks Academy
+      time: 2025
+      link: https://credentials.databricks.com/133472f0-9474-4991-89cd-3e7bbe11f911
+      details: 
+
+    - name: "Databricks Fundamentals"
+      authority: Databricks Academy
+      time: 2025
+      link: https://credentials.databricks.com/9a977d0e-1f49-422c-a74a-0faba1733e6e#acc.gADRdi7P
+      details: 
+
     - name: "Introduction to Machine Learning in Production"
       authority: Coursera
       time: 2022
       link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
-      details: |
+      details: 
 
     - name: "Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract"
       authority: Coursera
       time: 2021
       link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
-      details: |
+      details: 
 #     https://coursera.org/share/b8c104fdf7afa84fa1cc279d747d38c4
 
     - name: "Neural Networks and Deep Learning, DeepLearning.AI"
       authority: Coursera
       time: 2020
       link: https://coursera.org/share/92aafe4a3474d94117ab73a9420afe82
-      details: |
+      details: 
 
     - name: "Deep Learning and NLP A-Z: How to Create a ChatBot"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-PUMKBSE1/
-      details: |
+      details: 
 
     - name: "Artificial Intelligence A-Z: Learn How To Build An AI"
       authority: Udemy
       time: 2020
       link: https://www.google.com
-      details: |
+      details: 
 
     - name: "Business Fundamentals: Corporate Strategy"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-AP3ABEGX/
-      details: |
+      details: 
 
     - name: "Deep Learning with TensorFlow 2.0"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-6M01FJV2/
-      details: |
+      details: 
 
     - name: "Deep Learning: Advanced NLP and RNNs"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-FK7VUTER/
-      details: |
+      details: 
 
     - name: "Deep Learning and Computer Vision A-Z: OpenCV, SSD & GANs"
       authority: Udemy
       time: 2018
       link: https://www.udemy.com/certificate/UC-ZQF4NUHP/
-      details: |
+      details: 
 
     - name: "Deep Learning A-Z: Hands-On Artificial Neural Network"
       authority: Coursera
       time: 2018
       link: https://www.udemy.com/certificate/UC-PUMKBSE1/
-      details: |
+      details: 
 
     - name: "Machine Learning A-Z: Hands-On Python & R in Data Science"
       authority: Udemy
       time: 2017
       link: https://www.udemy.com/certificate/UC-76HXNV9U/
-      details: |
+      details: 
 
     - name: "Statistics for Business Analytics A-Z"
       authority: Udemy
       time: 2017
       link: https://www.udemy.com/certificate/UC-OOVF3D0D/
-      details: |
+      details: 
 
     - name: "Big Data Integration and Processing, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
-      details: |
+      details: 
 
     - name: "Big Data Modeling and Management System, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/VZ3PX9CV2Y8Z
 
     - name: "Introduction to Data Analytics for Business, University of Colorado"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/431a53339ca34da0776464e0742a15ed
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/K9MNKJXVKCZJ
 
     - name: "Introduction to Big Data, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/a5966ae7f1093d28cabdc2d0d56c96f0
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/QLJD4FLJJLVV
 
     - name: "Customer Analytics, University of Pennsylvania"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/c3761defcff1a28328abb5d12e23f0ae
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/6APN86VXXFKJ
 
     - name: "Practical Machine Learning, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/7295b164f5bf12044ebea79a7809cf24
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/MZP92JQR2CMT
 
     - name: "Linear Regression and Modelling, Duke University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
 
     - name: "Building a Data Science Team, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/2b8f08e4f99182d5ff882c2de2ff208e
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/B8PMWCU3PGP3
 
     - name: "Data Science in Real Life, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/ee48db7b7cbe7d12ad3cee24281d45b7
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/6P9E75GJZHD4
 
     - name: "Managing Data Analysis, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/0b95afa85e3ba653c34aa2206f84c5ae
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/LLFGAPSKTZ3A
 
     - name: "R Programming, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/ec6f87082b34ce5bd3c935c2b785d5b7
-      details: |
+      details: 
 
     - name: "Coaching Conversations, University of California, Davis"
       authority: Coursera
       time: 2020
       link: https://www.coursera.org/account/accomplishments/verify/854AWKUAYRDH
-      details: |
+      details: 
 
     - name: "Coaching Practices, University of California, Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/UWGHHXEKKNCL
-      details: |
+      details: 
 
     - name: "Data Management and Visualization, Wesleyan University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/SNWR3DDAMQDA
-      details: |
+      details: 
 
     - name: "Java Programming: Solving Problems with Software, Duke Univ"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/5GGYWAN9UZ5V
-      details: |
+      details: 
 
     - name: "A crash course in Data Science, Johns Hopkins"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/A9PBXDCTMP6H
-      details: |
+      details: 
 
     - name: "Managing as a Coach, University of California, Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/B9D4CP8UYK38
-      details: |
+      details: 
 
     - name: "Mastering Data Analysis in Excel, Duke University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/2JHAKUAHJRPP
-      details: |
+      details: 
 
     - name: "Programming Foundations with JavaScript, HTML & CSS, Duke"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/61cfbf4357f5769d2d1ea3dad2786a29
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/QC5UYULEU2L2
 
     - name: "Setting expectations & Assessing Performance Issues, UC Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/BF4WVJCW73GV
-      details: |
+      details: 
 
     - name: "Introduction to R Programming, Microsoft Corporation"
       authority: Coursera
       time: 2016
       link: https://www.google.com
-      details: |
-
+      details: 
 
 #     - name: Course Foo
 #       authority: Coursera

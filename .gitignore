@@ -3,3 +3,11 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+
+# Backup files
+*.backup
+*backup.html
+*backup.yml
+*_backup.*
+*~ 
+*.bak

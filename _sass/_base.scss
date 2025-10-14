@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "sass:color";
+@use "variables" as *;
+
 html {
     font-size: $base-font-size;
     scroll-behavior: smooth;
@@ -17,14 +21,14 @@ a {
     &,
     &:visited,
     &:hover {
-        color: darken($theme-color, 10%);
+        color: color.adjust($theme-color, $lightness: -10%);
         text-decoration: none;
     }
 }
 
 p {
     line-height: $base-line-height;
-    margin-bottom: $spacing-unit / 4;
+    margin-bottom: math.div($spacing-unit, 4);
 }
 
 small {
@@ -36,11 +40,11 @@ small {
     background: $wrapper-color;
     max-width: $content-width;
     margin: 0 auto;
-    padding: $spacing-unit * 2;
+    padding: $spacing-unit * 1.5; // tighter side padding
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
     section {
-        margin-bottom: $spacing-unit / 4;
+        margin-bottom: 1.75rem; // Increased from 5px to better separate sections
 
         .section-title {
             text-transform: uppercase;
@@ -49,16 +53,186 @@ small {
             color: $theme-color;
             position: relative;
             margin-top: 0;
-            margin-bottom: $spacing-unit / 4;
+            margin-bottom: 0.85rem; // Increased spacing after title
             border-bottom: 1px dashed rgba($theme-color, 25%);
         }
 
         .section-content {
+            // Empty - all markdown styling has been moved to .details container
+            // This ensures styling only applies to content within details containers
+            
+            // Apply justified text alignment to markdown content rendered in ribbon sections
             .markdown {
-                ul,
-                ol {
-                    margin-bottom: $spacing-unit / 4;
-                    padding-inline-start: $spacing-unit;
+                text-align: justify;
+            }
+        }
+        
+        // General details container styling for all sections
+        .details {
+            border: $details-container-border-width $details-container-border-style $details-container-border-color;
+            // border: none;
+            border-radius: $details-container-border-radius;
+            background: $details-container-background;
+            padding: $details-container-padding-top $details-container-padding-right $details-container-padding-bottom $details-container-padding-left;
+            padding-left: calc($details-container-padding-left + 1.5rem); // Add extra left indent
+            padding-top: $details-container-padding-top * 0.45; // Decrease top padding
+            text-align: $details-container-text-align;
+            
+            .markdown {
+                // Typography and readable measure - UNIFIED STYLING
+                max-width: 100%; // Use full width within wrapper for all sections
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.0625rem; // Consistent base font size (17px) for all sections
+                line-height: 1.7;
+                
+                // Better text wrapping to prevent orphans
+                text-wrap: pretty; // Modern CSS property for better line breaks
+                -webkit-text-wrap: pretty; // Safari support
+                hyphens: none; // Prevent hyphenation which can look awkward
+                
+                // Prevent widows and orphans
+                orphans: 3;
+                widows: 3;
+
+                // Tight list hierarchy: spacing adjustments controlled below
+                
+                // Better visual hierarchy for strong/bold tags
+                strong, b {
+                    font-weight: 600;
+                    color: $text-second-color;
+                }
+                
+                // Element spacing rhythm
+                p {
+                    margin: 0 0 0.9em;
+                    
+                    // Ensure bold/strong tags don't create line breaks
+                    strong, b {
+                        display: inline;
+                    }
+                }
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    line-height: 1.25;
+                    color: $text-second-color;
+                    font-weight: $base-font-weight * 1.75;
+                    margin-top: 1.2em;
+                    margin-bottom: 0.45em;
+                }
+
+                h1 { font-size: 1.9rem; }
+                h2 {
+                    font-size: 1.6rem;
+                    padding-bottom: 0.3em;
+                    border-bottom: 1px solid rgba($theme-color, 0.2);
+                }
+                h3 { font-size: 1.35rem; color: $text-color; font-weight: $base-font-weight * 1.6; }
+                h4 { font-size: 1.2rem; color: $text-color; font-weight: $base-font-weight * 1.5; }
+                h5 { font-size: 1.05rem; }
+                h6 { font-size: 0.95rem; color: $text-third-color; }
+
+                a {
+                    text-decoration: underline;
+                    text-underline-offset: 2px;
+                    &:hover { color: color.adjust($theme-color, $lightness: -15%); }
+                }
+
+                // Softer emphasis outside headings
+                p b,
+                p strong,
+                li b,
+                li strong,
+                td b,
+                td strong,
+                blockquote b,
+                blockquote strong {
+                    font-weight: 600;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: math.div($spacing-unit, 4) 0;
+                    font-size: 0.95em;
+                    overflow-x: auto;
+                }
+                thead th {
+                    background: rgba($theme-color, 0.08);
+                    color: $text-second-color;
+                    text-align: left;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+                }
+                th,
+                td {
+                    border: 1px solid rgba(0, 0, 0, 0.08);
+                    padding: 0.6em 0.8em;
+                    vertical-align: top;
+                }
+                tbody tr:nth-child(odd) {
+                    background: rgba(0, 0, 0, 0.02);
+                }
+                tbody tr:hover {
+                    background: rgba(0, 0, 0, 0.03);
+                }
+
+                blockquote {
+                    margin: 1em 0;
+                    padding: 0.75em 1em;
+                    border-left: 4px solid color.adjust($theme-color, $lightness: 10%);
+                    background: rgba($theme-color, 0.06);
+                    color: $text-second-color;
+                }
+
+                code {
+                    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                    font-size: 0.95em;
+                    background: rgba(0, 0, 0, 0.05);
+                    border: 1px solid rgba(0, 0, 0, 0.06);
+                    border-radius: 4px;
+                    padding: 0.15em 0.35em;
+                }
+                pre {
+                    background: rgba(0, 0, 0, 0.04);
+                    border: 1px solid rgba(0, 0, 0, 0.08);
+                    border-radius: 6px;
+                    padding: 0.9em;
+                    overflow: auto;
+                    -webkit-overflow-scrolling: touch;
+                    code {
+                        background: transparent;
+                        border: 0;
+                        padding: 0;
+                        font-size: 0.95em;
+                    }
+                }
+
+                hr {
+                    height: 2px;
+                    background: rgba($theme-color, 0.2);
+                    border: 0;
+                    border-radius: 1px;
+                    margin: 1.2em 0;
+                }
+
+                img,
+                svg {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    margin: 1em auto;
+                    border-radius: 4px;
+                }
+
+                mark {
+                    background: #fff8c5;
+                    padding: 0 0.2em;
+                    border-radius: 2px;
                 }
             }
         }
@@ -90,6 +264,158 @@ small {
             }
         }
     }
+    
+    // ========================================================================
+    // CONDITIONAL SPACING CONTROL
+    // Apply ultra-aggressive spacing by default (custom_spacing: true)
+    // Disable when wrapper has .no-custom-spacing class (custom_spacing: false)
+    // ========================================================================
+    
+    // ULTRA-AGGRESSIVE SPACING (custom_spacing: true - DEFAULT)
+    &:not(.no-custom-spacing) section .details .markdown {
+        // ULTRA-NUCLEAR: Make lines TOUCH each other (correct scoping)
+        ul,
+        ol {
+            margin: 0 !important;  // Force zero margin on list containers
+            padding-inline-start: 1.5em;
+            line-height: 0.75 !important;  // Inherit tight line height to children
+        }
+
+        // ULTRA-NUCLEAR: Force lines to TOUCH each other (list items)
+        li {
+            margin: 0 !important;              // Zero spacing between items
+            line-height: 0.75 !important;      // Lines touch/overlap
+            padding-left: 0.25em;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        // NUCLEAR: Force first item to have zero spacing
+        li:first-child {
+            margin-top: 0 !important;
+        }
+
+        // ULTRA-NUCLEAR: Force all nested items to TOUCH
+        li > p {
+            margin: 0 !important;
+            line-height: 0.75 !important;  // Lines TOUCH
+            display: inline;
+        }
+
+        // NUCLEAR: Force nested lists to have zero spacing
+        li > ul,
+        li > ol {
+            margin: 0 !important;
+            padding-inline-start: 1.5em;
+        }
+
+        // ULTRA-NUCLEAR: Force all sub-list items to TOUCH
+        ul ul > li,
+        ol ol > li,
+        ul ol > li,
+        ol ul > li {
+            // Sub-list items: very low spacing to keep them tightly grouped
+            margin-top: 0.05em !important;
+            margin-bottom: 0.05em !important;
+            line-height: 1.1 !important;
+        }
+
+        // ULTRA-NUCLEAR: Force single-level lists to TOUCH
+        ul:not(:has(ul)):not(:has(ol)) > li,
+        ol:not(:has(ul)):not(:has(ol)) > li {
+            // Single-level lists: very low spacing per item so they read as one group
+            margin-top: 0.06em !important;
+            margin-bottom: 0.06em !important;
+            line-height: 1.15 !important;
+        }
+
+        // Parent items that contain a nested list: add extra space above, less below
+        li:has(> ul),
+        li:has(> ol) {
+            margin-top: 0.18em !important;   // extra spacing above parent item
+            margin-bottom: 0.75em !important; // reduced spacing below so sublist appears closer
+            line-height: 1.15 !important;
+        }
+        
+        // Ensure ultra-tight spacing after headings and paragraphs (AGGRESSIVE)
+        p + ul, p + ol {
+            margin-top: 0.02em;  // tighter connection to the introducing text
+        }
+
+        // Context-aware spacing around lists
+        // - Tighten space BEFORE lists (paragraph that introduces a list)
+        // - Add breathing room AFTER lists (before next paragraph or heading)
+        p:has(+ ul),
+        p:has(+ ol) {
+            margin-bottom: 0.04em !important;  // minimal separation before list
+        }
+        ul + p,
+        ol + p {
+            margin-top: 0.9em !important;    // more breathing room after lists
+        }
+        ul + h1,
+        ul + h2,
+        ul + h3,
+        ul + h4,
+        ul + h5,
+        ul + h6,
+        ol + h1,
+        ol + h2,
+        ol + h3,
+        ol + h4,
+        ol + h5,
+        ol + h6 {
+            margin-top: 1.1em !important;    // clearer separation before headings
+        }
+    }
+    
+    // NORMAL/RELAXED SPACING (custom_spacing: false)
+    &.no-custom-spacing section .details .markdown {
+        // Normal list spacing for better readability
+        ul,
+        ol {
+            margin: 0.75em 0 !important;
+            padding-inline-start: 1.5em;
+            line-height: 1.6 !important;
+        }
+
+        // Normal list item spacing
+        li {
+            margin: 0.25em 0 !important;
+            line-height: 1.6 !important;
+            padding-left: 0.25em;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        // Normal paragraph spacing in lists
+        li > p {
+            margin: 0.25em 0 !important;
+            line-height: 1.6 !important;
+            display: block;
+        }
+
+        // Reset nested list spacing
+        li > ul,
+        li > ol {
+            margin: 0.5em 0 !important;
+            padding-inline-start: 1.5em;
+        }
+
+        // Normal context-aware spacing
+        p + ul, p + ol {
+            margin-top: 0.5em !important;
+        }
+
+        ul + p, ol + p {
+            margin-top: 1.2em !important;
+        }
+        
+        ul + h1, ul + h2, ul + h3, ul + h4, ul + h5, ul + h6,
+        ol + h1, ol + h2, ol + h3, ol + h4, ol + h5, ol + h6 {
+            margin-top: 1.5em !important;
+        }
+    }
 
     .basic {
         .avatar img {
@@ -103,9 +429,9 @@ small {
         .header {
             .name {
                 font-size: $huge-font-size;
-                font-weight: $base-font-weight * 2,25;
+                font-weight: $base-font-weight * 2.25;
                 margin-top: 0;
-                margin-bottom: $spacing-unit / 4;
+                margin-bottom: math.div($spacing-unit, 4);
             }
 
             .title {
@@ -113,11 +439,11 @@ small {
                 font-size: $middle-font-size;
                 font-weight: $base-font-weight;
                 margin-top: 0;
-                margin-bottom: $spacing-unit / 4;
+                margin-bottom: math.div($spacing-unit, 4);
             }
 
             .contact ul {
-                margin-bottom: $spacing-unit / 4;
+                margin-bottom: math.div($spacing-unit, 4);
 
                 li {
                     display: inline;
@@ -132,11 +458,140 @@ small {
         }
     }
 
+    .experiences {
+        .item {
+            margin-bottom: 2rem;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+            // Company row with lighter background
+            .company-row {
+                padding: 0.85rem 1rem;
+                background: linear-gradient(135deg, rgba($theme-color, 0.07) 0%, rgba($theme-color, 0.045) 100%);
+                margin-bottom: 0;
+                border-left: 3px solid rgba($theme-color, 0.4);
+                border-radius: 6px 6px 0 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                // Keep name on the left, allow it to take remaining space
+                .company {
+                    flex: 1 1 auto;
+                    min-width: 0;
+                }
+
+                // Override global absolute positioning for location inside company row
+                .location {
+                    position: static;
+                    margin-left: 1rem;
+                    display: inline-flex;
+                    align-items: center;
+                    white-space: nowrap;
+                }
+            }
+            
+            // Role rows with even lighter background
+            .role-row {
+                padding: 0.65rem 1rem;
+                background: linear-gradient(135deg, rgba($theme-color, 0.03) 0%, rgba($theme-color, 0.015) 100%);
+                margin-bottom: 0;
+                border-left: 3px solid rgba($theme-color, 0.25);
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                // Keep role on the left, allow it to take remaining space
+                .role {
+                    flex: 1 1 auto;
+                    min-width: 0;
+                }
+
+                // Override global absolute positioning for time inside role row
+                .time {
+                    position: static;
+                    display: inline-flex;
+                    align-items: center;
+                    margin-left: 1rem;
+                    white-space: nowrap;
+                }
+                
+                // Last role row gets bottom rounded corners
+                &:last-of-type {
+                    border-radius: 0 0 6px 6px;
+                    padding-bottom: 0;
+                }
+            }
+            
+            // If there are no role rows, company-row should have bottom corners too
+            .company-row:last-of-type {
+                border-radius: 6px;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.3rem;
+                
+                .company {
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    color: $text-color;
+                    
+                    small {
+                        font-weight: 400;
+                        color: $text-third-color;
+                        margin-left: 0.4em;
+                    }
+                }
+                
+                .location {
+                    font-size: 0.9rem;
+                    color: $text-third-color;
+                    
+                    i {
+                        margin-right: 0.25em;
+                    }
+                }
+                
+                .role {
+                    font-size: 0.975rem;
+                    color: $text-second-color;
+                    font-style: italic;
+                }
+                
+                .time {
+                    font-size: 0.9rem;
+                    color: $text-third-color;
+                    font-weight: 500;
+                }
+            }
+            
+            .details {
+                margin-top: 0;
+            }
+        }
+    }
+
     .projects {
-        .project {
-            font-weight: $base-font-weight * 1.75;
-            color: $text-color;
-            margin-bottom: 1px;
+        .item {
+            margin-bottom: 1rem;
+            
+            .project {
+                font-weight: $base-font-weight * 1.75;
+                color: $text-color;
+                margin-bottom: 0.35rem;
+                font-size: 1rem;
+            }
+            
+            .details {
+                margin-top: 0.35rem;
+            }
+        }
+        
+        .demo-link {
+            color: rgba(0, 0, 235, 0.8);
+            font-size: 0.9em;
         }
     }
 
@@ -147,22 +602,112 @@ small {
         }
     }
 
-    .publications {
+        .publications {
+        .item {
+            margin-bottom: 1rem;
+        }
+        
         .title {
             font-weight: $base-font-weight * 1.75;
             color: $text-color;
-            margin-bottom: 1px;
+            margin-bottom: 0.35rem;
+            font-size: 1.05rem;
         }
 
         .authors {
             font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .conference {
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem;
+        }
+        
+        .details {
+            margin-top: 0.35rem;
+
+            // Relax list spacing only inside publications details
+            .markdown {
+                ul,
+                ol {
+                    line-height: 1.25 !important;
+                    margin: 0.25em 0 0.25em 0 !important;
+                }
+                li {
+                    line-height: 1.25 !important;
+                    margin: 0.05em 0 !important;
+                }
+                p + ul,
+                p + ol {
+                    margin-top: 0.3em !important;
+                }
+            }
+        }
+        
+        .demo-link {
+            color: rgba(0, 0, 235, 0.8);
+            font-size: 0.9em;
+        }
+    }
+
+    .educations {
+        .item {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.35rem;
+                
+                .university {
+                    font-size: 1.05rem;
+                }
+                
+                .major {
+                    font-size: 0.95rem;
+                }
+            }
+            
+            .details {
+                margin-top: 0.65rem;
+            }
+        }
+    }
+
+    .certificates {
+        .item {
+            margin-bottom: 1rem;
+            
+            .upper-row {
+                margin-bottom: 0.35rem;
+            }
+            
+            .certificate {
+                font-size: 0.975rem;
+                
+                a {
+                    font-weight: 600;
+                }
+            }
+            
+            .authority {
+                font-size: 0.925rem;
+            }
         }
     }
 
     .languages,
     .interests {
         ul {
-            margin-bottom: $spacing-unit / 4;
+            margin-bottom: math.div($spacing-unit, 4);
 
             li {
                 display: inline;
@@ -178,7 +723,7 @@ small {
 }
 
 .footer {
-    padding-top: $spacing-unit / 2;
+    padding-top: math.div($spacing-unit, 2);
 
     .copyright {
         color: $text-second-color;
