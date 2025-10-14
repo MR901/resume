@@ -1,14 +1,13 @@
 {% assign patents = data.patents %}
 {% if patents and patents.display %}
 <section class="patents">
-    <br>
     <div class="section-title">
         {{ patents.title }}
     </div>
 
     <div class="section-content">
         <div class="details">
-            <div class="markdown" style="font-size:95%">
+            <div class="markdown">
                 {{ patents.details | markdownify }}
             </div>
         </div>

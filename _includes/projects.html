@@ -1,7 +1,6 @@
 {% assign projects = data.projects %}
 {% if projects and projects.display %}
 <section class="projects">
-    <br>
     <div class="section-title">
         {{ projects.title }}
     </div>
@@ -18,16 +17,16 @@
         {% for project in projects.items %}
         <div class="item">
             {% if project.name %}
-            <p class="project" style="font-size:90%">
+            <p class="project">
                 &nbsp;&nbsp;{{ project.name }}
                 {% if project.link %}
-                <small>[<a href="{{ project.link }}" style="color:rgba(0,0,235,0.8);font-size:90%">demo link</a>]</small>
+                <small>[<a href="{{ project.link }}" class="demo-link">demo link</a>]</small>
                 {% endif %}
             </p>
 
             {% if project.details %}
             <div class="details">
-                <div class="markdown" align="left" style="font-size:90%">
+                <div class="markdown" align="left">
                     {{ project.details | markdownify }}
                 </div>
             </div>

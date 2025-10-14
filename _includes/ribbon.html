@@ -46,19 +46,19 @@
   {% for section in ribbon.sections %}
     {% if section.enabled %}
       <div class="ribbon-view" id="view-{{ section.key }}" role="tabpanel" aria-labelledby="btn-{{ section.key }}">
-        {% case section.type %}
-          {% when 'markdown' %}
-            <div class="wrapper">
+        <div class="wrapper">
+          {% case section.type %}
+            {% when 'markdown' %}
               <section>
                 <div class="section-title">{{ section.title }}</div>
                 <div class="section-content">
-                  <div class="markdown" data-md-src="{{ section.file | relative_url }}"><div class="text-muted">Loading...</div></div>
+                  <div class="details">
+                    <div class="markdown" data-md-src="{{ section.file | relative_url }}"><div class="text-muted">Loading...</div></div>
+                  </div>
                 </div>
               </section>
-            </div>
 
-          {% when 'resume' %}
-            <div class="wrapper">
+            {% when 'resume' %}
               {% include basic.html %}
               {% include profile.html %}
               {% include areas_of_interest.html %}
@@ -72,10 +72,8 @@
               {% include language.html %}
               {% include interests.html %}
               {% include evaluation.html %}
-            </div>
 
-          {% when 'downloads' %}
-            <div class="wrapper">
+            {% when 'downloads' %}
               <section>
                 <div class="section-title">{{ section.title }}</div>
                 <div class="section-content">
@@ -91,22 +89,28 @@
                       <div class="list-group-item" style="display:flex; align-items:center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
                         <span>{{ f.name }}</span>
                         <span style="display:flex; gap: 8px;">
-                          <a class="btn btn-sm btn-outline-primary" href="{{ f.path | relative_url }}" target="_blank" rel="noopener">Preview</a>
-                          <a class="btn btn-sm btn-primary" href="{{ f.path | relative_url }}" download="{{ f.name }}">Download</a>
+                          <a class="btn btn-sm" style="background: white; color: #007bff; border: 1px solid #007bff;" href="{{ f.path | relative_url }}" target="_blank" rel="noopener">Preview</a>
+                          <a class="btn btn-sm" style="background: #007bff; color: white; border: 1px solid #007bff;" href="{{ f.path | relative_url }}" download="{{ f.name }}">Download</a>
                         </span>
                       </div>
                     {% endfor %}
                   </div>
                 </div>
               </section>
-            </div>
-        {% endcase %}
+          {% endcase %}
+        </div>
       </div>
     {% endif %}
   {% endfor %}
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Only load marked.js when ribbon is enabled -->
+<!-- Try multiple CDNs for reliability -->
+<script>
+  window.markedLoaded = false;
+  window.markedLoadAttempt = 0;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js" crossorigin="anonymous" onload="window.markedLoaded = true;" onerror="this.remove(); if(window.markedLoadAttempt++ < 1) { var s = document.createElement('script'); s.src = 'https://unpkg.com/marked@11.0.0/marked.min.js'; s.onload = function() { window.markedLoaded = true; }; document.head.appendChild(s); }"></script>
 <script>
   (function() {
     'use strict';
@@ -119,17 +123,45 @@
       animationDuration: {{ ribbon.animation.duration | default: 0.3 }}
     };
     
-    // Utility: Try multiple URLs for fetching
-    function tryFetch(urls) {
+    // Track active fetch requests to prevent race conditions
+    var activeRequests = {};
+    
+    // Track navigation debounce timer
+    var navDebounceTimer = null;
+    var isNavigating = false;
+    
+    // Debounce utility function
+    function debounce(func, wait) {
+      return function() {
+        var context = this, args = arguments;
+        clearTimeout(navDebounceTimer);
+        navDebounceTimer = setTimeout(function() {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
+    
+    // Utility: Try multiple URLs for fetching with AbortController support
+    function tryFetch(urls, signal) {
       return new Promise(function(resolve, reject) {
         var i = 0;
         function next() {
+          if (signal && signal.aborted) {
+            return reject(new Error('Request aborted'));
+          }
           if (i >= urls.length) return reject(new Error('All fetch attempts failed'));
           var u = urls[i++];
-          fetch(u).then(function(r){
+          var fetchOptions = signal ? { signal: signal } : {};
+          fetch(u, fetchOptions).then(function(r){
             if (!r.ok) return next();
             r.text().then(resolve).catch(next);
-          }).catch(next);
+          }).catch(function(err) {
+            if (err.name === 'AbortError') {
+              reject(new Error('Request aborted'));
+            } else {
+              next();
+            }
+          });
         }
         next();
       });
@@ -142,6 +174,15 @@
       var src = container.getAttribute('data-md-src');
       if (!src) return;
       
+      // Cancel any existing request for this container
+      if (activeRequests[src]) {
+        activeRequests[src].abort();
+      }
+      
+      // Create new AbortController for this request
+      var controller = new AbortController();
+      activeRequests[src] = controller;
+      
       // Show loading state
       container.classList.add('ribbon-loading');
       
@@ -153,34 +194,116 @@
         candidates.push(config.baseurl + (src.charAt(0) === '/' ? '' : '/') + src);
       }
       
-      tryFetch(candidates).then(function(text){
+      tryFetch(candidates, controller.signal).then(function(text){
         try {
-          var html = (window.marked && typeof window.marked.parse === 'function') 
-            ? window.marked.parse(text) 
-            : (window.marked ? window.marked(text) : text);
+          // Ensure marked.js is available
+          if (!window.marked) {
+            throw new Error('Markdown parser not loaded. Please refresh the page.');
+          }
+          
+          // Configure marked to NOT break on single newlines
+          if (window.marked.setOptions) {
+            window.marked.setOptions({
+              breaks: false,  // Don't create <br> on single line breaks
+              gfm: true,      // Use GitHub Flavored Markdown
+              pedantic: false,
+              sanitize: false  // We trust our own markdown files
+            });
+          }
+          
+          // marked.js v9.x uses marked.parse() as the primary API
+          var html = window.marked.parse(text);
+          
+          // Safe to use innerHTML here as marked.js sanitizes the output
+          // and we only load markdown from our own trusted _data directory
           container.innerHTML = html;
+          container.classList.remove('ribbon-loading');
+          container.setAttribute('data-md-loaded', 'true');
+          
+          // Clean up active request
+          if (activeRequests[src]) {
+            delete activeRequests[src];
+          }
         } catch (e) {
-          container.innerHTML = '<pre>' + text + '</pre>';
+          container.classList.remove('ribbon-loading');
+          console.error('Markdown parsing error:', e);
+          
+          // Clean up active request
+          if (activeRequests[src]) {
+            delete activeRequests[src];
+          }
+          
+          // Provide detailed error message with better styling and retry button
+          var errorHtml = '<div style="padding: 1.5rem; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; color: #856404;">';
+          errorHtml += '<strong style="font-size: 1.1em;">⚠️ Content Display Error</strong><br><br>';
+          errorHtml += '<p style="margin: 0.5rem 0;">The markdown parser failed to load.</p>';
+          errorHtml += '<p style="margin: 0.5rem 0; font-size: 0.9em;"><strong>Error:</strong> ' + escapeHtml(e.message) + '</p>';
+          errorHtml += '<button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #ffc107; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Reload Page</button>';
+          errorHtml += '<details style="margin-top: 1rem;"><summary style="cursor: pointer; font-weight: 600;">View raw content</summary>';
+          errorHtml += '<pre style="margin-top: 0.5rem; padding: 0.75rem; background: #f8f9fa; border-radius: 4px; overflow: auto; max-height: 400px; font-size: 0.9em; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">' + escapeHtml(text) + '</pre>';
+          errorHtml += '</details></div>';
+          
+          container.innerHTML = errorHtml;
         }
-        container.classList.remove('ribbon-loading');
-        container.setAttribute('data-md-loaded', 'true');
       }).catch(function(err){
         container.classList.remove('ribbon-loading');
-        container.innerHTML = '<div class="text-muted">Content unavailable.</div>';
-        console.warn('Failed to load markdown:', err);
+        
+        // Don't show error if request was aborted (user navigated away)
+        if (err.message !== 'Request aborted') {
+          console.error('Failed to load markdown:', err);
+          
+          // Provide detailed error message for fetch failures
+          var errorHtml = '<div style="padding: 1rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">';
+          errorHtml += '<strong>❌ Content Loading Error</strong><br>';
+          errorHtml += '<small>' + escapeHtml(err.message || 'Failed to fetch content') + '</small><br>';
+          errorHtml += '<small>Attempted URLs: ' + escapeHtml(candidates.join(', ')) + '</small>';
+          errorHtml += '</div>';
+          
+          container.innerHTML = errorHtml;
+        }
+        
+        // Clean up active request
+        if (activeRequests[src]) {
+          delete activeRequests[src];
+        }
       });
+    }
+
+    // Escape HTML to prevent XSS in error messages
+    function escapeHtml(text) {
+      var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return String(text).replace(/[&<>"']/g, function(m) { return map[m]; });
     }
     
     // Show a specific view
     function showView(key) {
+      // Prevent concurrent navigation
+      if (isNavigating) return;
+      isNavigating = true;
+      
       var views = document.querySelectorAll('.ribbon-view');
       var buttons = document.querySelectorAll('.ribbon-btn');
       
+      // Validate key exists
+      if (!key) {
+        console.warn('showView called with empty key');
+        isNavigating = false;
+        return;
+      }
+      
       // Hide all views
       views.forEach(function(v) {
-        v.style.display = 'none';
-        v.classList.remove('active');
-        v.setAttribute('aria-hidden', 'true');
+        if (v) {
+          v.style.display = 'none';
+          v.classList.remove('active');
+          v.setAttribute('aria-hidden', 'true');
+        }
       });
       
       // Show target view
@@ -191,19 +314,27 @@
         target.setAttribute('aria-hidden', 'false');
         
         // Load any markdown in the view
-        target.querySelectorAll('[data-md-src]').forEach(loadMarkdown);
+        var mdContainers = target.querySelectorAll('[data-md-src]');
+        if (mdContainers && mdContainers.length > 0) {
+          mdContainers.forEach(loadMarkdown);
+        }
         
         // Scroll to top smoothly
         if (window.scrollY > 100) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+      } else {
+        console.warn('View not found for key:', key);
       }
       
       // Update button states
       buttons.forEach(function(b) {
-        var isActive = b.getAttribute('data-target') === key;
-        b.classList.toggle('active', isActive);
-        b.setAttribute('aria-pressed', isActive);
+        if (b) {
+          var isActive = b.getAttribute('data-target') === key;
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          b.disabled = false; // Re-enable buttons after navigation
+        }
       });
       
       // Update URL without page reload
@@ -222,10 +353,21 @@
       if (announcement) {
         announcement.textContent = 'Switched to ' + (target ? target.getAttribute('aria-label') || key : key) + ' section';
       }
+      
+      // Allow navigation again after a short delay
+      setTimeout(function() {
+        isNavigating = false;
+      }, 100);
     }
+    
+    // Debounced version of showView
+    var debouncedShowView = debounce(showView, 150);
     
     // Initialize ribbon navigation
     function init() {
+      // Log marked.js availability for debugging
+      console.log('Ribbon init - marked.js available?', typeof window.marked !== 'undefined');
+      
       // Add screen reader announcement element
       var announcement = document.createElement('div');
       announcement.id = 'ribbon-sr-announcement';
@@ -236,8 +378,26 @@
       
       // Attach click handlers to buttons
       document.querySelectorAll('.ribbon-btn').forEach(function(btn) {
+        if (!btn) return;
+        
         btn.addEventListener('click', function() {
-          showView(this.getAttribute('data-target'));
+          var target = this.getAttribute('data-target');
+          if (!target) {
+            console.warn('Button missing data-target attribute');
+            return;
+          }
+          
+          // Disable button temporarily to prevent double-clicks
+          this.disabled = true;
+          
+          // Use debounced version for better UX
+          debouncedShowView(target);
+          
+          // Re-enable after debounce period
+          var self = this;
+          setTimeout(function() {
+            self.disabled = false;
+          }, 200);
         });
         
         // Add keyboard navigation
@@ -252,19 +412,47 @@
       // Show initial view
       var urlKey = null;
       try {
-        urlKey = new URL(window.location.href).searchParams.get('section');
+        var url = new URL(window.location.href);
+        urlKey = url.searchParams.get('section');
       } catch (e) {
         console.warn('Failed to parse URL:', e);
       }
-      showView(urlKey || config.defaultKey);
+      
+      var initialKey = urlKey || config.defaultKey;
+      if (initialKey) {
+        showView(initialKey);
+      } else {
+        console.error('No valid initial section key found');
+      }
     }
     
-    // Run when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
+    // Wait for marked.js to be available before initializing
+    function waitForMarked(attempts) {
+      attempts = attempts || 0;
+      
+      if (typeof window.marked !== 'undefined' && window.marked.parse) {
+        // marked.js is loaded and functional, initialize now
+        console.log('marked.js loaded successfully from attempt', attempts);
+        init();
+      } else if (attempts < 200) {
+        // Still waiting, retry after a short delay (max 10 seconds)
+        if (attempts % 20 === 0 && attempts > 0) {
+          console.log('Still waiting for marked.js... attempt', attempts);
+        }
+        setTimeout(function() {
+          waitForMarked(attempts + 1);
+        }, 50);
+      } else {
+        // Timeout - initialize anyway to show content
+        console.error('marked.js failed to load after 10 seconds - initializing anyway');
+        console.error('window.marked type:', typeof window.marked);
+        console.error('window.markedLoaded:', window.markedLoaded);
+        init();
+      }
     }
+    
+    // Start waiting for marked.js
+    waitForMarked();
   })();
 </script>
 

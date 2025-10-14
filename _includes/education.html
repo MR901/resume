@@ -1,8 +1,6 @@
 {% assign education = data.education %}
 {% if education and education.display %}
 <section class="educations">
-    <br>
-    <br>
     <div class="section-title">
         {{ education.title }}
     </div>
@@ -23,7 +21,7 @@
 
             {% if graduation.details %}
             <div class="details">
-                <div class="markdown" style="font-size:90%">
+                <div class="markdown">
                     {{ graduation.details | markdownify }}
                 </div>
             </div>

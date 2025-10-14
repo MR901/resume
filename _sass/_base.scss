@@ -42,7 +42,7 @@ small {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
     section {
-        margin-bottom: math.div($spacing-unit, 4);
+        margin-bottom: 1.75rem; // Increased from 5px to better separate sections
 
         .section-title {
             text-transform: uppercase;
@@ -51,22 +51,134 @@ small {
             color: $theme-color;
             position: relative;
             margin-top: 0;
-            margin-bottom: math.div($spacing-unit, 4);
+            margin-bottom: 0.85rem; // Increased spacing after title
             border-bottom: 1px dashed rgba($theme-color, 25%);
         }
 
         .section-content {
+            // Empty - all markdown styling has been moved to .details container
+            // This ensures styling only applies to content within details containers
+            
+            // Apply justified text alignment to markdown content rendered in ribbon sections
             .markdown {
-                // Typography and readable measure
-                max-width: 92ch; // slightly wider text measure
+                text-align: justify;
+            }
+        }
+        
+        // General details container styling for all sections
+        .details {
+            border: $details-container-border-width $details-container-border-style $details-container-border-color;
+            border-radius: $details-container-border-radius;
+            background: $details-container-background;
+            padding: $details-container-padding-top $details-container-padding-right $details-container-padding-bottom $details-container-padding-left;
+            padding-left: calc($details-container-padding-left + 1.5rem); // Add extra left indent
+            text-align: $details-container-text-align;
+            
+            .markdown {
+                // Typography and readable measure - INCREASED BASE FONT SIZE
+                max-width: 92ch;
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 1.0625rem; // Slightly larger for long-form text
+                font-size: 1.0625rem; // Increased base font size (17px)
                 line-height: 1.7;
+                
+                // Better text wrapping to prevent orphans
+                text-wrap: pretty; // Modern CSS property for better line breaks
+                -webkit-text-wrap: pretty; // Safari support
+                hyphens: none; // Prevent hyphenation which can look awkward
+                
+                // Prevent widows and orphans
+                orphans: 3;
+                widows: 3;
+
+                // Better base styling for ALL sections
+                ul, ol {
+                    margin: 0.75em 0 1em 0;
+                    padding-inline-start: 1.5em;
+                }
+                
+                li {
+                    margin: 0.6em 0;
+                    line-height: 1.65;
+                    padding-left: 0.25em;
+                    
+                    > p {
+                        margin: 0;
+                        line-height: 1.6;
+                        display: inline;
+                    }
+                    
+                    > ul, > ol {
+                        margin-top: 0.5em;
+                        margin-bottom: 0.5em;
+                        padding-inline-start: 1.5em;
+                    }
+                }
+                
+                // Better visual hierarchy for strong/bold tags
+                strong, b {
+                    font-weight: 600;
+                    color: $text-second-color;
+                }
+                
+                // Ensure proper spacing after headings and paragraphs
+                p + ul, p + ol {
+                    margin-top: 0.5em;
+                }
+
+                // Specific styles for experience section
+                &.experience-content {
+                    max-width: 100%; // Use full width within wrapper
+                    font-size: 1.025rem; // Slightly larger for detailed content
+
+                    // Grouping and spacing: clearer separation for top-level points,
+                    // tighter spacing for nested points
+                    > ul,
+                    > ol {
+                        margin-top: 0.7em;   // a touch more space before a group
+                        margin-bottom: 0.9em; // consistent block spacing
+                    }
+
+                    // Top-level bullets (group headers)
+                    > ul > li,
+                    > ol > li {
+                        margin-top: 0.8em;  // clearer group separation
+                        margin-bottom: 0.2em;
+                    }
+
+                    // Nested bullets: tighter rhythm within a group
+                    ul ul,
+                    ol ol {
+                        margin-top: 0.25em;
+                        margin-bottom: 0.25em;
+                    }
+                    ul ul > li,
+                    ol ol > li {
+                        margin: 0.25em 0;   // compact nested items
+                        line-height: 1.55;  // slightly tighter line-height for lists
+                    }
+
+                    // Single-level lists: treat as a compact group
+                    > ul:not(:has(ul)):not(:has(ol)),
+                    > ol:not(:has(ul)):not(:has(ol)) {
+                        margin-top: 0.65em;
+                        margin-bottom: 0.85em;
+
+                        > li {
+                            margin: 0.3em 0;
+                            line-height: 1.58;
+                        }
+                    }
+                }
 
                 // Element spacing rhythm
                 p {
                     margin: 0 0 0.9em;
+                    
+                    // Ensure bold/strong tags don't create line breaks
+                    strong, b {
+                        display: inline;
+                    }
                 }
 
                 h1,
@@ -113,18 +225,21 @@ small {
 
                 ul,
                 ol {
-                    margin: 0 0 0.9em;
+                    margin: 0 0 0.8em;
                     padding-inline-start: 1.25em;
                 }
-
+                
                 li {
-                    margin: 0.25em 0;
+                    margin: 0.4em 0; // slightly tighter bullet spacing
+                    line-height: 1.6;
                     > p {
-                        margin: 0.25em 0;
+                        margin: 0;
+                        display: inline;
                     }
                     > ul,
                     > ol {
-                        margin-top: 0.25em;
+                        margin-top: 0.3em;
+                        margin-bottom: 0.3em;
                     }
                 }
                 table {
@@ -249,7 +364,7 @@ small {
         .header {
             .name {
                 font-size: $huge-font-size;
-                font-weight: $base-font-weight * 2,25;
+                font-weight: $base-font-weight * 2.25;
                 margin-top: 0;
                 margin-bottom: math.div($spacing-unit, 4);
             }
@@ -278,11 +393,122 @@ small {
         }
     }
 
+    .experiences {
+        .item {
+            margin-bottom: 2rem;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+            // Company row with lighter background
+            .company-row {
+                padding: 0.85rem 1rem;
+                background: linear-gradient(135deg, rgba($theme-color, 0.07) 0%, rgba($theme-color, 0.045) 100%);
+                margin-bottom: 0;
+                border-left: 3px solid rgba($theme-color, 0.4);
+                border-radius: 6px 6px 0 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                // Keep name on the left, allow it to take remaining space
+                .company {
+                    flex: 1 1 auto;
+                    min-width: 0;
+                }
+
+                // Override global absolute positioning for location inside company row
+                .location {
+                    position: static;
+                    margin-left: 1rem;
+                    display: inline-flex;
+                    align-items: center;
+                    white-space: nowrap;
+                }
+            }
+            
+            // Role rows with even lighter background
+            .role-row {
+                padding: 0.65rem 1rem;
+                background: linear-gradient(135deg, rgba($theme-color, 0.03) 0%, rgba($theme-color, 0.015) 100%);
+                margin-bottom: 0;
+                border-left: 3px solid rgba($theme-color, 0.25);
+                
+                // Last role row gets bottom rounded corners
+                &:last-of-type {
+                    border-radius: 0 0 6px 6px;
+                    padding-bottom: 0.85rem;
+                }
+            }
+            
+            // If there are no role rows, company-row should have bottom corners too
+            .company-row:last-of-type {
+                border-radius: 6px;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.3rem;
+                
+                .company {
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    color: $text-color;
+                    
+                    small {
+                        font-weight: 400;
+                        color: $text-third-color;
+                        margin-left: 0.4em;
+                    }
+                }
+                
+                .location {
+                    font-size: 0.9rem;
+                    color: $text-third-color;
+                    
+                    i {
+                        margin-right: 0.25em;
+                    }
+                }
+                
+                .role {
+                    font-size: 0.975rem;
+                    color: $text-second-color;
+                    font-style: italic;
+                }
+                
+                .time {
+                    font-size: 0.9rem;
+                    color: $text-third-color;
+                    font-weight: 500;
+                }
+            }
+            
+            .details {
+                margin-top: 1rem;
+            }
+        }
+    }
+
     .projects {
-        .project {
-            font-weight: $base-font-weight * 1.75;
-            color: $text-color;
-            margin-bottom: 1px;
+        .item {
+            margin-bottom: 1rem;
+            
+            .project {
+                font-weight: $base-font-weight * 1.75;
+                color: $text-color;
+                margin-bottom: 0.35rem;
+                font-size: 1rem;
+            }
+            
+            .details {
+                margin-top: 0.35rem;
+            }
+        }
+        
+        .demo-link {
+            color: rgba(0, 0, 235, 0.8);
+            font-size: 0.9em;
         }
     }
 
@@ -294,14 +520,87 @@ small {
     }
 
     .publications {
+        .item {
+            margin-bottom: 1rem;
+        }
+        
         .title {
             font-weight: $base-font-weight * 1.75;
             color: $text-color;
-            margin-bottom: 1px;
+            margin-bottom: 0.35rem;
+            font-size: 1.05rem;
         }
 
         .authors {
             font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .conference {
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem;
+        }
+        
+        .details {
+            margin-top: 0.35rem;
+        }
+        
+        .demo-link {
+            color: rgba(0, 0, 235, 0.8);
+            font-size: 0.9em;
+        }
+    }
+
+    .educations {
+        .item {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.35rem;
+                
+                .university {
+                    font-size: 1.05rem;
+                }
+                
+                .major {
+                    font-size: 0.95rem;
+                }
+            }
+            
+            .details {
+                margin-top: 0.65rem;
+            }
+        }
+    }
+
+    .certificates {
+        .item {
+            margin-bottom: 1rem;
+            
+            .upper-row {
+                margin-bottom: 0.35rem;
+            }
+            
+            .certificate {
+                font-size: 0.975rem;
+                
+                a {
+                    font-weight: 600;
+                }
+            }
+            
+            .authority {
+                font-size: 0.925rem;
+            }
         }
     }
 

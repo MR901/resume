@@ -23,7 +23,7 @@ style:
   shadow: md
   
   # Custom colors (optional - leave blank to use theme color)
-  background: "#0eb322"
+  # background: "#1DA1F2"
   # text: "#ffffff"
   
   # Spacing

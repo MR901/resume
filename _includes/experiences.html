@@ -1,7 +1,6 @@
 {% assign experiences = data.experiences %}
 {% if experiences and experiences.display %}
 <section class="experiences">
-    <br>
     <div class="section-title">
         {{ experiences.title }}
     </div>
@@ -10,8 +9,8 @@
         {% for experience in experiences.items %}
         <div class="item">
 
-            <div class="upper-row">
-                <div class="company" style="font-size:110%">
+            <div class="upper-row company-row">
+                <div class="company">
                     {{ experience.company }}
                     {% if experience.tag %}
                     <small>[{{ experience.tag }}]</small>
@@ -20,22 +19,30 @@
                 <div class="location"><i class="fas fa-map-marker-alt"></i> {{ experience.location }}</div>
             </div>
 
-            <div class="upper-row">
+            {% if experience.role1 or experience.time1 %}
+            <div class="upper-row role-row">
                 <div class="role">{{ experience.role1 }}</div>
                 <div class="time">{{ experience.time1 }}</div>
             </div>
-            <div class="upper-row">
+            {% endif %}
+            
+            {% if experience.role2 or experience.time2 %}
+            <div class="upper-row role-row">
                 <div class="role">{{ experience.role2 }}</div>
                 <div class="time">{{ experience.time2 }}</div>
             </div>
-            <div class="upper-row">
+            {% endif %}
+            
+            {% if experience.role3 or experience.time3 %}
+            <div class="upper-row role-row">
                 <div class="role">{{ experience.role3 }}</div>
                 <div class="time">{{ experience.time3 }}</div>
             </div>
+            {% endif %}
 
             {% if experience.details %}
             <div class="details">
-                <div class="markdown" style="font-size:90%">
+                <div class="markdown experience-content">
                     {{ experience.details | markdownify }}
                 </div>
             </div>

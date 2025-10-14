@@ -1,14 +1,15 @@
 {% assign areas_of_interest = data.areas_of_interest %}
 {% if areas_of_interest and areas_of_interest.display %}
 <section class="areas_of_interest">
-	<br>
     <div class="section-title">
         {{ areas_of_interest.title }}
     </div>
 
     <div class="section-content">
-        <div class="markdown" style="font-size:95%">
-            {{ areas_of_interest.details | markdownify }}
+        <div class="details">
+            <div class="markdown">
+                {{ areas_of_interest.details | markdownify }}
+            </div>
         </div>
     </div>
 </section>

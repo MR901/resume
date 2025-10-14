@@ -197,8 +197,6 @@ experiences:
         + **National Provider Identifier (NPI) Filler services for the missing NPI**
           - Filled in the missing information for multiple cases of Healthcare provider by utilizing the data available from data source.
           - **Tags**: *Identity Resolution, Similarity Mapping, Search, Parallel Processing, Big Data, APIs, Redis, Spark*
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp;  
 
     - company: Amazon Seller Services Private Limited - Analytics Technology and Engineering (ATE)
       tag: Full-time
@@ -241,9 +239,6 @@ experiences:
         - Led deployment expansion to multiple countries within 6 months.
         - Optimized pipeline runtime and reporting latency for faster planning.
 
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp;  
-
     - company: Cargill - Cargill Digital Labs
       tag: Full-time
       location: Bangalore
@@ -285,9 +280,6 @@ experiences:
         - Delivered MVPs that transitioned into internal products.
         - Developed first successful internal vision pilot used for later projects.
         - Groomed soft and business skills through direct stakeholder interaction.
-
-        &nbsp;‎ &nbsp;    
-        &nbsp;‎ &nbsp;  
 
     - company: ShieldSquare (Radware) - Reseach and Development Team
       tag: Full-time
@@ -337,7 +329,6 @@ experiences:
           - “System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques” — [US20200099713A1](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0)
           - “System and method for detecting bots using semi-supervised deep learning techniques” — [US20200099714A1](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0)
         - Key contributions used during company acquisition by Radware.
-        &nbsp;‎ &nbsp;  
 
 projects:
   display: true
@@ -349,15 +340,15 @@ projects:
 
     - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
       link: 
-      details: |
+      details: 
       
     - name: Edge Device based CV application for counting of sheets processed in a workshop
       link: https://youtu.be/ZMsrct_866k
-      details: |
+      details: 
       
     - name: Sticker Detection and OCR
       link: https://youtu.be/de7EYj7bFEI
-      details: |
+      details: 
       
     - name: Image to Image Search - Flicker8k
       link: https://youtu.be/zV9rrC-mLGI
@@ -370,39 +361,39 @@ projects:
       
     - name: Image to Image Search - Jewellery
       link: https://youtu.be/DmrSy9Ivobc
-      details: |
+      details: 
       
     - name: Accounting for Pipe Bundles being Exported
       link: https://youtu.be/hJdGpM8_ADo
-      details: |
+      details: 
       
     - name: Face Detection, Face Landmark Detection and Face Recognition Wrappers
       link: https://youtu.be/HxUXtiWylH4
-      details: |
+      details: 
       
     - name: Human Pose Estimation and Activity Recognition
       link: https://youtu.be/Y7LCiZbOmNQ
-      details: |
+      details: 
       
     - name: GIS Temperature and Precipitation Time based changes visualization
       link: https://youtu.be/FeCqUZUwEZA
-      details: |
+      details: 
       
     - name: WhatsApp based Chatbot (Hack around way)
       link: 
-      details: |
+      details: 
       
     - name: Selenium based web scrapping and Web Application Control of Tinder & WhatsApp
       link: 
-      details: |
+      details: 
       
     - name: Streamlit deployed app for basic Computer Vision applications.
       link: https://computer-vision-util.streamlit.app/
-      details: |
+      details: 
       
     - name: Streamlit based threshold adjustment for object detector and annotation visualizer
       link: 
-      details: |
+      details: 
       
     - name: Supervised and Unsupervised Learning Framework 
       link: 
@@ -498,9 +489,7 @@ publications:
           + Redis Integration
           + GIS Data Support
           + Time Series
-          + Network information extraction
-        &nbsp;‎ &nbsp;  
-        &nbsp;‎ &nbsp;  
+          + Network information extraction 
       
     - title: 2. COCO Transformation Utility (CTU)
       # authors: Mohit Rajput 
@@ -521,8 +510,8 @@ patents:
   display: true
   title: Patent & Research Paper
   details: |
-    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0).  
-    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0).  
+    + First Author. “**System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques**”; us US20200099713A1; [link](https://patents.google.com/patent/US11652841B2/en).  
+    + Second Author. “**System and method for detecting bots using semi-supervised deep learning techniques**”; us US20200099714A1; [link](https://patents.google.com/patent/US11627156B2/en).  
     + First Author. “**Electric field and current assisted alignment of CNT inside polymer matrix and its effect on electrical and mechanical properties**”, in International Journal for the Science and Technology of Polymers 2016; [link](https://www.sciencedirect.com/science/article/abs/pii/S0032386116301057).  
       
 skills:
@@ -545,6 +534,9 @@ skills:
         - S3, Cloud Storage, Drive, Pcloud
     + **Hardware**
         - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
+    + **New**
+        - Postgres, Azure Data Factory, Databrick, Delta Lake, Cursor, VS Code, Jupyter Lab, Excel-Addon, MCP, Cloud Function, 
+
 
 # Apache Spark, Apacke Kafka, Streamlit      
 # -  Google Big Query, Kafka, Elasticsearch, Docker, Selenium, Redis , MongoDB, Grafana, Kibana, HTML, CSS
@@ -603,223 +595,222 @@ certificates:
       authority: Databricks Academy
       time: 2025
       link: https://credentials.databricks.com/133472f0-9474-4991-89cd-3e7bbe11f911
-      details: |
+      details: 
 
     - name: "Databricks Fundamentals"
       authority: Databricks Academy
       time: 2025
       link: https://credentials.databricks.com/9a977d0e-1f49-422c-a74a-0faba1733e6e#acc.gADRdi7P
-      details: |
+      details: 
 
     - name: "Introduction to Machine Learning in Production"
       authority: Coursera
       time: 2022
       link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
-      details: |
+      details: 
 
     - name: "Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract"
       authority: Coursera
       time: 2021
       link: https://coursera.org/share/3f09064f3c8827532175ababc17ec4ea
-      details: |
+      details: 
 #     https://coursera.org/share/b8c104fdf7afa84fa1cc279d747d38c4
 
     - name: "Neural Networks and Deep Learning, DeepLearning.AI"
       authority: Coursera
       time: 2020
       link: https://coursera.org/share/92aafe4a3474d94117ab73a9420afe82
-      details: |
+      details: 
 
     - name: "Deep Learning and NLP A-Z: How to Create a ChatBot"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-PUMKBSE1/
-      details: |
+      details: 
 
     - name: "Artificial Intelligence A-Z: Learn How To Build An AI"
       authority: Udemy
       time: 2020
       link: https://www.google.com
-      details: |
+      details: 
 
     - name: "Business Fundamentals: Corporate Strategy"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-AP3ABEGX/
-      details: |
+      details: 
 
     - name: "Deep Learning with TensorFlow 2.0"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-6M01FJV2/
-      details: |
+      details: 
 
     - name: "Deep Learning: Advanced NLP and RNNs"
       authority: Udemy
       time: 2020
       link: https://www.udemy.com/certificate/UC-FK7VUTER/
-      details: |
+      details: 
 
     - name: "Deep Learning and Computer Vision A-Z: OpenCV, SSD & GANs"
       authority: Udemy
       time: 2018
       link: https://www.udemy.com/certificate/UC-ZQF4NUHP/
-      details: |
+      details: 
 
     - name: "Deep Learning A-Z: Hands-On Artificial Neural Network"
       authority: Coursera
       time: 2018
       link: https://www.udemy.com/certificate/UC-PUMKBSE1/
-      details: |
+      details: 
 
     - name: "Machine Learning A-Z: Hands-On Python & R in Data Science"
       authority: Udemy
       time: 2017
       link: https://www.udemy.com/certificate/UC-76HXNV9U/
-      details: |
+      details: 
 
     - name: "Statistics for Business Analytics A-Z"
       authority: Udemy
       time: 2017
       link: https://www.udemy.com/certificate/UC-OOVF3D0D/
-      details: |
+      details: 
 
     - name: "Big Data Integration and Processing, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
-      details: |
+      details: 
 
     - name: "Big Data Modeling and Management System, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/0444817662a577ef25e429cb16590b62
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/VZ3PX9CV2Y8Z
 
     - name: "Introduction to Data Analytics for Business, University of Colorado"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/431a53339ca34da0776464e0742a15ed
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/K9MNKJXVKCZJ
 
     - name: "Introduction to Big Data, UC San Diego"
       authority: Coursera
       time: 2017
       link: https://coursera.org/share/a5966ae7f1093d28cabdc2d0d56c96f0
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/QLJD4FLJJLVV
 
     - name: "Customer Analytics, University of Pennsylvania"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/c3761defcff1a28328abb5d12e23f0ae
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/certificate/6APN86VXXFKJ
 
     - name: "Practical Machine Learning, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/7295b164f5bf12044ebea79a7809cf24
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/MZP92JQR2CMT
 
     - name: "Linear Regression and Modelling, Duke University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/XPVLTJRRMAL6
 
     - name: "Building a Data Science Team, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/2b8f08e4f99182d5ff882c2de2ff208e
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/B8PMWCU3PGP3
 
     - name: "Data Science in Real Life, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/ee48db7b7cbe7d12ad3cee24281d45b7
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/6P9E75GJZHD4
 
     - name: "Managing Data Analysis, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/0b95afa85e3ba653c34aa2206f84c5ae
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/LLFGAPSKTZ3A
 
     - name: "R Programming, Johns Hopkins University"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/ec6f87082b34ce5bd3c935c2b785d5b7
-      details: |
+      details: 
 
     - name: "Coaching Conversations, University of California, Davis"
       authority: Coursera
       time: 2020
       link: https://www.coursera.org/account/accomplishments/verify/854AWKUAYRDH
-      details: |
+      details: 
 
     - name: "Coaching Practices, University of California, Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/UWGHHXEKKNCL
-      details: |
+      details: 
 
     - name: "Data Management and Visualization, Wesleyan University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/SNWR3DDAMQDA
-      details: |
+      details: 
 
     - name: "Java Programming: Solving Problems with Software, Duke Univ"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/5GGYWAN9UZ5V
-      details: |
+      details: 
 
     - name: "A crash course in Data Science, Johns Hopkins"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/A9PBXDCTMP6H
-      details: |
+      details: 
 
     - name: "Managing as a Coach, University of California, Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/B9D4CP8UYK38
-      details: |
+      details: 
 
     - name: "Mastering Data Analysis in Excel, Duke University"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/2JHAKUAHJRPP
-      details: |
+      details: 
 
     - name: "Programming Foundations with JavaScript, HTML & CSS, Duke"
       authority: Coursera
       time: 2016
       link: https://coursera.org/share/61cfbf4357f5769d2d1ea3dad2786a29
-      details: |
+      details: 
 #       https://www.coursera.org/account/accomplishments/verify/QC5UYULEU2L2
 
     - name: "Setting expectations & Assessing Performance Issues, UC Davis"
       authority: Coursera
       time: 2016
       link: https://www.coursera.org/account/accomplishments/verify/BF4WVJCW73GV
-      details: |
+      details: 
 
     - name: "Introduction to R Programming, Microsoft Corporation"
       authority: Coursera
       time: 2016
       link: https://www.google.com
-      details: |
-
+      details: 
 
 #     - name: Course Foo
 #       authority: Coursera

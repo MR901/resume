@@ -143,8 +143,15 @@
   .ribbon-view {
     animation: fadeIn 0.3s ease-in-out;
     
+    // Hide all views by default
     &:not(.active) {
       display: none;
+    }
+    
+    // Fallback: Show first view by default (before JavaScript runs)
+    // This ensures content is visible even if JS fails
+    &:first-child:not(.active) {
+      display: block;
     }
   }
 }
