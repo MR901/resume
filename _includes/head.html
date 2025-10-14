@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" integrity="sha384-qpNsn9fNAkiBXwcwfxPTn1Ou6UU6e4VfYP05sKs3qeY6Xs8V1N3VcwA2jPZu1X3N" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css@1.1.0/dist/charts.min.css">
-<link id="theme-style" rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+<link id="theme-style" rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
 
 {% if site.analytics.google %}
 <!-- Global site tag (gtag.js) - Google Analytics -->

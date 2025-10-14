@@ -3,10 +3,8 @@
 
 @charset "utf-8";
 
-// Configure variables first so downstream modules receive the override
-@use "../_sass/variables" with (
-  $theme-color: {{ site.theme_color | default: '#42A8C0' }}
-);
+// Set theme color before imports so !default in variables respects this override
+$theme-color: {{ site.theme_color | default: '#42A8C0' }};
 
-// Load the forwarded styles
-@use "../_sass/default";
+// Import the aggregated stylesheet (uses classic @import for GitHub Pages compatibility)
+@import "default";
