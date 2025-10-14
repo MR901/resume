@@ -2,7 +2,7 @@
 @media print {
     @page {
         size: A4;
-        margin: 1cm 0.5cm;
+        margin: 1.5cm 0.5cm; // Minimal side margins for maximum text width
     }
 
     @page :first {
@@ -11,6 +11,9 @@
 
     body {
         padding: 0 !important;
+        background: white !important; // Remove gray background for clean printing
+        font-size: 14px !important; // Reduced from 18px for more professional print density
+        line-height: 1.4 !important; // Tighter line height for print
     }
 
     a:after {
@@ -19,13 +22,220 @@
 
     .wrapper {
         box-shadow: none;
+        max-width: none !important; // Use full page width
+        margin: 0 !important; // Remove auto centering margins
+        padding: 0.2cm !important; // Minimal padding for maximum text width
+        background: white !important; // Ensure white background
 
         .avatar img {
-            max-width: 100px !important;
+            max-width: 80px !important; // Slightly smaller avatar for print
+        }
+
+        // Reduce section spacing for print density
+        section {
+            margin-bottom: 1.2rem !important; // Reduced from 1.75rem
         }
     }
 
     footer {
         display: none;
+    }
+
+    // Optimize backgrounds and colors for printing
+    * {
+        background: white !important;
+        color: black !important;
+    }
+
+    // Preserve some color for headers and theme elements but make them print-friendly
+    .section-title,
+    h1, h2, h3, h4, h5, h6 {
+        color: #333 !important;
+    }
+
+    // Professional header sizing for print
+    .section-title {
+        font-size: 16px !important; // Reduced from larger size
+        margin-bottom: 0.6rem !important;
+        font-weight: 600 !important;
+    }
+
+    .basic .header .name {
+        font-size: 24px !important; // Reduced from 32px (huge-font-size)
+        margin-bottom: 0.3rem !important;
+    }
+
+    .basic .header .title {
+        font-size: 16px !important; // Reduced from 18px (middle-font-size)
+        margin-bottom: 0.4rem !important;
+    }
+
+    // Company and role headers in experiences
+    .experiences .upper-row .company {
+        font-size: 15px !important; // Reduced from 1.15rem
+    }
+
+    .experiences .upper-row .role {
+        font-size: 13px !important; // Reduced from 0.975rem
+    }
+
+    // Ensure borders are visible but subtle
+    .details {
+        border-color: #ccc !important;
+        background: white !important;
+        padding: 0.5rem !important; // Reduced padding for print density
+        margin-top: 0.6rem !important; // Reduced margin
+        font-size: 13px !important; // Smaller font for detail content
+        line-height: 1.35 !important; // Tighter line height for details
+    }
+
+    // Typography optimizations for print
+    p {
+        margin-bottom: 0.4rem !important; // Reduced paragraph spacing
+        font-size: 13px !important;
+    }
+
+    ul, ol {
+        margin: 0.3rem 0 0.5rem 0 !important;
+        font-size: 13px !important;
+    }
+
+    li {
+        margin: 0.2rem 0 !important; // Tighter list item spacing
+        line-height: 1.3 !important;
+    }
+
+    // Contact information spacing
+    .basic .header .contact ul li {
+        font-size: 12px !important;
+        
+        &:not(:last-child)::after {
+            margin: 0 0.15em !important; // Tighter contact separator spacing
+        }
+    }
+
+    // Experience item spacing
+    .experiences .item {
+        margin-bottom: 1.2rem !important; // Reduced from 2rem
+    }
+
+    // Make sure experience sections are clearly delineated without heavy backgrounds
+    .experiences .company-row,
+    .experiences .role-row {
+        background: white !important;
+        border-color: #ddd !important;
+        padding: 0.4rem 0.6rem !important; // Reduced padding
+    }
+
+    // Professional Certificates Section for Print
+    .certificates {
+        .item {
+            margin-bottom: 0.8rem !important;
+            padding: 0.4rem 0.6rem !important;
+            border: 1px solid #ddd !important;
+            border-radius: 4px !important;
+            background: white !important;
+            
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.25rem !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                
+                .certificate {
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    color: #333 !important;
+                    flex: 1 !important;
+                    
+                    a {
+                        color: #333 !important;
+                        text-decoration: none !important;
+                        font-weight: 600 !important;
+                    }
+                }
+                
+                .time {
+                    position: static !important;
+                    font-size: 12px !important;
+                    color: #666 !important;
+                    font-weight: 500 !important;
+                    white-space: nowrap !important;
+                    margin-left: 1rem !important;
+                }
+            }
+            
+            .authority {
+                font-size: 12px !important;
+                color: #777 !important;
+                font-style: italic !important;
+                margin-bottom: 0.3rem !important;
+            }
+            
+            .details {
+                margin-top: 0.4rem !important;
+                padding: 0.3rem !important;
+                border: none !important;
+                background: rgba(0, 0, 0, 0.02) !important;
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    // Professional Education Section for Print
+    .educations {
+        .item {
+            margin-bottom: 0.9rem !important;
+            padding: 0.5rem 0.7rem !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+            background: white !important;
+            
+            &:last-child {
+                margin-bottom: 0 !important;
+                border-bottom: 1px solid #ccc !important;
+            }
+            
+            .upper-row {
+                margin-bottom: 0.3rem !important;
+                
+                .university {
+                    font-size: 15px !important;
+                    font-weight: 600 !important;
+                    color: #333 !important;
+                    display: block !important;
+                    margin-bottom: 0.2rem !important;
+                }
+                
+                .major {
+                    font-size: 13px !important;
+                    color: #555 !important;
+                    font-style: italic !important;
+                    display: block !important;
+                }
+                
+                .degree {
+                    position: static !important;
+                    font-size: 12px !important;
+                    color: #666 !important;
+                    font-weight: 500 !important;
+                    margin-top: 0.2rem !important;
+                    display: block !important;
+                    text-align: right !important;
+                }
+            }
+            
+            .details {
+                margin-top: 0.4rem !important;
+                padding: 0.3rem !important;
+                border: none !important;
+                background: rgba(0, 0, 0, 0.02) !important;
+                font-size: 12px !important;
+            }
+        }
     }
 }

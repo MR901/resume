@@ -20,8 +20,33 @@ kramdown:
 lang: en                    # html lang
 open: true                  # open or close your site
 date_format: "%Y-%m-%d"     # date format
+
+# Color Options (uncomment to use):
 # theme_color: "#1DA1F2"      # your favorite theme color
-theme_color: "#0eb322"      # your favorite theme color
+# theme_color: "#0eb322"      # your favorite theme color
+# ---- Professional Blues ----
+# theme_color: "#1DA1F2"    # Twitter Blue
+theme_color: "#0077B5"    # LinkedIn Blue
+# theme_color: "#4285F4"    # Google Blue
+# theme_color: "#2196F3"    # Material Blue
+# theme_color: "#0066CC"    # Classic Blue
+# ---- Modern Greens ----
+# theme_color: "#0eb322"    # Current Green
+# theme_color: "#4CAF50"    # Material Green
+# theme_color: "#2E7D32"    # Dark Green
+# theme_color: "#00C851"    # Bright Green
+# ---- Elegant Purples ----
+# theme_color: "#9C27B0"    # Material Purple
+# theme_color: "#673AB7"    # Deep Purple
+# theme_color: "#3F51B5"    # Indigo
+# ---- Warm Oranges ----
+# theme_color: "#FF9800"    # Orange
+# theme_color: "#FF5722"    # Deep Orange
+# theme_color: "#795548"    # Brown
+# ---- Sophisticated Teals ----
+# theme_color: "#009688"    # Teal
+# theme_color: "#00BCD4"    # Cyan
+# theme_color: "#607D8B"    # Blue Grey
 allow_search_engines: true  # allow search engines indexing your resume
 favicon: /assets/images/icon-180.png  # path to your favicon (PNG/ICO/SVG)
 analytics:

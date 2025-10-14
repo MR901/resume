@@ -93,16 +93,22 @@ small {
                 orphans: 3;
                 widows: 3;
 
-                // Better base styling for ALL sections
+                // Better base styling for ALL sections with sophisticated list grouping
                 ul, ol {
-                    margin: 0.75em 0 1em 0;
+                    margin: 0.7em 0 0.9em 0;
                     padding-inline-start: 1.5em;
                 }
                 
+                // Top-level list items (parent items that may have nested lists)
                 li {
-                    margin: 0.6em 0;
+                    margin: 0.8em 0 0.2em 0;  // More space above, less below for grouping
                     line-height: 1.65;
                     padding-left: 0.25em;
+                    
+                    // First item gets normal spacing
+                    &:first-child {
+                        margin-top: 0.6em;
+                    }
                     
                     > p {
                         margin: 0;
@@ -110,10 +116,37 @@ small {
                         display: inline;
                     }
                     
+                    // Nested lists: tighter spacing to group with parent
                     > ul, > ol {
-                        margin-top: 0.5em;
-                        margin-bottom: 0.5em;
+                        margin-top: 0.25em;
+                        margin-bottom: 0.25em;
                         padding-inline-start: 1.5em;
+                    }
+                }
+                
+                // Nested list items: compact spacing within group
+                ul ul > li,
+                ol ol > li,
+                ul ol > li,
+                ol ul > li {
+                    margin: 0.25em 0;   // Very low spacing for nested items
+                    line-height: 1.55;
+                    
+                    // First nested item also gets normal spacing
+                    &:first-child {
+                        margin-top: 0.25em;  // Keep tight for nested
+                    }
+                }
+                
+                // Single-level lists: treat as compact group (no nested lists)
+                ul:not(:has(ul)):not(:has(ol)) > li,
+                ol:not(:has(ul)):not(:has(ol)) > li {
+                    margin: 0.9em 0;    // Low spacing for single-level lists
+                    line-height: 1.1;
+                    
+                    // First item in single-level list gets normal spacing
+                    &:first-child {
+                        margin-top: 0.6em;
                     }
                 }
                 
@@ -225,25 +258,6 @@ small {
                     font-weight: 600;
                 }
 
-                ul,
-                ol {
-                    margin: 0 0 0.8em;
-                    padding-inline-start: 1.25em;
-                }
-                
-                li {
-                    margin: 0.4em 0; // slightly tighter bullet spacing
-                    line-height: 1.6;
-                    > p {
-                        margin: 0;
-                        display: inline;
-                    }
-                    > ul,
-                    > ol {
-                        margin-top: 0.3em;
-                        margin-bottom: 0.3em;
-                    }
-                }
                 table {
                     width: 100%;
                     border-collapse: collapse;
