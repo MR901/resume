@@ -1,12 +1,12 @@
 # Welcome to Jekyll!
 title: MR901 Career Portfolio
-url: https://mr901.github.io
+url: https://mr901.co.in
 baseurl: /resume
 
 # Sass setting
 sass:
   sass_dir: _sass
-  style:    compressed
+  style: compressed
 
 # Markdown settings
 markdown: kramdown
@@ -17,16 +17,16 @@ kramdown:
   syntax_highlighter: rouge
 
 # Custom
-lang: en                    # html lang
-open: true                  # open or close your site
-date_format: "%Y-%m-%d"     # date format
+lang: en # html lang
+open: true # open or close your site
+date_format: "%Y-%m-%d" # date format
 
 # Color Options (uncomment to use):
 # theme_color: "#1DA1F2"      # your favorite theme color
 # theme_color: "#0eb322"      # your favorite theme color
 # ---- Professional Blues ----
 # theme_color: "#1DA1F2"    # Twitter Blue
-theme_color: "#0077B5"    # LinkedIn Blue
+theme_color: "#0077B5" # LinkedIn Blue
 # theme_color: "#4285F4"    # Google Blue
 # theme_color: "#2196F3"    # Material Blue
 # theme_color: "#0066CC"    # Classic Blue
@@ -47,11 +47,11 @@ theme_color: "#0077B5"    # LinkedIn Blue
 # theme_color: "#009688"    # Teal
 # theme_color: "#00BCD4"    # Cyan
 # theme_color: "#607D8B"    # Blue Grey
-allow_search_engines: true  # allow search engines indexing your resume
-favicon: /assets/images/icon-180.png  # path to your favicon (PNG/ICO/SVG)
+allow_search_engines: true # allow search engines indexing your resume
+favicon: /assets/images/icon-180.png # path to your favicon (PNG/ICO/SVG)
 analytics:
-  google:                   # your google analytics
-  cloudflare:               # your cloudflare analytics
+  google: # your google analytics
+  cloudflare: # your cloudflare analytics
 
 # Serve additional assets from _data so downloads and markdown can be accessed
 include:
