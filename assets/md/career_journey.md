@@ -1,5 +1,5 @@
 <!-- 
-**Career Journey Report — Mohit Rajput*
+**Career Journey Report — Mohit Rajput**
 (For Marketing, Positioning, and Professional Showcase)
 -->
 
@@ -21,7 +21,7 @@ Key achievements:
 * Developed ICLSSTA, an unsupervised learning experimentation framework.
 * Pioneered reinforcement learning modules for adaptive actioning.
 * Authored patents on bot detection through iterative clustering and semi-supervised learning.
-* Played a strategic role in ShieldSquare’s acquisition by Radware.
+* Contributed IP and research that supported ShieldSquare’s acquisition by Radware.
 
 **Impact:** Built strong foundations in ML research, advanced algorithms, and product-relevant innovation.
 
@@ -32,7 +32,7 @@ Key achievements:
 He shifted from research-centric roles to a **business-facing innovation environment**, applying ML to real-world problems in agriculture, manufacturing, and HR.
 Key achievements:
 
-* Delivered MVPs for vision-based chicken broiler growth estimation with <3% error margin.
+* Delivered MVPs for vision-based chicken broiler growth estimation with <5% error margin.
 * Built edge-deployable defect detection system for nugget production using Jetson Nano.
 * Launched HR chatbot (Myco) in Australia and Singapore.
 * Shaped MLOps and data governance practices through ML Labs v2 setup.
@@ -55,17 +55,17 @@ Key achievements:
 
 ---
 
-#### 4. **Strategic Edge AI & Industrial ML Leadership** — *NerdAppLabs (Dianomic Partner)*
+#### 4. **Strategic Edge AI, MCP & Industrial ML** — *NerdAppLabs (Dianomic Partner)*
 
-As Lead ML Engineer, Mohit currently drives **edge ML deployments** for heavy industrial systems, enabling smart centrifuge operations for ADM via Dianomic Systems.
+As Lead ML Engineer, Mohit leads **industrial Edge AI** and **MCP-driven automation** for heavy manufacturing clients through engineering partnership with Dianomic Systems.
 Key achievements:
 
-* Deployed multiple ML systems on FogLAMP for real-time operational intelligence.
-* Developed forecasting and anomaly detection models for process optimization.
-* Built MLOps pipelines, plugin architectures, and Excel integration tools for edge data.
-* Works closely with business partners and senior stakeholders to translate operational challenges into ML-first solutions.
+* Designed cloud orchestration architecture and built an **LLM-powered MCP Host** MVP integrating Excel, FogLAMP, and cloud services, demonstrated via end-to-end demo.
+* Delivered **FogLAMP MCP Server (v1)** and an **Excel Datalink Add-in (v1)**, enabling centralized configuration, debugging, analytics, and real-time data access for business users.
+* Built an **Azure Medallion data pipeline** (Delta Lake + Data Factory + Synapse) and a **cloud-agnostic, edge-ready MLOps pipeline** spanning GCP, Azure, and on-prem for ingestion, feature extraction, training, hyperparameter tuning, evaluation, and monitoring.
+* Developed production-grade **signal-processing, drift detection, and predictive ML systems** for centrifuge operations (multi-reference anomaly detection, breakover forecasting, solids build-up detection).
 
-**Impact:** Fully evolved into a **strategic technical leader** capable of architecting and executing complex AI initiatives.
+**Impact:** Deepened expertise in **Edge AI, MCP-based automation, and cloud-agnostic MLOps**, and proved the ability to take industrial ML systems and agentic workflows from architecture and experimentation to production and monitoring across cloud and edge environments.
 
 ---
 
@@ -101,11 +101,6 @@ Key achievements:
    * Strong presentation, product alignment, and stakeholder management skills.
    * Experienced in explaining technical complexity to non-technical audiences.
 
-7. **Strategic Contributor in Acquisitions and Partnerships**
-
-   * Key IP contributor during ShieldSquare acquisition.
-   * Drives engineering impact for Dianomic–ADM collaboration.
-
 ---
 
 ### Career Timeline Overview
@@ -115,7 +110,7 @@ Key achievements:
 | Early  | ShieldSquare (Radware)         | R&D, Bot Detection, Reinforcement Learning | Patents, Frameworks, Acquisition Impact                     |
 | Growth | Cargill Digital Labs           | Applied ML, Edge CV, NLP                   | MVPs, Business-facing ML, MLOps practices                   |
 | Scale  | Amazon (ATE)                   | Forecasting, Global Ops, ML Pipelines      | Global Deployment, Lean Ownership, Operational Resilience   |
-| Lead   | NerdAppLabs (Dianomic Partner) | Industrial Edge AI, MLOps, Forecasting     | Edge ML Architecture, Strategic Partnerships, Domain Impact |
+| Lead   | NerdAppLabs (Dianomic Partner) | Industrial Edge AI, MCP, Cloud-Agnostic MLOps | Edge ML Architecture, MCP Host & FogLAMP MCP, Predictive Maintenance Impact |
 
 ---
 

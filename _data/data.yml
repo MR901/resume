@@ -11,7 +11,7 @@ contact:
   wechat:
   whatsapp: +91-89795-72630
   telegram:
-  website:
+  website: https://mr901.co.in/posts
   medium:
   linkedin: mr901
   googlescholar:
@@ -27,23 +27,30 @@ contact:
 profile:
   display: false
   title: Profile
+  # details: |
+  #   It's your career profile, you can write markdown format text.
+  #   + First
+  #   + Second
+  #   ...
   details: |
-    It's your career profile, you can write markdown format text.
-    + First
-    + Second
-
-    ...
+    Mohit Rajput builds intelligent systems that combine applied machine learning, modular software engineering, and operational excellence.
+    For nearly 9 years, he has delivered production-grade solutions that transform high-velocity, complex data into reliable, scalable, and measurable outcomes.
+    His work spans cybersecurity, logistics, computer vision, NLP, and industrial Edge AI—ranging from patented detection frameworks to forecasting systems deployed at the edge and open-source ecosystem tools that accelerate innovation.
+    His approach is anchored in **end-to-end ownership**. He builds solutions that are not only accurate but also **bug-free, modular, adaptable**, and maintainable over time. He designs systems that collect, structure, analyze, operationalize, and monitor data at scale—handling high-frequency sensor streams, cloud–edge hybrid architectures, and complex production environments with rigor and clarity.
+    He operates at two complementary levels:
+    1. **Applied Engineering & Delivery** — I turn ambiguous, high-impact problems into robust, observable systems that integrate seamlessly with business operations. I balance delivery speed and quality using structured decision frameworks (e.g., one-way vs. two-way door thinking). I plan and execute strategically, ensuring timely delivery without compromising system soundness.
+    2. **Ecosystem Enablement** — I build frameworks, developer tooling, and open-source packages (MCP servers, Excel datalinks, registries, PyPI libraries) while **bringing and enabling best practices**, improving documentation, mentoring teams, encouraging knowledge transfer and technical sessions, and strengthening business-to-technical problem translation. I engage stakeholders to align technical execution with organizational goals.
 
 
 areas_of_interest:
   display: true
   title: Areas of Professional Interest
   details: |
-    + Reinforcement, Unsupervised Learning and Recommendation System 
-    + Data Collection, Data Engineering, R&D, Experiment and Solution Designing 
-    + Micro service architecture as well as EDGE computing based Machine Learning 
-    + Natural Language Processing (NLP) and ChatBots
-    + Time Series analysis & Computer Vision 
+    + Data product management, solution architecture, and end-to-end data/ML solution design (from collection and experimentation to deployment, monitoring, and maintenance).
+    + MLOps platforms with centralized and decentralized architectures, including microservices-based systems, industrial Edge processing, and hybrid cloud–edge workflows.
+    + Generative AI, augmented LLMs, agentic AI systems, and MCP Host/Server architectures, with a focus on tool-augmented workflows and prompt engineering.
+    + Statistical, machine, and deep learning across time series, computer vision, NLP, chatbots, and signal/sensor data for real-world decision-making.
+    + Reinforcement and unsupervised learning, recommendation systems, and data-centric architecture (data collection, data engineering, and R&D-driven solution design).
 
 experiences:
   display: true
@@ -92,10 +99,9 @@ experiences:
           - **Tags**: *Siamese Networks, Multi-Instance Learning, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
 
         + **MLOps Infrastructure (Cloud Agnostic)**
-          - Architected and developed an MLOps framework deployed on GCP and partially validated on Azure.
-          - Implemented feature engineering, model training, hyperparameter tuning, data collection monitoring, and raw data analysis modules.
-          - Evaluated Postgres vs BigQuery vs InfluxDB; set up Grafana dashboards for operational monitoring.
-          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB, Feature Engineering, Model Training*
+          - Architected and developed a cloud-agnostic, MLOps framework deployed on GCP (partially validated on Azure) covering ingestion, feature extraction, training, hyperparameter tuning, evaluation, monitoring, and data validation checks.
+          - Evaluated Postgres vs BigQuery vs InfluxDB; set up Grafana dashboards for operational and model monitoring.
+          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB, Feature Engineering, Model Training, Drift Detection*
 
         + **FogLAMP Filter and Rule Development**
           - Implemented multiple filters and rules for improved data handling and anomaly detection:
@@ -104,10 +110,10 @@ experiences:
             - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
           - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
 
-        + **MCP Server for FogLAMP**
-          - Designed and built MCP server supporting APIs, DB connections, agent persona handling, and dynamic tool orchestration.
+        + **MCP Host & MCP Server for FogLAMP**
+          - Designed and built an LLM-powered MCP Host and FogLAMP MCP server supporting APIs, DB connections, agent persona handling, and dynamic tool orchestration between Excel, FogLAMP, and cloud services.
           - Enables enterprise and agentic workflows for edge and cloud AI systems.
-          - **Tags**: *MCP, API Design, FogLAMP, Edge AI, Agentic Workflows, Registry*
+          - **Tags**: *MCP, MCP Host, API Design, FogLAMP, Edge AI, Agentic Workflows, Registry*
 
         + **Excel FogLAMP Datalink**
           - Developed an Excel add-in to fetch FogLAMP data, enabling data analysts and operators to work with edge data inside Excel.
@@ -147,19 +153,19 @@ experiences:
           - Proposed and researched contrastive learning based anomaly detection using multi-instance learning on vibration data.
           - **Tags**: *Siamese Networks, MIL, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
         + **MLOps Infrastructure (Cloud Agnostic)**
-          - Architected and developed MLOps framework (GCP, partially Azure) for data collection monitoring, model training, tuning, and evaluation.
-          - Set up Postgres + Grafana dashboards. Evaluated BigQuery and InfluxDB.
-          - Enabled multi-environment dev/stage/prod, job config control, backfill, health monitoring, logging.
-          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB*
+          - Architected and developed a cloud-agnostic MLOps framework (GCP, partially Azure, on-prem ready) for data collection monitoring, feature engineering, model training, tuning, evaluation, and drift-aware monitoring.
+          - Set up Postgres + Grafana dashboards; evaluated BigQuery and InfluxDB for storage and analytics.
+          - Enabled multi-environment dev/stage/prod, job config control, backfill, health monitoring, and logging.
+          - **Tags**: *MLOps, GCP, Azure, Grafana, Postgres, BigQuery, InfluxDB, Drift Detection*
         + **FogLAMP Filter & Rule Development**
           - `foglamp-filter-moving-measures`
           - `foglamp-filter-data-drift`
           - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
           - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
-        + **MCP Server for FogLAMP**
-          - API, DB connection, agent persona orchestration for FogLAMP.
-          - Enables agentic workflows for edge and cloud AI systems.
-          - **Tags**: *MCP, API Design, FogLAMP, Edge AI*
+        + **MCP Host & MCP Server for FogLAMP**
+          - Implemented LLM-powered MCP Host and FogLAMP MCP server supporting APIs, DB connections, and agent persona orchestration for edge devices.
+          - Enables agentic workflows for edge and cloud AI systems integrating Excel, FogLAMP, and cloud services.
+          - **Tags**: *MCP, MCP Host, API Design, FogLAMP, Edge AI, Agentic Workflows*
         + **Excel FogLAMP Datalink**
           - Excel add-in for pulling FogLAMP data into templated Excel views.
           - **Tags**: *Excel Add-in, Office.js, FogLAMP, Data Visualization*
@@ -328,7 +334,7 @@ experiences:
         - First author and co-inventor on patented bot detection frameworks:
           - “System and method for detecting bots based on iterative clustering and feedback-driven adaptive learning techniques” — [US20200099713A1](https://www.trademarkelite.com/patent/patent-detail/16574549/20200099713/0)
           - “System and method for detecting bots using semi-supervised deep learning techniques” — [US20200099714A1](https://www.trademarkelite.com/patent/patent-detail/16574556/20200099714/0)
-        - Key contributions used during company acquisition by Radware.
+        - Contributed IP and research that supported ShieldSquare’s acquisition by Radware.
 
 projects:
   display: true
@@ -338,6 +344,33 @@ projects:
 
   items:
 
+    - name: articledoc – Firefox Extension for Medium-to-PDF
+      link: https://addons.mozilla.org/en-US/firefox/addon/articledoc/
+      details: |
+        Developed a Firefox extension that converts Medium articles into a clean, defined PDF template for easier reading, printing, and offline archiving.
+      
+    - name: Personal Site for Articles and Notes
+      link: https://mr901.co.in/posts
+      details: |
+        Static site for publishing long-form posts, reading notes, and technical deep-dives across ML, Edge AI, and software engineering topics.
+      
+    - name: LLM-Powered Gmail Email Agent
+      link: 
+      details: |
+        Emails fetcher, filtering, and summarization workflow for Gmail using LangChain and Groq—supports query-based search, smart filtering, and compact summaries of single or multiple emails.
+      
+    - name: WhatsApp Mart Chatbot (LLM-Powered)
+      link: 
+      details: |
+        Mart chatbot available over WhatsApp (via Twilio) for product search, filtering, comparison, cart building and management, and checkout/invoice support.
+        Backend pipeline deployed on GCP with Kubernetes Event-Driven Autoscaling (KEDA), with a separate MindsDB pipeline powering advanced recommendation and query scenarios.
+      
+    - name: mcp-plots – MCP Server for Data Visualization
+      link: https://github.com/MR901/mcp-plots
+      details: |
+        A Model Context Protocol (MCP) server for data visualization that exposes tools to render charts (line, bar, pie, scatter, heatmap, etc.) from structured data.
+        Returns plots as PNG images, base64-encoded images, or Mermaid diagrams; available via Smithery, Glama, PyPI, and the MCP registry.
+      
     - name: IP camera (RTSP protocol) to consistent HTML Live Stream with offline Data Sync
       link: 
       details: 
@@ -502,6 +535,17 @@ publications:
         + Provides the capabilty to have augmented images and annoations.
         + Ability to plot multiple annoations on images.
         &nbsp;‎ &nbsp;  
+    - title: 3. mcp-plots – MCP Server for Data Visualization
+      link: https://pypi.org/project/mcp-plots/
+      details: |
+        A Model Context Protocol (MCP) server for data visualization that exposes tools to render charts (line, bar, pie, scatter, heatmap, etc.) from tabular data.
+        Supports multiple output formats including PNG images, base64-encoded images, and Mermaid diagram syntax.
+        Published on PyPI and listed on Smithery, Glama, and the MCP registry.
+    - title: 4. SyInfo – Simple System Information Library
+      link: https://pypi.org/project/syinfo/
+      details: |
+        A simple, well-structured Python library for gathering system information including hardware specifications, network configuration, and real-time system monitoring.
+        Provides analysis utilities for log search, package inventory, and basic diagnostics to support observability and troubleshooting workflows.
     # - title: The Art of Bar
     #   authors: Foo Bar
     #   conference: Foobar, 2019
@@ -520,23 +564,25 @@ skills:
   title: Tools & Skills
   details: |
     + ML Languages/Framework
-        - Python, Scikit-Learn, Tensorflow, PyTorch
+        - Python, scikit-learn, TensorFlow, PyTorch, NumPy, pandas, LangChain, OpenCV, Streamlit, Flask, Dask
     + **Other Language**
         - R, SAS, JAVA, C++
+    + **Shell & OS**
+        - Linux/Unix Shell, PowerShell
     + **Other**
-      -  APIs, Google Big Query, Docker, Selenium, Redis, Grafana, Kibana, HTML, CSS
+      -  APIs, Google Big Query, Docker, Selenium, Redis, Grafana, HTML, CSS, Jenkins, Apache Spark, Apache Kafka
     + **Databases**
-        - SQL, No-SQL
+        - SQL, No-SQL, Postgres
     + **Software**
         - Tableau, Excel, XLMiner, Spyder, Jupyter Notebook, RStudio, Gimp, SolidWorks
     + **Cloud Computing Services**
-        - Google Cloud Platform, Amazon Web Services, Microservices Architecture
+        - Google Cloud Platform, Amazon Web Services, Microsoft Azure, Databricks, AVEVA PI System, Microservices Architecture
     + **Cloud Data lakes**
-        - S3, Cloud Storage, Drive, Pcloud
+        - S3, Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS), Google Drive, Pcloud, Delta Lake
     + **Hardware**
-        - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, basic electrical devices and circuits
+        - Jetson Nano, Raspberry Pi, Arduino Uno, IP Cameras, Sensors, Programmable Logic Controller (PLC), basic electrical devices and circuits
     + **New**
-        - Postgres, Azure Data Factory, Databrick, Delta Lake, Cursor, VS Code, Jupyter Lab, Excel-Addon, MCP, Cloud Function, 
+        - Postgres, Azure Data Factory, Databricks, Cursor, VS Code, Jupyter Lab, Excel-Addon, MCP, Cloud Functions, Pub/Sub, Compute Engine, FogLAMP/Fledge
 
 
 # Apache Spark, Apacke Kafka, Streamlit      

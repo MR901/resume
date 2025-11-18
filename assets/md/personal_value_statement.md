@@ -3,7 +3,7 @@
 -->
 &nbsp;‎ &nbsp;
 
-I build intelligent systems that combine applied machine learning, modular software engineering, and operational excellence. Over the past 8.5+ years, I’ve delivered production-grade solutions that transform high-velocity, complex data into reliable, scalable, and measurable outcomes. My work spans cybersecurity, logistics, computer vision, NLP, and industrial AI—ranging from patented detection frameworks to forecasting systems deployed at the edge and open-source ecosystem tools that accelerate innovation.
+I build intelligent systems that combine applied machine learning, modular software engineering, and operational excellence. For nearly 9 years, I’ve delivered production-grade solutions that transform high-velocity, complex data into reliable, scalable, and measurable outcomes. My work spans cybersecurity, logistics, computer vision, NLP, and industrial AI—ranging from patented detection frameworks to forecasting systems deployed at the edge and open-source ecosystem tools that accelerate innovation.
 
 My approach is anchored in **end-to-end ownership**. I build solutions that are not only accurate but also **bug-free, modular, adaptable**, and maintainable over time. I design systems that collect, structure, analyze, operationalize, and monitor data at scale—handling high-frequency sensor streams, cloud–edge hybrid architectures, and complex production environments with rigor and clarity.
 
