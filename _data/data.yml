@@ -69,6 +69,15 @@ experiences:
         - Collaborate with cross-functional teams including Dianomic Systems and ADM stakeholders.
 
         **Experience in this company:**
+        + **MCP Host & MCP Server for FogLAMP**
+          - Designed and implemented an LLM-powered MCP Host and FogLAMP MCP server supporting APIs, DB connections, agent persona orchestration, and dynamic tool routing between Excel, FogLAMP, and cloud services.
+          - Enables enterprise and agentic workflows for edge and cloud AI systems.
+          - **Tags**: *MCP, MCP Host, API Design, FogLAMP, Edge AI, Agentic Workflows, Registry*
+
+        + **Excel FogLAMP Datalink**
+          - Developed an Excel add-in to fetch FogLAMP data, enabling analysts and operators to explore and visualize edge data directly inside Excel templates.
+          - **Tags**: *Excel Add-in, Office.js, FogLAMP, Enterprise Integration, Data Visualization*
+
         + **Centrifuge Breakover Forecasting (EDGE Deployment)**
           - Designed, trained, and deployed a predictive ML solution on EDGE devices to optimize centrifuge operation and reduce downtime.
           - Integrated with PLC and HMI for real-time operator feedback and decision support.
@@ -96,15 +105,6 @@ experiences:
             - `foglamp-rule-sensordrift` (vibration sensor disconnect detection)
           - **Tags**: *FogLAMP, Edge Compute, Signal Processing, Python, Plugin Development*
 
-        + **MCP Host & MCP Server for FogLAMP**
-          - Designed and implemented an LLM-powered MCP Host and FogLAMP MCP server supporting APIs, DB connections, agent persona orchestration, and dynamic tool routing between Excel, FogLAMP, and cloud services.
-          - Enables enterprise and agentic workflows for edge and cloud AI systems.
-          - **Tags**: *MCP, MCP Host, API Design, FogLAMP, Edge AI, Agentic Workflows, Registry*
-
-        + **Excel FogLAMP Datalink**
-          - Developed an Excel add-in to fetch FogLAMP data, enabling analysts and operators to explore and visualize edge data directly inside Excel templates.
-          - **Tags**: *Excel Add-in, Office.js, FogLAMP, Enterprise Integration, Data Visualization*
-
         + **Data Infrastructure and Monitoring**
           - Developed system resource and syslog monitoring modules; built improved automated data transfer scripts for reliable movement of operational data.
           - **Tags**: *System Monitoring, Syslogs, Automation, Edge Infrastructure*
@@ -118,6 +118,11 @@ experiences:
           - Created `foglamp-south-datafaker` plugin to generate configurable signal patterns for system, pipeline, and MCP orchestration testing.
           - **Tags**: *FogLAMP, Edge Compute, Plugin Development, Test Infrastructure*
 
+        **Notable Contributions:**
+        - Defined and delivered an Edge AI and MLOps blueprint for centrifuge optimization that is reusable across assets and sites.
+        - Shipped multiple production-grade EDGE deployments (forecasting, anomaly detection, solids buildup) integrated with PLC/HMI and Grafana-based monitoring.
+        - Introduced MCP Host + FogLAMP MCP server and Excel FogLAMP Datalink, enabling operator-friendly, tool-augmented workflows for industrial data analysis.
+        - Established Azure Data Platform with Medallion architecture and evaluation frameworks (DVC/MLFlow/Databricks) to standardize experimentation and governance.
 
     - company: CandorHealth
       tag: Full-time
