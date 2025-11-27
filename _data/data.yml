@@ -89,7 +89,7 @@ experiences:
           - **Tags**: *Autoencoder, Fourier Analysis Networks, Signal Processing, High-Velocity Data, FogLAMP, Postgres, Grafana, Edge AI*
 
         + **Multi-Reference Anomaly Detector**
-          - Built and researched a multi-reference anomaly detection system leveraging contrastive learning and multi-instance learning for centrifuge operations.
+          - Researched and planned a multi-reference anomaly detection system leveraging contrastive learning and multi-instance learning for centrifuge operations.
           - Supports operator-action and machine-response anomaly detection on vibration and process data.
           - **Tags**: *Siamese Networks, Multi-Instance Learning, Contrastive Learning, Fourier Analysis, Vibration Data, Edge AI*
 
@@ -119,10 +119,10 @@ experiences:
           - **Tags**: *FogLAMP, Edge Compute, Plugin Development, Test Infrastructure*
 
         **Notable Contributions:**
-        - Defined and delivered an Edge AI and MLOps blueprint for centrifuge optimization that is reusable across assets and sites.
+        - Defined and delivered an Edge AI and MLOps blueprint for centrifuge optimisation that is reusable across assets and sites.
         - Shipped multiple production-grade EDGE deployments (forecasting, anomaly detection, solids buildup) integrated with PLC/HMI and Grafana-based monitoring.
         - Introduced MCP Host + FogLAMP MCP server and Excel FogLAMP Datalink, enabling operator-friendly, tool-augmented workflows for industrial data analysis.
-        - Established Azure Data Platform with Medallion architecture and evaluation frameworks (DVC/MLFlow/Databricks) to standardize experimentation and governance.
+        - Established Azure Data Platform with Medallion architecture and evaluation frameworks (DVC/MLFlow/Databricks) to standardise experimentation and governance.
 
     - company: CandorHealth
       tag: Full-time
@@ -136,7 +136,7 @@ experiences:
 
         **Experience in this company:**
         + **National Provider Identifier (NPI) Filler services for the missing NPI**
-          - Filled in the missing information for multiple cases of Healthcare provider by utilizing the data available from data source.
+          - Filled in the missing information for multiple cases of Healthcare providers by utilising the data available from data source.
           - **Tags**: *Identity Resolution, Similarity Mapping, Search, Parallel Processing, Big Data, APIs, Redis, Spark*
 
     - company: Amazon Seller Services Private Limited - Analytics Technology and Engineering (ATE)
@@ -154,29 +154,29 @@ experiences:
 
         **Experience in this company:**
         + **Day Ahead Capacity Planning**
-          - Providing Day Ahead forecast for the Lastmile, to the Delivery Stations. This enables them to plan for the logistics.
-          - Cost Saving comes from minimizing the Over and the underbooking of the logistics.  
+          - Providing Day Ahead forecast for the Last Mile, to the Delivery Stations. This enables them to plan for the logistics.
+          - Cost Saving comes from minimizing the over- and the underbooking of the logistics.  
           - **Tags**: *Time Series, Curve Matching, ML, Sagemaker, EC2, Lambda, Event Bridge, S3, Dashboard*
         + **Common Utilities Python Lib (v1)**
           - A simple library that contains the common utilities to be used as part of multiple projects.geography
           - Credential Keeping and Retrieving: This is based on AWS Secret Manager 
           - SQL Query Executor: Run SQL jobs while capturing and providing the job stats and logging them too.
-          - Logger: A file and table based logger wrapper
-          - S3 Interaction: A wrapper containing functions for S3 based utility.
-          - Operations: A set of certain class & functions for Path, Time, & Math related Operations
-          - Data Evaluation & Clustering: Functions to evaluate & show performance of Regression & class based data in much greator details.
-          - Data Analysis: Function to identify Missing data wrt to groups, plotting the data etc were present.
+          - Logger: A file and table-based logger wrapper
+          - S3 Interaction: A wrapper containing functions for S3-based utility.
+          - Operations: A set of certain classes & functions for Path, Time, & Math-related Operations
+          - Data Evaluation & Clustering: Functions to evaluate & show performance of Regression & class-based data in much greater detail.
+          - Data Analysis: Function to identify Missing data with respect to groups, plotting the data, etc was present.
           - Document Interaction: ability to connect & retrieve data from Quip
-          - **Tags**: *AWS Services, DB, SQL, Evaluation, Logging, Analyis, data pipeline*
+          - **Tags**: *AWS Services, DB, SQL, Evaluation, Logging, Analysis, data pipeline*
         + **Capacity Planning Performance Evaluation, Analysis & Dashboard**
-          - Developed and maintain capacity planning evaluation and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
-          - Helps better evaluate multiple component of delivery at multiple country, station, ship methods and cycles
+          - Developed and maintained capacity planning, evaluation, and analysis. It is robust enough to get multiple insights and even generate plans for current state, pilots, and areas for improvement.
+          - Helps better evaluate multiple components of delivery at multiple countries, stations, ship methods and cycles
           - **Tags**: *Time Series, EC2, QuickSight, S3, Excel*
         + **Multiple Reports Creation and Data Pipelines Testing**
-          - Created Reports for Middle Mile Performance Evaluation and tested/adjusted few data pipelines for reporting.
+          - Created Reports for Middle Mile Performance Evaluation and tested/adjusted a few data pipelines for reporting.
 
         **Notable Contributions:**
-        - Took over and stabilized project with zero active maintainers.
+        - Took over and stabilized the project with zero active maintainers.
         - Led deployment expansion to multiple countries within 6 months.
         - Optimized pipeline runtime and reporting latency for faster planning.
 
@@ -193,28 +193,28 @@ experiences:
 
         **Experience in this company:**
         + **ML labs v2 setup**
-          - Defining ways to Work with ML projects and other applications having ML related features
-          - Brining sustainable practices for accelerated development while maintaining the agility  
+          - Defining ways to work with ML projects and other applications having ML-related features
+          - Bringing sustainable practices for accelerated development while maintaining the agility  
           - Planning phase of data governance, 3rd Party Data Annotators, Portal development for data tagging, selection and versioning, data collection experiment designs and pipelines.
         + **Estimating Growth Indicator of Chicken (POC)**
-          - Estimating the weight and age of the chicken based on video recording done using the mobile camera.
-          - **Tags**: *Agile Experiment Setup & Design , Object Detection, Image Standardizer, Estimator, Ensembling*
+          - Estimating the weight and age of the chicken based on a video recording done using the mobile camera.
+          - **Tags**: *Agile Experiment Setup & Design, Object Detection, Image Standardizer, Estimator, Ensembling*
         + **Defective Nugget Detection and Accounting (POC then MVP)**
           - Defective Nugget Detection and Tracking on conveyor belt with output projected on display for manual removal.
           - **Tags**: *Jetson Nano, Raspberry Pi, Ardino Uno, Edge device, Object Detection, Tracking, on-premise, real-time*
         + **HR Chatbot (Myco) (MVP)**
-          - Initial product version was launched for Singapore and Australia with capability for form filling, ticket creation, ticket checking, easy data integration from excel sheet
+          - Initial product version was launched for Singapore and Australia with the capability for form filling, ticket creation, ticket checking, easy data integration from excel sheet
           - **Tags**: *Rasa, Redis, NLU, NDM, NLG, NLP, Chatbot, excel*
         + **Financial Commentary Generation (POC)**
           - A utility for table-to-text based on template method was developed for the initial stage, b/c of the lack and too much fragmentation of data source this approach was deemed fit.
-        + **YOLOv5-v4** training and deployment integration on AWS suitable to multiple tailored needs.
+        + **YOLOv5-v4** training and deployment integration on AWS, suitable to multiple tailored needs.
           - **Tags**: *Computer Vision, Sagemaker, ECR, S3, Lambda Function, API Gateway, IAM, CloudWatch*
         + **Computer Vision Utility**
-          - Streamlit based web application for parsing, labelling, visualizing annotation, with support for Yolo prediction.
+          - Streamlit-based web application for parsing, labelling, and visualizing annotations, with support for Yolo prediction.
           - Ability to connect work with local, S3 and pcloud storage.
         + MiApp feature involving weather data visualization using the GIS data.
         + **Information Extraction from Ship Invoices (POC)**  
-          - Extracting multiple information through the information that was shared in old and current emails.
+          - Extracting multiple information from the information that was shared in old and current emails.
           - **Tags**: *Text-to-Table, Analytics; Regex, Python Email to DB*
 
         **Notable Contributions:**
